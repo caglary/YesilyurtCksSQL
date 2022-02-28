@@ -127,6 +127,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş Ekranı";
+            this.Activated += new System.EventHandler(this.LoginForm_Activated);
             this.ResumeLayout(false);
             this.PerformLayout();
 
