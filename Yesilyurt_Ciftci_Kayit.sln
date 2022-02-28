@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yesilyurt_Ciftci_Kayit", "Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit.csproj", "{3E15833E-82B1-4203-880B-7A8BBDADB211}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB_Control", "DB_Control\DB_Control.csproj", "{4B648A26-5419-4BD5-B736-B869FF2D7887}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E15833E-82B1-4203-880B-7A8BBDADB211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E15833E-82B1-4203-880B-7A8BBDADB211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E15833E-82B1-4203-880B-7A8BBDADB211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E15833E-82B1-4203-880B-7A8BBDADB211}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B648A26-5419-4BD5-B736-B869FF2D7887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B648A26-5419-4BD5-B736-B869FF2D7887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B648A26-5419-4BD5-B736-B869FF2D7887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B648A26-5419-4BD5-B736-B869FF2D7887}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48ABA4F6-8963-4D4D-AED5-C5D689B98FEC}
+	EndGlobalSection
+EndGlobal

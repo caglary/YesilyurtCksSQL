@@ -1,0 +1,14 @@
+D:\Yesilyurt_Ciftci_Kayit\DB_Control\bin\Debug\DB_Control.exe.config
+D:\Yesilyurt_Ciftci_Kayit\DB_Control\bin\Debug\DB_Control.exe
+D:\Yesilyurt_Ciftci_Kayit\DB_Control\bin\Debug\DB_Control.pdb
+D:\Yesilyurt_Ciftci_Kayit\DB_Control\bin\Debug\Yesilyurt_Ciftci_Kayit.exe
+D:\Yesilyurt_Ciftci_Kayit\DB_Control\bin\Debug\Yesilyurt_Ciftci_Kayit.pdb
+D:\Yesilyurt_Ciftci_Kayit\DB_Control\bin\Debug\Yesilyurt_Ciftci_Kayit.exe.config
+D:\Yesilyurt_Ciftci_Kayit\DB_Control\obj\Debug\DB_Control.csproj.AssemblyReference.cache
+D:\Yesilyurt_Ciftci_Kayit\DB_Control\obj\Debug\DB_Control.Form1.resources
+D:\Yesilyurt_Ciftci_Kayit\DB_Control\obj\Debug\DB_Control.Properties.Resources.resources
+D:\Yesilyurt_Ciftci_Kayit\DB_Control\obj\Debug\DB_Control.csproj.GenerateResource.cache
+D:\Yesilyurt_Ciftci_Kayit\DB_Control\obj\Debug\DB_Control.csproj.CoreCompileInputs.cache
+D:\Yesilyurt_Ciftci_Kayit\DB_Control\obj\Debug\DB_Control.csproj.CopyComplete
+D:\Yesilyurt_Ciftci_Kayit\DB_Control\obj\Debug\DB_Control.exe
+D:\Yesilyurt_Ciftci_Kayit\DB_Control\obj\Debug\DB_Control.pdb
