@@ -45,7 +45,8 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         {
             string macAddress = Utilities.MacAddress.GetMacAddress();
             string machineName = Environment.MachineName; // Lenovo için ekleme yapıldı...
-            if (macAddress == "0A0027000014" || machineName == "M601102-0042")
+            
+            if (machineName == "DESKTOP-HF3B47B" || machineName == "M601102-0042")
             {
                 _kullanici.KullaniciAdi = "caglar";
 
