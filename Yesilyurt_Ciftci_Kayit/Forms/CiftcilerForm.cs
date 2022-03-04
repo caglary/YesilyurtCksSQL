@@ -69,7 +69,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
 
             Ciftci ciftci = new Ciftci()
             {
-                TcKimlikNo = string.IsNullOrEmpty(txtTc.Text) ? "" : txtTc.Text,
+                TcKimlikNo = string.IsNullOrEmpty(txtTc.Text) ? "" : txtTc.Text.Trim(),
                 IsimSoyisim = string.IsNullOrEmpty(txtNameSurname.Text) ? "" : txtNameSurname.Text,
                 BabaAdi = string.IsNullOrEmpty(txtFatherName.Text) ? "" : txtFatherName.Text,
                 AnneAdi = string.IsNullOrEmpty(txtMotherName.Text) ? "" : txtMotherName.Text,
@@ -94,7 +94,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             Ciftci ciftci = new Ciftci()
             {
                 Id = _activeCiftci.Id,
-                TcKimlikNo = string.IsNullOrEmpty(txtupdateTc.Text) ? "" : txtupdateTc.Text,
+                TcKimlikNo = string.IsNullOrEmpty(txtupdateTc.Text) ? "" : txtupdateTc.Text.Trim(),
                 IsimSoyisim = string.IsNullOrEmpty(txtUpdateNameSurname.Text) ? "" : txtUpdateNameSurname.Text,
                 BabaAdi = string.IsNullOrEmpty(txtUpdateFatherName.Text) ? "" : txtUpdateFatherName.Text,
                 AnneAdi = string.IsNullOrEmpty(txtUpdateMotherName.Text) ? "" : txtUpdateMotherName.Text,

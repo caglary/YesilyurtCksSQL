@@ -164,7 +164,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         {
             aksiyon = Aksiyon.ciftciGetirClick;
 
-            string tcNo = txtAddTc.Text;
+            string tcNo = txtAddTc.Text.Trim();
 
             //Tc numarasının kontrolü yapılıyor..
             if (tcNo.Length != 11)
@@ -200,7 +200,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         private void btnAdd_Click(object sender, EventArgs e)
         {
             aksiyon = Aksiyon.btnAddClick;
-
+            txtAddTc.Text=txtAddTc.Text.Trim();
             if (txtAddTc.Text.Length != 11)
             {
                 Utilities.Mesaj.MessageBoxWarning("Tc numarasını kontrol ediniz.");
