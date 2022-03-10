@@ -22,8 +22,9 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 pictureBoxCiftciler.Visible = false;
                 pictureBoxCksIslemleri.Visible = false;
             }
-
-            this.Text = $"Hoşgeldin {kullanici.KullaniciAdi} - {Utilities.ConnectionString.TeachYearFromFile()} Yılı için çalışıyorsunuz.";
+            string connectionstring =Utilities.ConnectionString.Get().Substring(0, 36);
+            
+            this.Text = $"Hoşgeldin {kullanici.KullaniciAdi} - {Utilities.ConnectionString.TeachYearFromFile()} Yılı için çalışıyorsunuz.  {connectionstring}";
             labelYear.Text= $"{Utilities.ConnectionString.TeachYearFromFile()} Yılı";
         }
         private void btnCiftciler_Click(object sender, EventArgs e)

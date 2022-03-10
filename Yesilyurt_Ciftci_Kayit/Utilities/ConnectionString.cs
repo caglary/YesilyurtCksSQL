@@ -13,8 +13,8 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
             string Lenovo2022 = @"data source=DESKTOP-HF3B47B\SQLEXPRESS; Initial Catalog=YesilyurtDb2022; Integrated security=true";
             string Lenovo2021 = @"data source=DESKTOP-HF3B47B\SQLEXPRESS; Initial Catalog=YesilyurtDb2021; Integrated security=true";
 
-            string Work2022 = @"data source=M601102-0043; Initial Catalog=YesilyurtDb2022;User Id=sa;Password=caglar.123;Trusted_Connection=True;";
-            string Work2021 = @"data source=M601102-0043; Initial Catalog=YesilyurtDb2021;User Id=sa;Password=caglar.123;Trusted_Connection=True;";
+            string Work2022 = @"data source=M601102-0042\SQLEXPRESS; Initial Catalog=YesilyurtDb2022;User Id=sa;Password=caglar.123;Trusted_Connection=True;";
+            string Work2021 = @"data source=M601102-0042\SQLEXPRESS; Initial Catalog=YesilyurtDb2021;User Id=sa;Password=caglar.123;Trusted_Connection=True;";
 
       
             string Year = TeachYearFromFile();
