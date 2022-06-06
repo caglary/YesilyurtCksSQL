@@ -6,7 +6,5 @@
         public int Id { get; set; }
         public string UrunAdi { get; set; }
         public string UrunCesidi { get; set; }
-
-
     }
 }

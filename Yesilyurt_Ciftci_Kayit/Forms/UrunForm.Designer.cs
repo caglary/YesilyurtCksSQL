@@ -7,7 +7,6 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -20,9 +19,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             }
             base.Dispose(disposing);
         }
-
         #region Windows Form Designer generated code
-
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -255,11 +252,8 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-
         }
-
         #endregion
-
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgwListe;
         private System.Windows.Forms.GroupBox groupBox2;

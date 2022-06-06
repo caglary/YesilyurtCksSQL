@@ -117,3 +117,8 @@ C:\Users\cagla\Documents\GitHub\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug
 C:\Users\cagla\Documents\GitHub\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.CoreCompileInputs.cache
 C:\Users\cagla\Documents\GitHub\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.exe
 C:\Users\cagla\Documents\GitHub\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.pdb
+C:\Users\cagla\Documents\GitHub\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\Newtonsoft.Json.dll
+C:\Users\cagla\Documents\GitHub\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\System.Data.SqlClient.dll
+C:\Users\cagla\Documents\GitHub\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\Newtonsoft.Json.xml
+C:\Users\cagla\Documents\GitHub\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\System.Data.SqlClient.xml
+C:\Users\cagla\Documents\GitHub\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.CopyComplete

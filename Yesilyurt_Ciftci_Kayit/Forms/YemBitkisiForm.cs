@@ -3,7 +3,6 @@ using System.Linq;
 using System.Windows.Forms;
 using Yesilyurt_Ciftci_Kayit.Entities;
 using Yesilyurt_Ciftci_Kayit.Manager;
-
 namespace Yesilyurt_Ciftci_Kayit.Forms
 {
     public partial class YemBitkisiForm : Form
@@ -12,11 +11,11 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         UrunManager _urunManager;
         Ciftci _ciftci;
         YemBitkisiManager _yemBitkisiManager;
-        
+
         CksManager _cksManager;
         YemBitkisi _yemKayit;
         int _index;
-        public YemBitkisiForm(Kullanici kullanici, Ciftci ciftci,string FormAdi)
+        public YemBitkisiForm(Kullanici kullanici, Ciftci ciftci, string FormAdi)
         {
             InitializeComponent();
             _kullanici = kullanici;
@@ -27,49 +26,48 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             _yemKayit = null;
             this.Text = $"{FormAdi} Formu";
         }
-
         private void YemBitkisiForm_Load(object sender, System.EventArgs e)
         {
-
             if (_kullanici.Yetki == "Read")
             {
                 btnAdd.Enabled = false;
                 btnUpdate.Enabled = false;
                 btnDelete.Enabled = false;
             }
-
             ComboboxFillData();
-
             lblCiftciIsim.Text = $"{_ciftci.IsimSoyisim.ToUpper()} / {_ciftci.MahalleKoy.ToUpper()}";
             this.Text = $"Hoşgeldin {_kullanici.KullaniciAdi} - {Utilities.ConnectionString.TeachYearFromFile()} Yılı için çalışıyorsunuz.";
-
             RefreshList();
-
         }
-
         private void RefreshList()
         {
-            var cksId=_cksManager.GetAll().Where(I => I.CiftciId == _ciftci.Id).FirstOrDefault().Id;
-           var liste= _yemBitkisiManager.GetAll_YemBitkisiDataGrid().Where(I => I.CksId == cksId).ToList();
-            dgwListe.DataSource = liste;
-            Utilities.Datagrid.DataGridSettings(dgwListe, new string[] { "Id","CksId"});
-            int kayitSayisi= liste.Count();
-            var uygunListe= liste.Where(I => I.KontrolDurumu == "UYGUNDUR").ToList();
-            decimal toplam = 0;
-            foreach (var yemKayit in uygunListe)
+            try
             {
-                toplam += Convert.ToDecimal(yemKayit.TespitEdilenAlan);
+                var cksId = _cksManager.GetAll().Where(I => I.CiftciId == _ciftci.Id).FirstOrDefault().Id;
+                var liste = _yemBitkisiManager.GetAll_YemBitkisiDataGrid().Where(I => I.CksId == cksId).ToList();
+                dgwListe.DataSource = liste;
+                Utilities.Datagrid.DataGridSettings(dgwListe, new string[] { "Id", "CksId" });
+                int kayitSayisi = liste.Count();
+                var uygunListe = liste.Where(I => I.KontrolDurumu == "UYGUNDUR").ToList();
+                decimal toplam = 0;
+                foreach (var yemKayit in uygunListe)
+                {
+                    toplam += Convert.ToDecimal(yemKayit.TespitEdilenAlan);
+                }
+                lblNot.Text = $"Toplam Kayıt Sayısı: {kayitSayisi} adet\nToplam Desteklenen Alan: {toplam / 1000} da";
+            }
+            catch (Exception exception)
+            {
+
+                Utilities.Mesaj.MessageBoxError(exception.Message+"\n"+"Doğru girilmeyen alanlar mevcut olduğundan bu hatayı alıyorsunuz.");
             }
 
-            lblNot.Text = $"Toplam Kayıt Sayısı: {kayitSayisi} adet\nToplam Desteklenen Alan: {toplam / 1000} da";
         }
-
         private void btnAdd_Click(object sender, System.EventArgs e)
         {
             try
             {
                 int id = (int)comboBoxAddUrun.SelectedValue;
-
                 YemBitkisi yem = new YemBitkisi();
                 yem.CksId = _cksManager.GetAll().Where(I => I.CiftciId == _ciftci.Id).FirstOrDefault().Id;
                 yem.UrunId = Convert.ToInt32(id);
@@ -83,7 +81,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 yem.Note = txtAddNote.Text;
                 yem.KontrolDurumu = "Arazi Kontrol Edilmedi.";
                 yem.KullaniciId = _kullanici.Id;
-                yem.TespitEdilenAlan= txtAddMuracaatAlani.Text;
+                yem.TespitEdilenAlan = txtAddMuracaatAlani.Text;
                 int result = _yemBitkisiManager.Add(yem);
                 if (result == 1)
                 {
@@ -96,23 +94,17 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             }
             catch (Exception exception)
             {
-
                 Utilities.Mesaj.MessageBoxError(exception.Message);
             }
-
         }
-
         private void dgwListe_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-
             _index = dgwListe.CurrentRow.Index;
             int id = (int)dgwListe.Rows[_index].Cells["Id"].Value;
             _yemKayit = _yemBitkisiManager.GetAll().Where(I => I.Id == id).FirstOrDefault();
             GuncelleFormDoldur(_yemKayit);
             GuncelleButonAyarla(_yemKayit);
         }
-
         private void GuncelleButonAyarla(YemBitkisi yemKayit)
         {
             if (_yemKayit == null)
@@ -128,7 +120,6 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 lblUpdateMesaj.Visible = false;
             }
         }
-
         private void GuncelleFormDoldur(YemBitkisi yemKayit)
         {
             comboBoxUpdateUrun.SelectedValue = yemKayit.UrunId;
@@ -154,9 +145,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             {
                 radioButtonUygunDegil.Select();
             }
-
         }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -175,12 +164,9 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 if (radioButtonAraziKontrolEdilmedi.Checked) _yemKayit.KontrolDurumu = "Arazi Kontrol Edilmedi.";
                 if (radioButtonUygun.Checked) _yemKayit.KontrolDurumu = "UYGUNDUR";
                 if (radioButtonUygunDegil.Checked) _yemKayit.KontrolDurumu = "UYGUN DEGİLDİR";
-
                 int result = _yemBitkisiManager.Update(_yemKayit);
-
                 if (result == 1)
                 {
-
                     txtUpdateEkilisYili.Text = "";
                     txtUpdateAda.Text = "";
                     txtUpdateParsel.Text = "";
@@ -191,22 +177,15 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                     txtUpdateMuracaatAlani.Text = "";
                     _yemKayit = null;
                     GuncelleButonAyarla(_yemKayit);
-
                     RefreshList();
                     dgwListe.Rows[_index].Selected = true;
                 }
             }
             catch (Exception exception)
             {
-
                 Utilities.Mesaj.MessageBoxError(exception.Message);
             }
-
-
-
-
         }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             int result = _yemBitkisiManager.Delete(_yemKayit);
@@ -222,43 +201,34 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 txtUpdateMuracaatAlani.Text = "";
                 _yemKayit = null;
                 GuncelleButonAyarla(_yemKayit);
-
                 RefreshList();
             }
         }
-
         private void btnUrun_Click(object sender, EventArgs e)
         {
             Utilities.FormProperties.FormOpen("UrunForm", new UrunForm(_kullanici), this, true);
             ComboboxFillData();
         }
-
         private void ComboboxFillData()
         {
-
             comboBoxAddUrun.DataSource = _urunManager.GetAll();
             comboBoxAddUrun.DisplayMember = "UrunAdi";
             comboBoxAddUrun.ValueMember = "Id";
             comboBoxUpdateUrun.DataSource = _urunManager.GetAll();
             comboBoxUpdateUrun.DisplayMember = "UrunAdi";
             comboBoxUpdateUrun.ValueMember = "Id";
-
-
-
             comboBoxAddMahalle.DataSource = Utilities.RequiredLists.VillageNameList();
             comboBoxUpdateMahalle.DataSource = Utilities.RequiredLists.VillageNameList();
         }
-
         private void btnFirma_Click(object sender, EventArgs e)
         {
             Utilities.FormProperties.FormOpen("FirmaForm", new FirmaForm(_kullanici), this, true);
             ComboboxFillData();
         }
-
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
         }
     }
-   
+
 }

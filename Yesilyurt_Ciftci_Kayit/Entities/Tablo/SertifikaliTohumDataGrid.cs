@@ -19,6 +19,5 @@
         public string Note { get; set; }
         public string OdemeDurumu { get; set; }
         public int CksId { get; set; }
-
     }
 }

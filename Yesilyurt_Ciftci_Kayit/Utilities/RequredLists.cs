@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using Yesilyurt_Ciftci_Kayit.Entities;
-
 namespace Yesilyurt_Ciftci_Kayit.Utilities
 {
     public static class RequiredLists

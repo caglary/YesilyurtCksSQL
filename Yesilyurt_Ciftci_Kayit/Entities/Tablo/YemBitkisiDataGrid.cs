@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace Yesilyurt_Ciftci_Kayit.Entities.Tablo
 {
     public class YemBitkisiDataGrid
@@ -26,6 +25,5 @@ namespace Yesilyurt_Ciftci_Kayit.Entities.Tablo
         public int CksId { get; set; }
         public string KontrolDurumu { get; set; }
         public string TespitEdilenAlan { get; set; }
-
     }
 }

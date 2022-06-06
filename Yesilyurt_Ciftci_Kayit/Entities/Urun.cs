@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace Yesilyurt_Ciftci_Kayit.Entities
 {
     public class Urun
@@ -9,7 +8,5 @@ namespace Yesilyurt_Ciftci_Kayit.Entities
         public string UrunCesidi { get; set; }
         public int KullaniciId { get; set; }
         public DateTime CreateTime { get; set; }
-
-
     }
 }

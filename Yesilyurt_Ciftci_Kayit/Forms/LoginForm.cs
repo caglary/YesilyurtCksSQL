@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 using Yesilyurt_Ciftci_Kayit.Entities;
 using Yesilyurt_Ciftci_Kayit.Manager;
-
 namespace Yesilyurt_Ciftci_Kayit.Forms
 {
     public partial class LoginForm : Form
@@ -15,20 +14,14 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             loginManager = new LoginManager();
             _kullanici = new Kullanici();
         }
-
         private void btnExit_Click(object sender, System.EventArgs e)
         {
             Application.Exit();
         }
-
         private void btnGiris_Click(object sender, System.EventArgs e)
         {
-
-
             _kullanici.KullaniciAdi = txtKullaniciAdi.Text.ToLower();
             _kullanici.Parola = txtParola.Text.ToLower();
-
-
             if (loginManager.KullaniciGirisOnay(_kullanici))
             {
                 var k = loginManager.GetKullanici(_kullanici);
@@ -36,11 +29,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 anasayfa.Show();
                 this.Hide();
             }
-
-
-
         }
-
         private void LoginForm_Activated(object sender, EventArgs e)
         {
             string macAddress = Utilities.MacAddress.GetMacAddress();
@@ -49,13 +38,10 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             if (machineName == "DESKTOP-HF3B47B" || machineName == "M601102-0042")
             {
                 _kullanici.KullaniciAdi = "caglar";
-
                 var k = loginManager.GetKullanici(_kullanici);
                 Anasayfa anasayfa = new Anasayfa(k);
                 anasayfa.Show();
                 this.Hide();
-
-
             }
         }
     }

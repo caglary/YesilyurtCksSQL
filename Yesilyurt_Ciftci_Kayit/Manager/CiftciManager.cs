@@ -5,22 +5,18 @@ using System.Linq;
 using Yesilyurt_Ciftci_Kayit.Database;
 using Yesilyurt_Ciftci_Kayit.Entities;
 using Yesilyurt_Ciftci_Kayit.Entities.Tablo;
-
 namespace Yesilyurt_Ciftci_Kayit.Manager
 {
     public class CiftciManager : IBaseManager<Ciftci>
     {
         CiftciDal _dal;
         SqlDataReader _reader;
-
         public CiftciManager()
         {
             _dal = new CiftciDal();
-
         }
-
         public int Result { get; set; }
-
+        
         public int Add(Ciftci c)
         {
             Result = 0;
@@ -34,14 +30,11 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
                 Utilities.Mesaj.MessageBoxWarning("T.C. Kimlik No eksik yada yanlış girdiniz.");
                 return Result;
             }
-
-
             bool tcSorguSonuc = TcKontrol(c.TcKimlikNo);
             if (tcSorguSonuc)
                 Result = _dal.Add(c);
             return Result;
         }
-
         public int Delete(Ciftci c)
         {
             int sonuc = 0;
@@ -52,18 +45,14 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
             }
             Utilities.Question.IfYes(() =>
             {
-
                 sonuc = _dal.Delete(c);
                 if (sonuc == 1)
                 {
                     Utilities.Mesaj.MessageBoxInformation("Kayıt silindi.");
                 }
-
             }, $"{c.IsimSoyisim} isimli kaydı silmek istiyor musunuz?");
-
             return sonuc;
         }
-
         public List<Ciftci> GetAll()
         {
             List<Ciftci> Ciftcilerim = new List<Ciftci>();
@@ -80,7 +69,6 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
                         BabaAdi = _reader.IsDBNull(3) ? "" : _reader.GetString(3),
                         AnneAdi = _reader.IsDBNull(4) ? "" : _reader.GetString(4),
                         DogumTarihi = _reader.IsDBNull(5) ? "" : _reader.GetString(5),
-
                         Cinsiyet = _reader.IsDBNull(6) ? "" : _reader.GetString(6),
                         MedeniDurum = _reader.IsDBNull(7) ? "" : _reader.GetString(7),
                         CepTelefonu = _reader.IsDBNull(8) ? "" : _reader.GetString(8),
@@ -92,7 +80,6 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
                         Not = _reader.IsDBNull(14) ? "" : _reader.GetString(14),
                         KullaniciId = _reader.IsDBNull(15) ? 0 : _reader.GetInt32(15),
                         CreateTime = _reader.IsDBNull(16) ? DateTime.MinValue : _reader.GetDateTime(16),
-
                     }); ;
                 }
                 _reader.Close();
@@ -137,7 +124,6 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
             }
             return Ciftcilerim.ToList();
         }
-
         internal Ciftci GetByTc(string tcNumarasi)
         {
             if (tcNumarasi.Length != 11)
@@ -147,7 +133,6 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
             }
             return GetAll().Where(I => I.TcKimlikNo == tcNumarasi).FirstOrDefault();
         }
-
         public int Update(Ciftci c)
         {
             Result = 0;
@@ -162,11 +147,8 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
             //{
             //    Utilities.Mesaj.MessageBoxInformation("Kayıt güncellendi.");
             //}
-
             return Result;
-
         }
-
         public bool TcKontrol(string tcNumarasi)
         {
             Ciftci _arananTc = GetAll().Where(I => I.TcKimlikNo == tcNumarasi).FirstOrDefault();
@@ -178,10 +160,7 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
             else
             {
                 return true;
-
             }
-
         }
-
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
 using Yesilyurt_Ciftci_Kayit.Entities;
-
 namespace Yesilyurt_Ciftci_Kayit.Database
 {
     public class FirmaDal : BaseDal, IBaseDal<Firma>
@@ -19,11 +18,9 @@ namespace Yesilyurt_Ciftci_Kayit.Database
                
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
-
             }
             catch (System.Exception ex)
             {
-
                 Utilities.Mesaj.MessageBoxError(ex.Message);
             }
             finally
@@ -32,7 +29,6 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             }
             return result;
         }
-
         public int Delete(Firma firma)
         {
             try
@@ -40,14 +36,11 @@ namespace Yesilyurt_Ciftci_Kayit.Database
                 command = new SqlCommand("Delete_Firma", connect);
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = firma.Id;
-
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
-
             }
             catch (System.Exception ex)
             {
-
                 Utilities.Mesaj.MessageBoxError(ex.Message);
             }
             finally
@@ -56,7 +49,6 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             }
             return result;
         }
-
         public SqlDataReader GetAll()
         {
             command = new SqlCommand("GetAll_Firma", connect);
@@ -71,7 +63,6 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             BaglantiAyarla();
             return command.ExecuteReader();
         }
-
         public int Update(Firma firma)
         {
             try
@@ -86,11 +77,9 @@ namespace Yesilyurt_Ciftci_Kayit.Database
                 
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
-
             }
             catch (System.Exception ex)
             {
-
                 Utilities.Mesaj.MessageBoxError(ex.Message);
             }
             finally

@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace Yesilyurt_Ciftci_Kayit.Entities
 {
     public class FarkOdemesi
@@ -19,6 +18,5 @@ namespace Yesilyurt_Ciftci_Kayit.Entities
         public string OdemeDurumu { get; set; }
         public int KullaniciId { get; set; }
         public DateTime CreateTime { get; set; }
-
     }
 }

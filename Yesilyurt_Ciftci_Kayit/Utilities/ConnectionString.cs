@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-
 namespace Yesilyurt_Ciftci_Kayit.Utilities
 {
     public static class ConnectionString
@@ -9,16 +8,12 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
         public static string Get()
         {
             string machineName = Environment.MachineName;
-
             string Lenovo2022 = @"data source=DESKTOP-HF3B47B\SQLEXPRESS; Initial Catalog=YesilyurtDb2022; Integrated security=true";
             string Lenovo2021 = @"data source=DESKTOP-HF3B47B\SQLEXPRESS; Initial Catalog=YesilyurtDb2021; Integrated security=true";
-
             string Work2022 = @"data source=M601102-0042\SQLEXPRESS; Initial Catalog=YesilyurtDb2022;User Id=sa;Password=caglar.123;Trusted_Connection=True;";
             string Work2021 = @"data source=M601102-0042\SQLEXPRESS; Initial Catalog=YesilyurtDb2021;User Id=sa;Password=caglar.123;Trusted_Connection=True;";
-
       
             string Year = TeachYearFromFile();
-
             if (machineName == "DESKTOP-HF3B47B")
             {
                 //Lenovo
@@ -29,13 +24,9 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
                 else
                 {
                     return Lenovo2022;
-
                 }
-
             }
         
-
-
             if (Year == "2021")
             {
                 return Work2021;
@@ -44,26 +35,20 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
             {
                 return Work2022;
             }
-
-
         }
-
         public static string TeachYearFromFile()
         {
             string currentDirectory = Directory.GetCurrentDirectory();
             string path = currentDirectory + @"\Year.txt";
             if (File.Exists(path))
             {
-
                 var result = File.ReadLines(path);
                 List<string> satirlar = new List<string>();
                 foreach (string satir in result)
                 {
                     satirlar.Add(satir);
                 }
-
                 return satirlar[0];
-
             }
             else
             {
@@ -78,7 +63,6 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
                 {
                     satirlar.Add(satir);
                 }
-
                 return satirlar[0];
             }
         }
