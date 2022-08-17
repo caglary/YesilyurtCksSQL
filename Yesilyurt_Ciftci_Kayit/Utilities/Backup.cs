@@ -15,6 +15,8 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
         SertifikaliTohumManager _sertifikaliTohumManager;
         UrunManager _urunManager;
         YemBitkisiManager _yemBitkisiManager;
+        string backupTime = DateTime.Now.ToShortDateString();
+        string SavePath = string.Empty;
         public Backup()
         {
             _ciftciManager = new CiftciManager();
@@ -68,8 +70,59 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
         }
         public void BackUpAll()
         {
-            string backupTime = DateTime.Now.ToShortDateString();
-            string SavePath = string.Empty;
+            try
+            {
+                string folderPath = SelectedDirectory();
+
+                string ciftciler = CiftciListesi();
+                string cksListesi = CksListesi();
+                string farkOdemesiListesi = FarkOdemesiListesi();
+                string firmalar = FirmaListesi();
+                string urunler = UrunListesi();
+                string kullaniciListesi = KullaniciListesi();
+                string sertifikalıTohumListesi = SertifikaliTohumListesi();
+                string yemBitkileriListesi = YemBitkisiListesi();
+                SavePath = folderPath + "\\" + backupTime + " Ciftciler.json";
+                System.IO.File.WriteAllText(SavePath, ciftciler);
+                SavePath = folderPath + "\\" + backupTime + " CksListesi.json";
+                System.IO.File.WriteAllText(SavePath, cksListesi);
+                SavePath = folderPath + "\\" + backupTime + " FarkOdemesiListesi.json";
+                System.IO.File.WriteAllText(SavePath, farkOdemesiListesi);
+                SavePath = folderPath + "\\" + backupTime + " Firmalar.json";
+                System.IO.File.WriteAllText(SavePath, firmalar);
+                SavePath = folderPath + "\\" + backupTime + " Urunler.json";
+                System.IO.File.WriteAllText(SavePath, urunler);
+                SavePath = folderPath + "\\" + backupTime + " KullanıcıListesi.json";
+                System.IO.File.WriteAllText(SavePath, kullaniciListesi);
+                SavePath = folderPath + "\\" + backupTime + " SertifikalıTohumListesi.json";
+                System.IO.File.WriteAllText(SavePath, sertifikalıTohumListesi);
+                SavePath = folderPath + "\\" + backupTime + " YemBitkisiListesi.json";
+                System.IO.File.WriteAllText(SavePath, yemBitkileriListesi);
+                Utilities.Mesaj.MessageBoxInformation($"Yedekleme işlemi gerçekleşti.\n{folderPath} adresini kontrol ediniz.");
+            }
+            catch (Exception exception)
+            {
+
+                Utilities.Mesaj.MessageBoxError(exception.Message);
+            }
+
+
+        }
+        private string SelectedDirectory()
+        {
+            string folderPath = Utilities.FileOperations.FolderPath();
+            if (string.IsNullOrEmpty(folderPath))
+                throw new Exception("Klasör seçimi yapmadığınız için işlemiz iptal edildi.");
+            folderPath = folderPath + "\\" + "Yeşilyurt Çks Programı Yedek";
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+            return folderPath;
+        }
+        public void BackupCiftciler()
+        {
+
             string folderPath = Utilities.FileOperations.FolderPath();
             if (string.IsNullOrEmpty(folderPath))
                 return;
@@ -79,29 +132,29 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
                 Directory.CreateDirectory(folderPath);
             }
             string ciftciler = CiftciListesi();
-            string cksListesi = CksListesi();
-            string farkOdemesiListesi = FarkOdemesiListesi();
-            string firmalar = FirmaListesi();
-            string urunler = UrunListesi();
-            string kullaniciListesi = KullaniciListesi();
-            string sertifikalıTohumListesi = SertifikaliTohumListesi();
-            string yemBitkileriListesi = YemBitkisiListesi();
+
             SavePath = folderPath + "\\" + backupTime + " Ciftciler.json";
             System.IO.File.WriteAllText(SavePath, ciftciler);
+
+            Utilities.Mesaj.MessageBoxInformation($"Yedekleme işlemi gerçekleşti.\n{folderPath} adresini kontrol ediniz.");
+
+        }
+        public void BackupCksKayitlari()
+        {
+
+            string folderPath = Utilities.FileOperations.FolderPath();
+            if (string.IsNullOrEmpty(folderPath))
+                return;
+            folderPath = folderPath + "\\" + "Yeşilyurt Çks Programı Yedek";
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+
+            string cksListesi = CksListesi();
+
             SavePath = folderPath + "\\" + backupTime + " CksListesi.json";
             System.IO.File.WriteAllText(SavePath, cksListesi);
-            SavePath = folderPath + "\\" + backupTime + " FarkOdemesiListesi.json";
-            System.IO.File.WriteAllText(SavePath, farkOdemesiListesi);
-            SavePath = folderPath + "\\" + backupTime + " Firmalar.json";
-            System.IO.File.WriteAllText(SavePath, firmalar);
-            SavePath = folderPath + "\\" + backupTime + " Urunler.json";
-            System.IO.File.WriteAllText(SavePath, urunler);
-            SavePath = folderPath + "\\" + backupTime + " KullanıcıListesi.json";
-            System.IO.File.WriteAllText(SavePath, kullaniciListesi);
-            SavePath = folderPath + "\\" + backupTime + " SertifikalıTohumListesi.json";
-            System.IO.File.WriteAllText(SavePath, sertifikalıTohumListesi);
-            SavePath = folderPath + "\\" + backupTime + " YemBitkisiListesi.json";
-            System.IO.File.WriteAllText(SavePath, yemBitkileriListesi);
             Utilities.Mesaj.MessageBoxInformation($"Yedekleme işlemi gerçekleşti.\n{folderPath} adresini kontrol ediniz.");
         }
     }

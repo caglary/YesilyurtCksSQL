@@ -42,6 +42,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         {
             dgwListe.DataSource = bll.GetAll_CiftciDataGrid();
             Utilities.Datagrid.DataGridSettings(dgwListe, new string[] { "Id"});
+            label7.Text = dgwListe.RowCount.ToString()+" Kişi";
         }
         private Ciftci FormToEntityForAdd()
         {

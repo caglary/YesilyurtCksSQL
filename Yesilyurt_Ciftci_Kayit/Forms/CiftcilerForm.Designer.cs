@@ -30,6 +30,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageEkle = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -61,6 +62,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.txtMotherName = new System.Windows.Forms.TextBox();
             this.tabPageGuncelle = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtpUpdateBirthday = new System.Windows.Forms.DateTimePicker();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -95,18 +97,17 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.txtUpdateMotherName = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgwListe = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageEkle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPageGuncelle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwListe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -135,6 +136,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             // tabPageEkle
             // 
             this.tabPageEkle.BackColor = System.Drawing.Color.White;
+            this.tabPageEkle.Controls.Add(this.label7);
             this.tabPageEkle.Controls.Add(this.pictureBox1);
             this.tabPageEkle.Controls.Add(this.groupBox1);
             this.tabPageEkle.Location = new System.Drawing.Point(4, 25);
@@ -144,6 +146,16 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.tabPageEkle.Size = new System.Drawing.Size(1267, 383);
             this.tabPageEkle.TabIndex = 0;
             this.tabPageEkle.Text = "Ekle";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1040, 70);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(203, 228);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 41;
+            this.pictureBox1.TabStop = false;
             // 
             // groupBox1
             // 
@@ -454,6 +466,16 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.tabPageGuncelle.TabIndex = 1;
             this.tabPageGuncelle.Text = "Güncelle";
             this.tabPageGuncelle.Click += new System.EventHandler(this.tabPageGuncelle_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1040, 70);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(203, 228);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 42;
+            this.pictureBox2.TabStop = false;
             // 
             // groupBox2
             // 
@@ -805,25 +827,17 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.dgwListe.TabIndex = 0;
             this.dgwListe.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwListe_CellDoubleClick);
             // 
-            // pictureBox1
+            // label7
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1040, 70);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(203, 228);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 41;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1040, 70);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(203, 228);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 42;
-            this.pictureBox2.TabStop = false;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(1105, 301);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 27);
+            this.label7.TabIndex = 44;
+            this.label7.Text = "label7";
             // 
             // CiftcilerForm
             // 
@@ -840,16 +854,18 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPageEkle.ResumeLayout(false);
+            this.tabPageEkle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPageGuncelle.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgwListe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+
         }
         #endregion
         private System.Windows.Forms.Panel panel1;
@@ -922,5 +938,6 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         private System.Windows.Forms.DateTimePicker dtpUpdateBirthday;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label7;
     }
 }
