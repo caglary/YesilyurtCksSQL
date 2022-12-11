@@ -1,8 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Yesilyurt_Ciftci_Kayit.Entities;
 using Yesilyurt_Ciftci_Kayit.Manager;
+
 namespace Yesilyurt_Ciftci_Kayit.Forms
 {
     public partial class CiftcilerForm : Form
@@ -11,6 +18,8 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         Kullanici kullanici;
         Ciftci _activeCiftci;
         List<Ciftci> liste;
+
+
         public CiftcilerForm(Kullanici k)
         {
             InitializeComponent();
@@ -18,7 +27,9 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             kullanici = k;
             _activeCiftci = new Ciftci() { Id = -1 };
             liste = new List<Ciftci>();
+
         }
+
         private void CiftcilerForm_Load(object sender, EventArgs e)
         {
             this.Text = $"{ Utilities.ConnectionString.TeachYearFromFile()} Yılı Çiftçi Bilgi İşlemleri";
@@ -28,24 +39,34 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 btnUpdate.Enabled = false;
                 btnDelete.Enabled = false;
             }
+
             comboBoxGender.DataSource = Utilities.RequiredLists.GenderList();
             comboBoxMaritalStatus.DataSource = Utilities.RequiredLists.MaritalStatusList();
             comboBoxVillage.DataSource = Utilities.RequiredLists.VillageNameList();
+
             comboBoxUpdateGender.DataSource = Utilities.RequiredLists.GenderList();
             comboBoxUpdateMaritalStatus.DataSource = Utilities.RequiredLists.MaritalStatusList();
             comboBoxUpdateVillage.DataSource = Utilities.RequiredLists.VillageNameList();
+
             DataGridYinele();
+
+
             txtCity.Text = "TOKAT";
             txtTown.Text = "YEŞİLYURT";
+
         }
         private void DataGridYinele()
         {
+
             dgwListe.DataSource = bll.GetAll_CiftciDataGrid();
             Utilities.Datagrid.DataGridSettings(dgwListe, new string[] { "Id"});
-            label7.Text = dgwListe.RowCount.ToString()+" Kişi";
+
+
+
         }
         private Ciftci FormToEntityForAdd()
         {
+
             Ciftci ciftci = new Ciftci()
             {
                 TcKimlikNo = string.IsNullOrEmpty(txtTc.Text) ? "" : txtTc.Text.Trim(),
@@ -63,11 +84,13 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 MahalleKoy = string.IsNullOrEmpty(comboBoxVillage.Text) ? "" : comboBoxVillage.Text,
                 Not = string.IsNullOrEmpty(txtNote.Text) ? "" : txtNote.Text,
                 KullaniciId = kullanici.Id
+
             };
             return ciftci;
         }
         private Ciftci FormToEntityForUpdate()
         {
+
             Ciftci ciftci = new Ciftci()
             {
                 Id = _activeCiftci.Id,
@@ -86,6 +109,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 MahalleKoy = string.IsNullOrEmpty(comboBoxUpdateVillage.Text) ? "" : comboBoxUpdateVillage.Text,
                 Not = string.IsNullOrEmpty(txtUpdateNote.Text) ? "" : txtUpdateNote.Text,
                 KullaniciId = kullanici.Id
+
             };
             return ciftci;
         }
@@ -108,20 +132,35 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         }
         private void PersonToFormForUpdate(Ciftci person)
         {
+
             txtupdateTc.Text = person.TcKimlikNo;
+
             txtUpdateNameSurname.Text = person.IsimSoyisim;
+
             txtUpdateFatherName.Text = person.BabaAdi;
+
             txtUpdateMotherName.Text = person.AnneAdi;
+
             dtpUpdateBirthday.Text = person.DogumTarihi;
+
             comboBoxUpdateGender.Text = person.Cinsiyet;
+
             comboBoxUpdateMaritalStatus.Text = person.MedeniDurum;
+
             txtUpdateMobile.Text = person.CepTelefonu;
+
             txtUpdateHomePhone.Text = person.EvTelefonu;
+
             txtUpdateEmail.Text = person.Email;
+
             txtUpdateCity.Text = person.Il;
+
             txtUpdateTown.Text = person.Ilce;
+
             comboBoxUpdateVillage.Text = person.MahalleKoy;
+
             txtUpdateNote.Text = person.Not;
+
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -134,6 +173,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 AddFormuTemizle();
             }
            
+
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -145,6 +185,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             }
             //GuncelleFormunuTemizle();
             DataGridYineleTekKayit(ciftci);
+
         }
         private void GuncelleFormunuTemizle()
         {
@@ -170,6 +211,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 Utilities.Mesaj.MessageBoxWarning("Silinecek kayıt yok.");
                 return;
             }
+
             int result = bll.Delete(_activeCiftci);
             if (result == 1)
             {
@@ -177,10 +219,12 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 DataGridYineleTekKayit(null);
                 _activeCiftci.Id = -1;
             }
+
         }
         private void tabPageGuncelle_Click(object sender, EventArgs e)
         {
             _activeCiftci.Id = -1;
+
             GuncelleFormunuTemizle();
             comboBoxUpdateGender.DataSource = Utilities.RequiredLists.GenderList();
             comboBoxUpdateMaritalStatus.DataSource = Utilities.RequiredLists.MaritalStatusList();
@@ -201,18 +245,25 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             txtUpdateTown.Text = "";
             comboBoxUpdateVillage.Text = "";
             txtUpdateNote.Text = "";
+
             var bulunankayit = bll.GetByTc(txtupdateTc.Text);
             if (bulunankayit != null)
             {
                 PersonToFormForUpdate(bulunankayit);
                 liste.Add(bulunankayit);
                 _activeCiftci = bulunankayit;
+
+
             }
             else
             {
                 _activeCiftci.Id = -1;
+
+
             }
+
             DataGridYineleTekKayit(bulunankayit);
+
         }
         private void DataGridYineleTekKayit(Ciftci c)
         {
@@ -220,6 +271,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             liste.Add(c);
             dgwListe.DataSource = null;
             dgwListe.DataSource = liste;
+
             Utilities.Datagrid.DataGridSettings(dgwListe, new string[] { "Id", "DogumTarihi", "Cinsiyet", "MedeniDurum", "Email", "Il", "Ilce", "KullaniciId", "CreateTime" });
         }
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
@@ -240,9 +292,12 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             int index = dgwListe.CurrentRow.Index;
             string tcNo = dgwListe.Rows[index].Cells["TcKimlikNo"].Value.ToString();
             tabControl1.SelectedTab = tabPageGuncelle;
+
             _activeCiftci = bll.GetByTc(tcNo);
             PersonToFormForUpdate(_activeCiftci);
             DataGridYineleTekKayit(_activeCiftci);
+
         }
     }
+
 }

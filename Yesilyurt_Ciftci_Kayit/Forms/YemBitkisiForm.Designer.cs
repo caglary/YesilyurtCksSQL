@@ -7,6 +7,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -19,7 +20,9 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             }
             base.Dispose(disposing);
         }
+
         #region Windows Form Designer generated code
+
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -28,6 +31,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YemBitkisiForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnKapat = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.btnUrun = new System.Windows.Forms.Button();
@@ -90,7 +94,6 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgwListe = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnKapat = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -118,11 +121,26 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.panel1.Size = new System.Drawing.Size(1231, 64);
             this.panel1.TabIndex = 0;
             // 
+            // btnKapat
+            // 
+            this.btnKapat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
+            this.btnKapat.Location = new System.Drawing.Point(1113, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(105, 54);
+            this.btnKapat.TabIndex = 19;
+            this.btnKapat.Text = "Kapat";
+            this.btnKapat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnKapat.UseVisualStyleBackColor = true;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(4, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(95, 62);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -146,7 +164,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.btnUrun.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUrun.Image = ((System.Drawing.Image)(resources.GetObject("btnUrun.Image")));
             this.btnUrun.Location = new System.Drawing.Point(887, 4);
-            this.btnUrun.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUrun.Margin = new System.Windows.Forms.Padding(4);
             this.btnUrun.Name = "btnUrun";
             this.btnUrun.Size = new System.Drawing.Size(105, 54);
             this.btnUrun.TabIndex = 14;
@@ -160,7 +178,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.btnFirma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFirma.Image = ((System.Drawing.Image)(resources.GetObject("btnFirma.Image")));
             this.btnFirma.Location = new System.Drawing.Point(1000, 4);
-            this.btnFirma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFirma.Margin = new System.Windows.Forms.Padding(4);
             this.btnFirma.Name = "btnFirma";
             this.btnFirma.Size = new System.Drawing.Size(105, 54);
             this.btnFirma.TabIndex = 15;
@@ -780,21 +798,6 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.panel2.Size = new System.Drawing.Size(1231, 378);
             this.panel2.TabIndex = 1;
             // 
-            // btnKapat
-            // 
-            this.btnKapat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
-            this.btnKapat.Location = new System.Drawing.Point(1113, 4);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(105, 54);
-            this.btnKapat.TabIndex = 19;
-            this.btnKapat.Text = "Kapat";
-            this.btnKapat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnKapat.UseVisualStyleBackColor = true;
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
-            // 
             // YemBitkisiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -822,8 +825,11 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             ((System.ComponentModel.ISupportInitialize)(this.dgwListe)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
+
         #endregion
+
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblCiftciIsim;
         private System.Windows.Forms.Panel panel3;

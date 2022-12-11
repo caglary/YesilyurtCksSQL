@@ -1,8 +1,10 @@
 ﻿using System;
+
 namespace Yesilyurt_Ciftci_Kayit.Entities.PrintTablo
 {
     public class SertifikaliTohumPrint
     {
+
         public string TcKimlikNo { get; set; }
         public string IsimSoyisim { get; set; }
         public int DosyaNo { get; set; }

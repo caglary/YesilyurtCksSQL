@@ -1,0 +1,58 @@
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\WordTemplate.exe.config
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\WordTemplate.exe
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\WordTemplate.pdb
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\obj\Debug\WordTemplate.csproj.SuggestedBindingRedirects.cache
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\obj\Debug\WordTemplate.csproj.CoreCompileInputs.cache
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\obj\Debug\WordTemplate.exe
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\obj\Debug\WordTemplate.pdb
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.Compression.Base.dll
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.DocIO.Base.dll
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.Licensing.dll
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.OfficeChart.Base.dll
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.Compression.Base.xml
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.DocIO.Base.xml
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.OfficeChart.Base.xml
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\obj\Debug\WordTemplate.csproj.AssemblyReference.cache
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\obj\Debug\WordTemplate.csproj.CopyComplete
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Yesilyurt_Ciftci_Kayit.exe
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Yesilyurt_Ciftci_Kayit.pdb
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Yesilyurt_Ciftci_Kayit.exe.config
+D:\Yesilyurt_Ciftci_Kayit\WordTemplate\obj\Debug\WordTemplate.csproj.AssemblyReference.cache
+D:\Yesilyurt_Ciftci_Kayit\WordTemplate\obj\Debug\WordTemplate.csproj.CoreCompileInputs.cache
+D:\Yesilyurt_Ciftci_Kayit\WordTemplate\obj\Debug\WordTemplate.exe
+D:\Yesilyurt_Ciftci_Kayit\WordTemplate\obj\Debug\WordTemplate.pdb
+D:\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\WordTemplate.exe.config
+D:\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\WordTemplate.exe
+D:\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\WordTemplate.pdb
+D:\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.Compression.Base.dll
+D:\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.DocIO.Base.dll
+D:\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.Licensing.dll
+D:\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.OfficeChart.Base.dll
+D:\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Yesilyurt_Ciftci_Kayit.exe
+D:\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Yesilyurt_Ciftci_Kayit.pdb
+D:\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Yesilyurt_Ciftci_Kayit.exe.config
+D:\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.Compression.Base.xml
+D:\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.DocIO.Base.xml
+D:\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.OfficeChart.Base.xml
+D:\Yesilyurt_Ciftci_Kayit\WordTemplate\obj\Debug\WordTemplate.csproj.CopyComplete
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\WordTemplate.exe.config
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\WordTemplate.exe
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\WordTemplate.pdb
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.Compression.Base.dll
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.DocIO.Base.dll
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.Licensing.dll
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.OfficeChart.Base.dll
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Yesilyurt_Ciftci_Kayit.exe
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Yesilyurt_Ciftci_Kayit.pdb
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Yesilyurt_Ciftci_Kayit.exe.config
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.Compression.Base.xml
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.DocIO.Base.xml
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Syncfusion.OfficeChart.Base.xml
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\obj\Debug\WordTemplate.csproj.AssemblyReference.cache
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\obj\Debug\WordTemplate.csproj.CoreCompileInputs.cache
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\obj\Debug\WordTemplate.csproj.CopyComplete
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\obj\Debug\WordTemplate.exe
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\obj\Debug\WordTemplate.pdb
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Newtonsoft.Json.dll
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\bin\Debug\Newtonsoft.Json.xml
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTemplate\obj\Debug\WordTemplate.csproj.SuggestedBindingRedirects.cache

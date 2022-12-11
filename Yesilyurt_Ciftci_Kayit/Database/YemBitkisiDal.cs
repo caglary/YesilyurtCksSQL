@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using Yesilyurt_Ciftci_Kayit.Entities;
+
 namespace Yesilyurt_Ciftci_Kayit.Database
 {
     public class YemBitkisiDal : BaseDal, IBaseDal<YemBitkisi>
@@ -27,11 +28,16 @@ namespace Yesilyurt_Ciftci_Kayit.Database
                 command.Parameters.Add("@Note", SqlDbType.NVarChar).Value = yemBitkisi.Note;
                 command.Parameters.Add("@KontrolDurumu", SqlDbType.NVarChar).Value = yemBitkisi.KontrolDurumu;
                 command.Parameters.Add("@KullaniciId", SqlDbType.Int).Value = yemBitkisi.KullaniciId;
+
+
+
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
+
             }
             catch (System.Exception ex)
             {
+
                 Utilities.Mesaj.MessageBoxError(ex.Message);
             }
             finally
@@ -40,6 +46,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             }
             return result;
         }
+
         public int Delete(YemBitkisi yemBitkisi)
         {
             try
@@ -47,11 +54,14 @@ namespace Yesilyurt_Ciftci_Kayit.Database
                 command = new SqlCommand("Delete_YemBitkileri", connect);
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = yemBitkisi.Id;
+
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
+
             }
             catch (System.Exception ex)
             {
+
                 Utilities.Mesaj.MessageBoxError(ex.Message);
             }
             finally
@@ -60,6 +70,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             }
             return result;
         }
+
         public SqlDataReader GetAll()
         {
             command = new SqlCommand("GetAll_YemBitkileri", connect);
@@ -81,6 +92,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             BaglantiAyarla();
             return command.ExecuteReader();
         }
+
         public int Update(YemBitkisi yemBitkisi)
         {
             try
@@ -104,11 +116,14 @@ namespace Yesilyurt_Ciftci_Kayit.Database
                 command.Parameters.Add("@KontrolDurumu", SqlDbType.NVarChar).Value = yemBitkisi.KontrolDurumu;
                 command.Parameters.Add("@KullaniciId", SqlDbType.Int).Value = yemBitkisi.KullaniciId;
                 command.Parameters.Add("@CreateTime", SqlDbType.DateTime).Value = DateTime.Now;
+
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
+
             }
             catch (System.Exception ex)
             {
+
                 Utilities.Mesaj.MessageBoxError(ex.Message);
             }
             finally

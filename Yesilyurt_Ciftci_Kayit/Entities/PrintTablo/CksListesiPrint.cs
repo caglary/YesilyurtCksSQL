@@ -1,4 +1,6 @@
 ﻿using System;
+
+
 namespace Yesilyurt_Ciftci_Kayit.Entities.PrintTablo
 {
     public class CksListesiPrint
@@ -12,5 +14,11 @@ namespace Yesilyurt_Ciftci_Kayit.Entities.PrintTablo
         public string EvTelefonu { get; set; }
         public string KoyMahalle { get; set; }
         public DateTime MuracaatTarihi { get; set; }
+        public string EvrakKayitNo { get; set; }
+        public string HavaleEdilenPersonel { get; set; }
+        public string MuracaatYeri { get; set; }
+
+
+
     }
 }

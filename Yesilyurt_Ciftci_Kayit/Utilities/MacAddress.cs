@@ -1,4 +1,5 @@
 ﻿using System.Net.NetworkInformation;
+
 namespace Yesilyurt_Ciftci_Kayit.Utilities
 {
     public static class MacAddress
@@ -6,6 +7,7 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
         public static string GetMacAddress()
         {
             string macAddresses = string.Empty;
+
             foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
             {
                 if (nic.OperationalStatus == OperationalStatus.Up)
@@ -14,6 +16,7 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
                     break;
                 }
             }
+
             return macAddresses;
         }
     }

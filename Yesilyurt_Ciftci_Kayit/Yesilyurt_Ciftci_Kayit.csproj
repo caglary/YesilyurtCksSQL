@@ -42,13 +42,10 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
@@ -64,6 +61,7 @@
     <Compile Include="Database\Interface\IBaseDal.cs" />
     <Compile Include="Database\KullaniciDal.cs" />
     <Compile Include="Database\SertifikaliTohumDal.cs" />
+    <Compile Include="Database\TMODal.cs" />
     <Compile Include="Database\UrunDal.cs" />
     <Compile Include="Database\YemBitkisiDal.cs" />
     <Compile Include="Entities\Ciftci.cs" />
@@ -74,6 +72,7 @@
     <Compile Include="Entities\PrintTablo\CksListesiPrint.cs" />
     <Compile Include="Entities\PrintTablo\FarkOdemesiPrint.cs" />
     <Compile Include="Entities\PrintTablo\SertifikaliTohumPrint.cs" />
+    <Compile Include="Entities\PrintTablo\TMOListPrint.cs" />
     <Compile Include="Entities\PrintTablo\YemBitkileriPrint.cs" />
     <Compile Include="Entities\SertifikaliTohum.cs" />
     <Compile Include="Entities\Tablo\CiftciDataGrid.cs" />
@@ -84,6 +83,7 @@
     <Compile Include="Entities\Tablo\SertifikaliTohumDataGrid.cs" />
     <Compile Include="Entities\Tablo\UrunDataGrid.cs" />
     <Compile Include="Entities\Tablo\YemBitkisiDataGrid.cs" />
+    <Compile Include="Entities\TMO.cs" />
     <Compile Include="Entities\Urun.cs" />
     <Compile Include="Entities\YemBitkisi.cs" />
     <Compile Include="Forms\Anasayfa.cs">
@@ -140,6 +140,12 @@
     <Compile Include="Forms\SertifikaliTohumForm.Designer.cs">
       <DependentUpon>SertifikaliTohumForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TMOForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TMOForm.Designer.cs">
+      <DependentUpon>TMOForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UrunForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,18 +166,17 @@
     <Compile Include="Manager\LoginManager.cs" />
     <Compile Include="Manager\KullaniciManager.cs" />
     <Compile Include="Manager\SertifikaliTohumManager.cs" />
+    <Compile Include="Manager\TMOManager.cs" />
     <Compile Include="Manager\UrunManager.cs" />
     <Compile Include="Manager\YemBitkisiManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utilities\Backup.cs" />
     <Compile Include="Utilities\Datagrid.cs" />
     <Compile Include="Utilities\ExcelExport.cs" />
-    <Compile Include="Utilities\FileOperations.cs" />
     <Compile Include="Utilities\FolderBrowser.cs" />
     <Compile Include="Utilities\FormProperties.cs" />
     <Compile Include="Utilities\ConnectionString.cs" />
-    <Compile Include="Utilities\JsonOperations.cs" />
+    <Compile Include="Utilities\JsonOperation.cs" />
     <Compile Include="Utilities\MacAddress.cs" />
     <Compile Include="Utilities\Mesaj.cs" />
     <Compile Include="Utilities\Question.cs" />
@@ -209,6 +214,9 @@
     <EmbeddedResource Include="Forms\SertifikaliTohumForm.resx">
       <DependentUpon>SertifikaliTohumForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TMOForm.resx">
+      <DependentUpon>TMOForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UrunForm.resx">
       <DependentUpon>UrunForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,7 +252,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="379478_farmer_icon.ico" />
-    <Content Include="SQLScript.txt" />
+    <None Include="Resources\tmo.png" />
+    <Content Include="YesilyurtDatabaseSqlScript.sql" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Interop.Excel">
@@ -266,5 +275,6 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Yesilyurt_Ciftci_Kayit.Entities;
 using Yesilyurt_Ciftci_Kayit.Manager;
+
 namespace Yesilyurt_Ciftci_Kayit.Forms
 {
     public partial class FirmaForm : Form
@@ -17,6 +18,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             _kullanici = kullanici;
             _firmaManager = new FirmaManager();
         }
+
         private void FirmaForm_Load(object sender, EventArgs e)
         {
             if (_kullanici.Yetki == "Read")
@@ -25,22 +27,29 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 btnUpdate.Enabled = false;
                 btnDelete.Enabled = false;
             }
+
             //Form  açıldığında liste ekrana gelecek.
             ListeYinele();
+
             //güncelleme formu boş olacak..
             //güncelleme butonları pasif olacak..
             txtFirmaAdiGuncelle.Text = "";
             txtVergiNoGuncelle.Text = "";
             txtNoteGuncelle.Text = "";
+
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
             //Ekle buton aktif olacak.
+
         }
+
         private void ListeYinele()
         {
             dgwListe.DataSource = _firmaManager.GetAll_FirmaDataGrid();
             Utilities.Datagrid.DataGridSettings(dgwListe,new string[] { "Id"});
+
         }
+
         private void dgwListe_CellClick(object sender, DataGridViewCellEventArgs e)
         {
            
@@ -51,11 +60,13 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             }
             catch (Exception)
             {
+
                 return;
             }
             btnUpdate.Enabled = true;
             btnDelete.Enabled = true;
             int id = (int)dgwListe.Rows[index].Cells["Id"].Value;
+
             _firmaEntity = _firmaManager.GetAll().Where(I => I.Id == id).FirstOrDefault();
             //Güncelle formunu dolduruyoruz..
             //Aynı zamanda firma bilgilerini bir class içinde saklıyoruz.
@@ -64,6 +75,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             txtVergiNoGuncelle.Text = _firmaEntity.VergiNo;
             txtNoteGuncelle.Text = _firmaEntity.Note;
         }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             int result = 0;
@@ -75,6 +87,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             _firmaEntity.VergiNo = txtVergiNoEkle.Text;
             _firmaEntity.Note = txtNoteEkle.Text;
             _firmaEntity.KullaniciId = _kullanici.Id;
+
             result=_firmaManager.Add(_firmaEntity);
             if (result==1)
             {
@@ -82,20 +95,29 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 txtVergiNoEkle.Text = "";
                 txtNoteEkle.Text = "";
                 ListeYinele();
+
             }
+
             _firmaEntity = null;
         }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             _firmaManager.Delete(_firmaEntity);
+
             txtFirmaAdiGuncelle.Text = "";
             txtVergiNoGuncelle.Text = "";
             txtNoteGuncelle.Text = "";
+
             btnUpdate.Enabled = false;
             btnDelete.Enabled = false;
+
             _firmaEntity = null;
+
             ListeYinele();
+
         }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             _firmaEntity.FirmaAdi = txtFirmaAdiGuncelle.Text;
@@ -103,7 +125,9 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             _firmaEntity.Note = txtNoteGuncelle.Text;
             _firmaEntity.KullaniciId = _kullanici.Id;
             _firmaManager.Update(_firmaEntity);
+
             ListeYinele();
+
         }
     }
 }

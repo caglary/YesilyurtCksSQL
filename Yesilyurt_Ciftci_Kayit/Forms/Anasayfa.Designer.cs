@@ -7,6 +7,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -19,7 +20,9 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             }
             base.Dispose(disposing);
         }
+
         #region Windows Form Designer generated code
+
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -35,14 +38,14 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.pictureBoxSifreDegistir = new System.Windows.Forms.PictureBox();
             this.pictureBoxListeter = new System.Windows.Forms.PictureBox();
             this.labelYear = new System.Windows.Forms.Label();
-            this.pictureBoxBackup = new System.Windows.Forms.PictureBox();
+            this.pictureBoxTMO = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCiftciler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCksIslemleri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFirmalar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUrunler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSifreDegistir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxListeter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTMO)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -145,17 +148,18 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.labelYear.TabIndex = 18;
             this.labelYear.Text = "Yem Bitkileri";
             // 
-            // pictureBoxBackup
+            // pictureBoxTMO
             // 
-            this.pictureBoxBackup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxBackup.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBackup.Image")));
-            this.pictureBoxBackup.Location = new System.Drawing.Point(1142, 627);
-            this.pictureBoxBackup.Name = "pictureBoxBackup";
-            this.pictureBoxBackup.Size = new System.Drawing.Size(46, 52);
-            this.pictureBoxBackup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxBackup.TabIndex = 2;
-            this.pictureBoxBackup.TabStop = false;
-            this.pictureBoxBackup.Click += new System.EventHandler(this.pictureBoxBackup_Click);
+            this.pictureBoxTMO.BackColor = System.Drawing.Color.Gray;
+            this.pictureBoxTMO.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxTMO.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTMO.Image")));
+            this.pictureBoxTMO.Location = new System.Drawing.Point(390, 217);
+            this.pictureBoxTMO.Name = "pictureBoxTMO";
+            this.pictureBoxTMO.Size = new System.Drawing.Size(119, 128);
+            this.pictureBoxTMO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxTMO.TabIndex = 2;
+            this.pictureBoxTMO.TabStop = false;
+            this.pictureBoxTMO.Click += new System.EventHandler(this.pictureBoxTMO_Click);
             // 
             // Anasayfa
             // 
@@ -170,8 +174,8 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.Controls.Add(this.pictureBoxSifreDegistir);
             this.Controls.Add(this.pictureBoxUrunler);
             this.Controls.Add(this.pictureBoxFirmalar);
-            this.Controls.Add(this.pictureBoxBackup);
             this.Controls.Add(this.pictureBoxCksIslemleri);
+            this.Controls.Add(this.pictureBoxTMO);
             this.Controls.Add(this.pictureBoxListeter);
             this.Controls.Add(this.pictureBoxCiftciler);
             this.Controls.Add(this.btnExit);
@@ -190,10 +194,12 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUrunler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSifreDegistir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxListeter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTMO)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
+
         #endregion
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.PictureBox pictureBoxCiftciler;
@@ -203,6 +209,6 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         private System.Windows.Forms.PictureBox pictureBoxSifreDegistir;
         private System.Windows.Forms.PictureBox pictureBoxListeter;
         private System.Windows.Forms.Label labelYear;
-        private System.Windows.Forms.PictureBox pictureBoxBackup;
+        private System.Windows.Forms.PictureBox pictureBoxTMO;
     }
 }

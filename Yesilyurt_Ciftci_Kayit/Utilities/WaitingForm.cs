@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace Yesilyurt_Ciftci_Kayit.Utilities
 {
     public partial class WaitingForm : Form
@@ -21,6 +22,7 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
         }
         private void WaitingForm_Load(object sender, EventArgs e)
         {
+
         }
     }
 }

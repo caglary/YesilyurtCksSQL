@@ -5,7 +5,17 @@
       "ProjectGuid": "3e15833e-82b1-4203-880b-7a8bbdadb211",
       "DisplayName": "Yesilyurt_Ciftci_Kayit",
       "ColorIndex": 0
+    },
+    "4b648a26-5419-4bd5-b736-b869ff2d7887": {
+      "ProjectGuid": "4b648a26-5419-4bd5-b736-b869ff2d7887",
+      "DisplayName": "DB_Control",
+      "ColorIndex": 1
+    },
+    "4682a105-f78a-4676-a9d8-0ac3bca759c1": {
+      "ProjectGuid": "4682a105-f78a-4676-a9d8-0ac3bca759c1",
+      "DisplayName": "WordTemplate",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 3
 }

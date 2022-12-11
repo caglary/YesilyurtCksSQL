@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Yesilyurt_Ciftci_Kayit.Entities
 {
     public class SertifikaliTohum
@@ -15,9 +16,17 @@ namespace Yesilyurt_Ciftci_Kayit.Entities
         public string Miktari { get; set; }
         public string BirimFiyati { get; set; }
         public string ToplamMaliyet { get; set; }
+
         public string Note { get; set; }
         public string OdemeDurumu { get; set; }
         public int KullaniciId { get; set; }
         public DateTime CreateTime { get; set; }
+
+
+
+
+
+
+
     }
 }

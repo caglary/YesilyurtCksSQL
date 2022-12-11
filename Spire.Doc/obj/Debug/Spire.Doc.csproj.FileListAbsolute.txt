@@ -1,0 +1,13 @@
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Spire.Doc\bin\Debug\Spire.Doc.exe.config
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Spire.Doc\bin\Debug\Spire.Doc.exe
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Spire.Doc\bin\Debug\Spire.Doc.pdb
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Spire.Doc\bin\Debug\Spire.Doc.dll
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Spire.Doc\bin\Debug\Spire.Pdf.dll
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Spire.Doc\bin\Debug\Microsoft.mshtml.dll
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Spire.Doc\bin\Debug\Spire.Doc.xml
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Spire.Doc\bin\Debug\Spire.Pdf.xml
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Spire.Doc\obj\Debug\Spire.Doc.csproj.AssemblyReference.cache
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Spire.Doc\obj\Debug\Spire.Doc.csproj.CoreCompileInputs.cache
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Spire.Doc\obj\Debug\Spire.Doc.csproj.CopyComplete
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Spire.Doc\obj\Debug\Spire.Doc.exe
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Spire.Doc\obj\Debug\Spire.Doc.pdb

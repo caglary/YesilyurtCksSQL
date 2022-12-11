@@ -7,28 +7,35 @@ using System.Threading.Tasks;
 using Yesilyurt_Ciftci_Kayit.Database;
 using Yesilyurt_Ciftci_Kayit.Entities;
 using Yesilyurt_Ciftci_Kayit.Entities.Tablo;
+
 namespace Yesilyurt_Ciftci_Kayit.Manager
 {
     public class UrunManager : IBaseManager<Urun>
     {
         //database class bağlı olacak..
+
         UrunDal _urunDal;
         SqlDataReader _reader;
         public UrunManager()
         {
             _urunDal = new UrunDal();
+
         }
         public int Result { get; set; }
+
         public int Add(Urun urun)
         {
             return _urunDal.Add(urun);
         }
+
         public int Delete(Urun urun)
         {
             Result = 0;
             Utilities.Question.IfYes(() => { Result = _urunDal.Delete(urun); },$"{urun.UrunAdi} adlı ürünü silmek istediğinize emin misiniz?");
             return Result;
+
         }
+
         public List<Urun> GetAll()
         {
             List<Urun> urunListe = new List<Urun>();
@@ -39,11 +46,13 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
                 {
                     urunListe.Add(new Urun()
                     {
+
                         Id = _reader.IsDBNull(0) ? 0 : _reader.GetInt32(0),
                         UrunAdi = _reader.IsDBNull(1) ? "" : _reader.GetString(1),
                         UrunCesidi = _reader.IsDBNull(2) ? "" : _reader.GetString(2),
                         KullaniciId = _reader.IsDBNull(3) ? 0 : _reader.GetInt32(3),
                         CreateTime = _reader.IsDBNull(4) ? DateTime.MinValue : _reader.GetDateTime(4),
+
                     }); ;
                 }
                 _reader.Close();
@@ -58,6 +67,7 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
             }
             return urunListe.OrderByDescending(I => I.CreateTime).ToList();
         }
+
         public List<UrunDataGrid> GetAll_UrunDataGrid()
         {
             List<UrunDataGrid> urunListe = new List<UrunDataGrid>();
@@ -69,8 +79,10 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
                     urunListe.Add(new UrunDataGrid()
                     {
                         Id = _reader.IsDBNull(0) ? 0 : _reader.GetInt32(0),
+
                         UrunAdi = _reader.IsDBNull(1) ? "" : _reader.GetString(1),
                         UrunCesidi = _reader.IsDBNull(2) ? "" : _reader.GetString(2),
+
                     }); 
                 }
                 _reader.Close();
@@ -85,9 +97,12 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
             }
             return urunListe;
         }
+
+
         public int Update(Urun urun)
         {
             return _urunDal.Update(urun);
+
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Yesilyurt_Ciftci_Kayit.Entities;
 using Yesilyurt_Ciftci_Kayit.Manager;
+
 namespace Yesilyurt_Ciftci_Kayit.Forms
 {
     public partial class SertifikaliTohumForm : Form
@@ -28,41 +29,58 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             _cksManager = new CksManager();
             _sertifikaliTohumKayit = null;
             this.Text = $"{FormAdi} Formu";
+
+
+
+
         }
+
         private void SertifikaliTohumForm_Load(object sender, EventArgs e)
         {
+
             if (_kullanici.Yetki == "Read")
             {
                 btnAdd.Enabled = false;
                 btnUpdate.Enabled = false;
                 btnDelete.Enabled = false;
             }
+
             lblCiftciIsim.Text = _ciftci.IsimSoyisim + " / " + _ciftci.MahalleKoy;
             this.Text =$"Hoşgeldin {_kullanici.KullaniciAdi} - {Utilities.ConnectionString.TeachYearFromFile()} Yılı için çalışıyorsunuz.";
+
             ComboboxFillData();
+
             RefreshList();
+
         }
+
         private void ComboboxFillData()
         {
             comboBoxAddFirma.DataSource = _firmaManager.GetAll().OrderBy(I=>I.FirmaAdi).ToList();
             comboBoxAddFirma.DisplayMember = "FirmaAdi";
             comboBoxAddFirma.ValueMember = "Id";
+
             comboBoxUpdateFirma.DataSource = _firmaManager.GetAll().OrderBy(I => I.FirmaAdi).ToList();
             comboBoxUpdateFirma.DisplayMember = "FirmaAdi";
             comboBoxUpdateFirma.ValueMember = "Id";
+
             comboBoxAddUrun.DataSource = _urunManager.GetAll().OrderBy(I => I.UrunAdi).ToList();
             comboBoxAddUrun.DisplayMember = "UrunAdi";
             comboBoxAddUrun.ValueMember = "Id";
+
             comboBoxUpdateUrun.DataSource = _urunManager.GetAll().OrderBy(I => I.UrunAdi).ToList();
             comboBoxUpdateUrun.DisplayMember = "UrunAdi";
             comboBoxUpdateUrun.ValueMember = "Id";
         }
+
         private void RefreshList()
         {
            var cks= _cksManager.GetAll().Where(I => I.CiftciId == _ciftci.Id).FirstOrDefault();
             dgwListe.DataSource = _sertifikaliTohumManager.GetAll_SertifikaliTohumDataGrid().Where(I=>I.CksId== cks.Id).ToList();
             Utilities.Datagrid.DataGridSettings(dgwListe, new string[] { "Id","CksId"});
+
         }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
            
@@ -70,6 +88,8 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             {
                 int idUrun = (int)comboBoxAddUrun.SelectedValue;
                 int idFirma = (int)comboBoxAddFirma.SelectedValue;
+
+
                 SertifikaliTohum st = new SertifikaliTohum();
                 st.CksId = _cksManager.GetAll().Where(I => I.CiftciId == _ciftci.Id).FirstOrDefault().Id;
                 st.FirmaId = Convert.ToInt32(idFirma);
@@ -87,6 +107,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 int result = _sertifikaliTohumManager.Add(st);
                 if (result == 1)
                 {
+
                     txtAddBirimFiyati.Text = "";
                     txtAddMiktari.Text = "";
                     txtAddNote.Text = "";
@@ -95,20 +116,28 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             }
             catch (Exception exception)
             {
+
                 Utilities.Mesaj.MessageBoxError(exception.Message);
             }
         }
+
         private void dgwListe_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
+
             _index = dgwListe.CurrentRow.Index;
             int id = (int)dgwListe.Rows[_index].Cells["Id"].Value;
             _sertifikaliTohumKayit = _sertifikaliTohumManager.GetAll().Where(I => I.Id == id).FirstOrDefault();
+
             if (_sertifikaliTohumKayit.OdemeDurumu == "Ödeme bekliyor") radioButtonOdemeBekliyor.Select();
             if (_sertifikaliTohumKayit.OdemeDurumu == "Ödeme yapıldı") radioButtonOdemeYapildi.Select();
             if (_sertifikaliTohumKayit.OdemeDurumu == "Ödeme yapılmadı") radioButtonOdemeYapilmadi.Select();
+
+
             GuncelleFormDoldur(_sertifikaliTohumKayit);
             GuncelleButonAyarla(_sertifikaliTohumKayit);
         }
+
         private void GuncelleButonAyarla(SertifikaliTohum sertifikaliTohum)
         {
             if (sertifikaliTohum == null)
@@ -124,6 +153,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 lblUpdateMesaj.Visible = false;
             }
         }
+
         private void GuncelleFormDoldur(SertifikaliTohum sertifikaliTohum)
         {
             comboBoxUpdateFirma.SelectedValue = sertifikaliTohum.FirmaId;
@@ -136,6 +166,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             txtUpdateMiktari.Text = sertifikaliTohum.Miktari.ToString();
             txtUpdateBirimFiyati.Text = sertifikaliTohum.BirimFiyati.ToString();
             txtUpdateNote.Text = sertifikaliTohum.Note;
+
          
             if (sertifikaliTohum.OdemeDurumu == "Ödeme Bekliyor")
             {
@@ -149,7 +180,9 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             {
                 radioButtonOdemeYapilmadi.Select();
             }
+
         }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -167,12 +200,17 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 _sertifikaliTohumKayit.ToplamMaliyet =(Convert.ToDecimal(_sertifikaliTohumKayit.Miktari) * Convert.ToDecimal(_sertifikaliTohumKayit.BirimFiyati)).ToString();
                 _sertifikaliTohumKayit.Note = txtUpdateNote.Text;
                 _sertifikaliTohumKayit.KullaniciId = _kullanici.Id;
+
+
                 if (radioButtonOdemeBekliyor.Checked) _sertifikaliTohumKayit.OdemeDurumu = "Ödeme bekliyor";
                 if (radioButtonOdemeYapildi.Checked) _sertifikaliTohumKayit.OdemeDurumu = "Ödeme yapıldı";
                 if (radioButtonOdemeYapilmadi.Checked) _sertifikaliTohumKayit.OdemeDurumu = "Ödeme yapılmadı";
+
                 int result = _sertifikaliTohumManager.Update(_sertifikaliTohumKayit);
+
                 if (result == 1)
                 {
+
                     txtUpdateDosyaNo.Text = "";
                     txtUpdateSertifikaNo.Text = "";
                     txtUpdateFaturaNo.Text = "";
@@ -183,20 +221,24 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                     
                     _sertifikaliTohumKayit = null;
                     GuncelleButonAyarla(_sertifikaliTohumKayit);
+
                     RefreshList();
                     dgwListe.Rows[_index].Selected = true;
                 }
             }
             catch (Exception exception)
             {
+
                 Utilities.Mesaj.MessageBoxError(exception.Message);
             }
         }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             int result = _sertifikaliTohumManager.Delete(_sertifikaliTohumKayit);
             if (result == 1)
             {
+
                 txtUpdateDosyaNo.Text = "";
                 txtUpdateSertifikaNo.Text = "";
                 txtUpdateFaturaNo.Text = "";
@@ -204,31 +246,40 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 txtUpdateBirimFiyati.Text = "";
                 txtUpdateNote.Text = "";
               
+
                 _sertifikaliTohumKayit = null;
                 GuncelleButonAyarla(_sertifikaliTohumKayit);
+
                 RefreshList();
             }
         }
+
         private void btnUrun_Click(object sender, EventArgs e)
         {
             Utilities.FormProperties.FormOpen("UrunForm", new UrunForm(_kullanici), this,true);
             ComboboxFillData();
+
         }
+
         private void btnFirma_Click(object sender, EventArgs e)
         {
             Utilities.FormProperties.FormOpen("FirmaForm", new FirmaForm(_kullanici), this, true);
             ComboboxFillData();
+
         }
+
         private void comboBoxAddUrun_SelectedIndexChanged(object sender, EventArgs e)
         {
             var seciliUrun=(Urun) comboBoxAddUrun.SelectedItem;
             lblAddUrunCesit.Text = seciliUrun.UrunCesidi;
         }
+
         private void comboBoxUpdateUrun_SelectedIndexChanged(object sender, EventArgs e)
         {
             var seciliUrun = (Urun)comboBoxUpdateUrun.SelectedItem;
             lblUpdateUrunCesit.Text = seciliUrun.UrunCesidi;
         }
+
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();

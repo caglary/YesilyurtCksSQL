@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+
 namespace Yesilyurt_Ciftci_Kayit.Utilities
 {
     public class FormProperties
@@ -15,12 +16,18 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
                     
                 else
                     f.Show();
+
             }
             else
             {
                 f.Focus();
+
+
             }
+
+
         }
+
         static void FromSettings(Form form, Form acildigiForm, bool mdiform = false)
         {
             //form.Size = new System.Drawing.Size(1000, 800);

@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Yesilyurt_Ciftci_Kayit.Entities.Tablo
 {
     public class CksDatagrid
@@ -13,5 +14,9 @@ namespace Yesilyurt_Ciftci_Kayit.Entities.Tablo
         public string KoyMahalle { get; set; }
         public string Note { get; set; }
         public DateTime CreateTime { get; set; }
+        public string EvrakKayitNo { get; set; }
+        public string HavaleEdilenPersonel { get; set; }
+        public string MuracaatYeri { get; set; }
+
     }
 }

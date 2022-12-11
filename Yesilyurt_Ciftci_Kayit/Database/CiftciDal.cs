@@ -1,10 +1,12 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
 using Yesilyurt_Ciftci_Kayit.Entities;
+
 namespace Yesilyurt_Ciftci_Kayit.Database
 {
     public class CiftciDal : BaseDal, IBaseDal<Ciftci>
     {
+
         public int Add(Ciftci c)
         {
             try
@@ -16,6 +18,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
                 command.Parameters.Add("@FatherName", SqlDbType.NVarChar).Value = c.BabaAdi;
                 command.Parameters.Add("@MotherName", SqlDbType.NVarChar).Value = c.AnneAdi;
                 command.Parameters.Add("@Birthday", SqlDbType.NVarChar).Value = c.DogumTarihi;
+
                 command.Parameters.Add("@Gender", SqlDbType.NVarChar).Value = c.Cinsiyet;
                 command.Parameters.Add("@MaritalStatus", SqlDbType.NVarChar).Value = c.MedeniDurum;
                 command.Parameters.Add("@MobilePhone", SqlDbType.NVarChar).Value = c.CepTelefonu;
@@ -28,9 +31,11 @@ namespace Yesilyurt_Ciftci_Kayit.Database
                 command.Parameters.Add("@KullaniciId", SqlDbType.Int).Value = c.KullaniciId;
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
+
             }
             catch (System.Exception ex)
             {
+
                 Utilities.Mesaj.MessageBoxError(ex.Message);
             }
             finally
@@ -47,11 +52,14 @@ namespace Yesilyurt_Ciftci_Kayit.Database
                 command = new SqlCommand("Delete_Ciftci", connect);
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = c.Id;
+
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
+
             }
             catch (System.Exception ex)
             {
+
                 Utilities.Mesaj.MessageBoxError(ex.Message);
             }
             finally
@@ -74,6 +82,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             BaglantiAyarla();
             return command.ExecuteReader();
         }
+
         public int Update(Ciftci c)
         {
             try
@@ -86,6 +95,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
                 command.Parameters.Add("@FatherName", SqlDbType.NVarChar).Value = c.BabaAdi;
                 command.Parameters.Add("@MotherName", SqlDbType.NVarChar).Value = c.AnneAdi;
                 command.Parameters.Add("@Birthday", SqlDbType.NVarChar).Value = c.DogumTarihi;
+
                 command.Parameters.Add("@Gender", SqlDbType.NVarChar).Value = c.Cinsiyet;
                 command.Parameters.Add("@MaritalStatus", SqlDbType.NVarChar).Value = c.MedeniDurum;
                 command.Parameters.Add("@MobilePhone", SqlDbType.NVarChar).Value = c.CepTelefonu;
@@ -98,9 +108,11 @@ namespace Yesilyurt_Ciftci_Kayit.Database
                 command.Parameters.Add("@KullaniciId", SqlDbType.Int).Value = c.KullaniciId;
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
+
             }
             catch (System.Exception ex)
             {
+
                 Utilities.Mesaj.MessageBoxError(ex.Message);
             }
             finally

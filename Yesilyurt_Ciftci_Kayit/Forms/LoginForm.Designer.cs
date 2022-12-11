@@ -7,6 +7,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -19,7 +20,9 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             }
             base.Dispose(disposing);
         }
+
         #region Windows Form Designer generated code
+
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -127,8 +130,11 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.Activated += new System.EventHandler(this.LoginForm_Activated);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
+
         #endregion
+
         private System.Windows.Forms.Button btnGiris;
         private System.Windows.Forms.TextBox txtParola;
         private System.Windows.Forms.Label label2;

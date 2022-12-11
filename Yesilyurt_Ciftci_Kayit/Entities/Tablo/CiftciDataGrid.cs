@@ -9,5 +9,7 @@
         public string BabaAdi { get; set; }
         public string AnneAdi { get; set; }
         public string MahalleKoy { get; set; }
+
+
     }
 }

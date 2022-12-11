@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using Yesilyurt_Ciftci_Kayit.Entities;
+
 namespace Yesilyurt_Ciftci_Kayit.Database
 {
     public class KullaniciDal : BaseDal, IBaseDal<Kullanici>
@@ -16,10 +17,13 @@ namespace Yesilyurt_Ciftci_Kayit.Database
                 command.Parameters.Add("@Parola", SqlDbType.NVarChar).Value = k.Parola;
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
+
             }
             catch (Exception ex)
             {
+
                 Utilities.Mesaj.MessageBoxError(ex.Message);
+
             }
             finally
             {
@@ -27,6 +31,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             }
             return result;
         }
+
         public int Delete(Kullanici k)
         {
             try
@@ -36,10 +41,13 @@ namespace Yesilyurt_Ciftci_Kayit.Database
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = k.Id;
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
+
             }
             catch (Exception ex)
             {
+
                 Utilities.Mesaj.MessageBoxError(ex.Message);
+
             }
             finally
             {
@@ -47,6 +55,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             }
             return result;
         }
+
         public SqlDataReader GetAll()
         {
             command = new SqlCommand("GetAll_Kullanici", connect);
@@ -61,6 +70,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             BaglantiAyarla();
             return command.ExecuteReader();
         }
+
         public int Update(Kullanici k)
         {
             try
@@ -71,12 +81,17 @@ namespace Yesilyurt_Ciftci_Kayit.Database
                 command.Parameters.Add("@KullaniciAdi", SqlDbType.NVarChar).Value = k.KullaniciAdi;
                 command.Parameters.Add("@Parola", SqlDbType.NVarChar).Value = k.Parola;
                 command.Parameters.Add("@Yetki", SqlDbType.NVarChar).Value = k.Yetki;
+
+
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
+
             }
             catch (Exception ex)
             {
+
                 Utilities.Mesaj.MessageBoxError(ex.Message);
+
             }
             finally
             {

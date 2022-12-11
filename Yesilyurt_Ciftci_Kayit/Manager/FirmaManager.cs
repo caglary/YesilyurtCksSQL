@@ -5,18 +5,22 @@ using System.Linq;
 using Yesilyurt_Ciftci_Kayit.Database;
 using Yesilyurt_Ciftci_Kayit.Entities;
 using Yesilyurt_Ciftci_Kayit.Entities.Tablo;
+
 namespace Yesilyurt_Ciftci_Kayit.Manager
 {
     public class FirmaManager : IBaseManager<Firma>
     {
         //database class bağlı olacak..
+
         FirmaDal _firmaDal;
         SqlDataReader _reader;
         public FirmaManager()
         {
             _firmaDal = new FirmaDal();
+
         }
         public int Result { get; set; }
+
         public int Add(Firma firma)
         {
             if (string.IsNullOrEmpty(firma.FirmaAdi) && string.IsNullOrEmpty(firma.VergiNo))
@@ -26,12 +30,15 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
             }
             return _firmaDal.Add(firma);
         }
+
         public int Delete(Firma firma)
         {
             Result = 0;
             Utilities.Question.IfYes(() => { _firmaDal.Delete(firma); },$"{firma.FirmaAdi} isimli firmayı silmek istiyor musnuz?");
             return Result; ;
+
         }
+
         public List<Firma> GetAll()
         {
             List<Firma> firmaListe = new List<Firma>();
@@ -42,12 +49,14 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
                 {
                     firmaListe.Add(new Firma()
                     {
+
                         Id = _reader.IsDBNull(0) ? 0 : _reader.GetInt32(0),
                         FirmaAdi = _reader.IsDBNull(1) ? "" : _reader.GetString(1),
                         VergiNo = _reader.IsDBNull(2) ? "" : _reader.GetString(2),
                         Note = _reader.IsDBNull(3) ? "" : _reader.GetString(3),
                         KullaniciId = _reader.IsDBNull(4) ? 0 : _reader.GetInt32(4),
                         CreateTime = _reader.IsDBNull(5) ? DateTime.MinValue : _reader.GetDateTime(5),
+
                     }); ;
                 }
                 _reader.Close();
@@ -62,6 +71,7 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
             }
             return firmaListe.OrderByDescending(I => I.CreateTime).ToList();
         }
+
         public List<FirmaDataGrid> GetAll_FirmaDataGrid()
         {
             List<FirmaDataGrid> firmaListe = new List<FirmaDataGrid>();
@@ -72,6 +82,7 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
                 {
                     firmaListe.Add(new FirmaDataGrid()
                     {
+
                         Id = _reader.IsDBNull(0) ? 0 : _reader.GetInt32(0),
                         FirmaAdi = _reader.IsDBNull(1) ? "" : _reader.GetString(1)
                     }); ;
@@ -92,6 +103,7 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
         public int Update(Firma firma)
         {
             return _firmaDal.Update(firma);
+
         }
     }
 }

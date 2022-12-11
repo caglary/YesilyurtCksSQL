@@ -1,0 +1,8 @@
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTransfer\bin\Debug\WordTransfer.exe.config
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTransfer\bin\Debug\WordTransfer.exe
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTransfer\bin\Debug\WordTransfer.pdb
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTransfer\obj\Debug\WordTransfer.csproj.AssemblyReference.cache
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTransfer\obj\Debug\WordTransfer.csproj.CoreCompileInputs.cache
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTransfer\obj\Debug\WordTransfer.exe
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTransfer\obj\Debug\WordTransfer.pdb
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\WordTransfer\obj\Debug\WordTransfer.csproj.ResolveComReference.cache

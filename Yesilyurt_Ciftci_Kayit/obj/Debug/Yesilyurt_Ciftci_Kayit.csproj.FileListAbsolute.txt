@@ -117,8 +117,58 @@ C:\Users\cagla\Documents\GitHub\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug
 C:\Users\cagla\Documents\GitHub\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.CoreCompileInputs.cache
 C:\Users\cagla\Documents\GitHub\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.exe
 C:\Users\cagla\Documents\GitHub\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.pdb
-C:\Users\cagla\Documents\GitHub\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\Newtonsoft.Json.dll
-C:\Users\cagla\Documents\GitHub\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\System.Data.SqlClient.dll
-C:\Users\cagla\Documents\GitHub\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\Newtonsoft.Json.xml
-C:\Users\cagla\Documents\GitHub\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\System.Data.SqlClient.xml
-C:\Users\cagla\Documents\GitHub\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.CopyComplete
+C:\Users\caglar.yurdakul\Desktop\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.AssemblyReference.cache
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\bin\Debug\Yesilyurt_Ciftci_Kayit.exe.config
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\bin\Debug\Yesilyurt_Ciftci_Kayit.exe
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\bin\Debug\Yesilyurt_Ciftci_Kayit.pdb
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.AssemblyReference.cache
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.ResolveComReference.cache
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.Anasayfa.resources
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.CiftcilerForm.resources
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.CksForm.resources
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.ListelerForm.resources
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.FarkOdemesiForm.resources
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.FirmaForm.resources
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.KullaniciSifreForm.resources
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.LoginForm.resources
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.SertifikaliTohumForm.resources
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.UrunForm.resources
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.YemBitkisiForm.resources
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Properties.Resources.resources
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Utilities.WaitingForm.resources
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.GenerateResource.cache
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.CoreCompileInputs.cache
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.exe
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.pdb
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.TMOForm.resources
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\bin\Debug\Newtonsoft.Json.dll
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\bin\Debug\Newtonsoft.Json.xml
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.CopyComplete
+C:\Users\cagla\Desktop\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.SuggestedBindingRedirects.cache
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\bin\Debug\Yesilyurt_Ciftci_Kayit.exe.config
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\bin\Debug\Yesilyurt_Ciftci_Kayit.exe
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\bin\Debug\Yesilyurt_Ciftci_Kayit.pdb
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\bin\Debug\Newtonsoft.Json.dll
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\bin\Debug\Newtonsoft.Json.xml
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.AssemblyReference.cache
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.SuggestedBindingRedirects.cache
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.ResolveComReference.cache
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.Anasayfa.resources
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.CiftcilerForm.resources
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.CksForm.resources
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.ListelerForm.resources
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.FarkOdemesiForm.resources
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.FirmaForm.resources
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.KullaniciSifreForm.resources
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.LoginForm.resources
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.SertifikaliTohumForm.resources
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.TMOForm.resources
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.UrunForm.resources
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.YemBitkisiForm.resources
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Properties.Resources.resources
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Utilities.WaitingForm.resources
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.GenerateResource.cache
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.CoreCompileInputs.cache
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.CopyComplete
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.exe
+F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.pdb

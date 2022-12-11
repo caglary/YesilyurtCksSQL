@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+
 namespace Yesilyurt_Ciftci_Kayit.Manager
 {
     public interface IBaseManager<T>

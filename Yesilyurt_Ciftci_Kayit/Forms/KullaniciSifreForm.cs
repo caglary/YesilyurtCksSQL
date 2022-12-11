@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using Yesilyurt_Ciftci_Kayit.Entities;
 using Yesilyurt_Ciftci_Kayit.Manager;
+
 namespace Yesilyurt_Ciftci_Kayit.Forms
 {
     public partial class KullaniciSifreForm : Form
@@ -14,15 +15,18 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             _kullanici = kullanici;
             _kullaniciManager = new KullaniciManager();
         }
+
         private void btnGeri_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
         private void KullaniciSifreForm_Load(object sender, EventArgs e)
         {
             txtKullaniciAdi.Text = _kullanici.KullaniciAdi;
             txtKullaniciAdi.Enabled = false;
         }
+
         private void btnSifreDegistir_Click(object sender, EventArgs e)
         {
             
@@ -43,6 +47,8 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 Utilities.Mesaj.MessageBoxInformation("Şifreniz değiştirildi.");
                 this.Close();
             }
+
         }
+
     }
 }
