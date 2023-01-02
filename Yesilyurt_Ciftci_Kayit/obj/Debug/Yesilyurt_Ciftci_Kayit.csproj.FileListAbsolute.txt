@@ -172,3 +172,30 @@ F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit
 F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.CopyComplete
 F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.exe
 F:\Yesilyurt ilce Tarim\programlar\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.pdb
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.AssemblyReference.cache
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.SuggestedBindingRedirects.cache
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.ResolveComReference.cache
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.Anasayfa.resources
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.CiftcilerForm.resources
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.CksForm.resources
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.ListelerForm.resources
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.FarkOdemesiForm.resources
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.FirmaForm.resources
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.KullaniciSifreForm.resources
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.LoginForm.resources
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.SertifikaliTohumForm.resources
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.TMOForm.resources
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.UrunForm.resources
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Forms.YemBitkisiForm.resources
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Properties.Resources.resources
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.Utilities.WaitingForm.resources
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.GenerateResource.cache
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.CoreCompileInputs.cache
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.exe
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.pdb
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\Yesilyurt_Ciftci_Kayit.exe.config
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\Yesilyurt_Ciftci_Kayit.exe
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\Yesilyurt_Ciftci_Kayit.pdb
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\Newtonsoft.Json.dll
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\Newtonsoft.Json.xml
+D:\GitRepository\caglary\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyurt_Ciftci_Kayit.csproj.CopyComplete

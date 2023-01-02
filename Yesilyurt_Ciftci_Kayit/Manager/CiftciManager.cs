@@ -138,7 +138,7 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
             return Ciftcilerim.ToList();
         }
 
-        internal Ciftci GetByTc(string tcNumarasi)
+        public Ciftci GetByTc(string tcNumarasi)
         {
             if (tcNumarasi.Length != 11)
             {

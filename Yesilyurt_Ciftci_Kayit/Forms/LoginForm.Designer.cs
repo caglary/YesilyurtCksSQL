@@ -59,7 +59,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.txtParola.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtParola.Name = "txtParola";
             this.txtParola.PasswordChar = '*';
-            this.txtParola.Size = new System.Drawing.Size(153, 27);
+            this.txtParola.Size = new System.Drawing.Size(153, 23);
             this.txtParola.TabIndex = 1;
             // 
             // label2
@@ -68,7 +68,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(88, 361);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 20);
+            this.label2.Size = new System.Drawing.Size(43, 15);
             this.label2.TabIndex = 8;
             this.label2.Text = "Parola:";
             // 
@@ -77,7 +77,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.txtKullaniciAdi.Location = new System.Drawing.Point(187, 316);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(153, 27);
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(153, 23);
             this.txtKullaniciAdi.TabIndex = 0;
             // 
             // label1
@@ -86,7 +86,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(88, 322);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 20);
+            this.label1.Size = new System.Drawing.Size(76, 15);
             this.label1.TabIndex = 9;
             this.label1.Text = "Kullanici Adı:";
             // 
@@ -108,7 +108,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             // LoginForm
             // 
             this.AcceptButton = this.btnGiris;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
@@ -128,6 +128,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş Ekranı";
             this.Activated += new System.EventHandler(this.LoginForm_Activated);
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

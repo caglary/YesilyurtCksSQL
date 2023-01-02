@@ -239,6 +239,17 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 HavaleEdilenPersonel = comboBoxHavaleEdilenPersonel.Text,
 
             };
+
+
+
+
+
+
+
+
+
+
+
             if (checkBoxEdevlet.Checked == true)
             {
                 cks.MuracaatYeri = "E-Devlet Üzerinden yapılan başvuru";

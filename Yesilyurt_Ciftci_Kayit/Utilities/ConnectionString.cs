@@ -10,9 +10,9 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
         {
             string machineName = Environment.MachineName;
 
-            string Lenovo2022 = @"data source=DESKTOP-HF3B47B\SQLEXPRESS; Initial Catalog=YesilyurtDb2022; Integrated security=true";
-            string Lenovo2021 = @"data source=DESKTOP-HF3B47B\SQLEXPRESS; Initial Catalog=YesilyurtDb2021; Integrated security=true";
-            string Lenovo2023 = @"data source=DESKTOP-HF3B47B\SQLEXPRESS; Initial Catalog=YesilyurtDb2023; Integrated security=true";
+            string Lenovo2022 = @"data source=DESKTOP-5QNS7U3\SQLEXPRESS; Initial Catalog=YesilyurtDb2022; Integrated security=true";
+            string Lenovo2021 = @"data source=DESKTOP-5QNS7U3\SQLEXPRESS; Initial Catalog=YesilyurtDb2021; Integrated security=true";
+            string Lenovo2023 = @"data source=DESKTOP-5QNS7U3\SQLEXPRESS; Initial Catalog=YesilyurtDb2023; Integrated security=true";
 
             string Work2022 = @"data source=M601102-0042\SQLEXPRESS; Initial Catalog=YesilyurtDb2022;User Id=sa;Password=caglar.123;Trusted_Connection=True;";
             string Work2021 = @"data source=M601102-0042\SQLEXPRESS; Initial Catalog=YesilyurtDb2021;User Id=sa;Password=caglar.123;Trusted_Connection=True;";
@@ -21,7 +21,7 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
 
             string Year = TeachYearFromFile();
 
-            if (machineName == "DESKTOP-HF3B47B")
+            if (machineName == "DESKTOP-5QNS7U3")
             {
                 //Lenovo
                 if (Year == "2021")
