@@ -14,8 +14,8 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("Add_Edevlet", connect);
-                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command = new SqlCommand("insert into Edevlet (CksId,DosyaNoEdevlet,KullaniciId) values (@CksId,@DosyaNoEdevlet,@KullaniciId)", connect);
+                
                 command.Parameters.Add("@CksId", SqlDbType.Int).Value = Entity.CksId;
                 command.Parameters.Add("@DosyaNoEdevlet", SqlDbType.NVarChar).Value = Entity.DosyaNoEdevlet;
                 
@@ -38,8 +38,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             result = 0;
             try
             {
-                command = new SqlCommand("Delete_Edevlet", connect);
-                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command = new SqlCommand("delete from Edevlet where Id=@Id", connect);
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = Entity.Id;
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
@@ -56,8 +55,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         }
         public SqlDataReader GetAll()
         {
-            command = new SqlCommand("GetAll_Edevlet", connect);
-            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command = new SqlCommand("select * from Edevlet", connect);
             BaglantiAyarla();
             return command.ExecuteReader();
         }
@@ -66,8 +64,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             try
             {
               
-                command = new SqlCommand("Update_Edevlet", connect);
-                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command = new SqlCommand("update Edevlet set DosyaNoEdevlet=@DosyaNoEdevlet,KullaniciId=@KullaniciId where Id=@Id", connect);
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = Entity.Id;
                 command.Parameters.Add("@DosyaNoEdevlet", SqlDbType.NVarChar).Value = Entity.DosyaNoEdevlet;
                 command.Parameters.Add("@KullaniciId", SqlDbType.Int).Value = Entity.KullaniciId;

@@ -10,8 +10,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("Add_SertifikaliTohum", connect);
-                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command = new SqlCommand("insert into SertifikaliTohum (CksId,FirmaId,UrunId,DosyaNo,MuracaatTarihi,SertifikaNo,FaturaNo,FaturaTarihi,Miktari,BirimFiyati,ToplamMaliyet,Note,KullaniciId) values (@CksId,@FirmaId,@UrunId,@DosyaNo,@MuracaatTarihi,@SertifikaNo,@FaturaNo,@FaturaTarihi,@Miktari,@BirimFiyati,@ToplamMaliyet,@Note,@KullaniciId) ", connect);
                 command.Parameters.Add("@CksId", SqlDbType.Int).Value = sertifikaliTohum.CksId;
                 command.Parameters.Add("@FirmaId", SqlDbType.Int).Value = sertifikaliTohum.FirmaId;
                 command.Parameters.Add("@UrunId", SqlDbType.Int).Value = sertifikaliTohum.UrunId;
@@ -43,8 +42,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("Delete_SertifikaliTohum", connect);
-                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command = new SqlCommand("delete from SertifikaliTohum where Id=@Id ", connect);
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = sertifikaliTohum.Id;
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
@@ -61,22 +59,19 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         }
         public SqlDataReader GetAll()
         {
-            command = new SqlCommand("GetAll_SertifikaliTohum", connect);
-            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command = new SqlCommand("select * from SertifikaliTohum", connect);
             BaglantiAyarla();
             return command.ExecuteReader();
         }
         public SqlDataReader GetAll_SertifikaliTohumDataGrid()
         {
-            command = new SqlCommand("GetAll_SertifikaliTohumDataGrid", connect);
-            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command = new SqlCommand("select  SertifikaliTohum.Id, SertifikaliTohum.DosyaNo,Firma.FirmaAdi, Urun.UrunAdi, SertifikaliTohum.Miktari, SertifikaliTohum.Note, SertifikaliTohum.OdemeDurumu, Cks.Id as cksId from SertifikaliTohum inner join cks on SertifikaliTohum.CksId=cks.Id inner join Firma on SertifikaliTohum.FirmaId=Firma.Id inner join Urun on SertifikaliTohum.UrunId=Urun.Id", connect);
             BaglantiAyarla();
             return command.ExecuteReader();
         }
         public SqlDataReader GetAll_SertifikaliTohum_ForPrint()
         {
-            command = new SqlCommand("GetAll_SertifikaliTohum_ForPrint", connect);
-            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command = new SqlCommand("select Ciftciler.TcKimlikNo, Ciftciler.NameSurname, SertifikaliTohum.DosyaNo, SertifikaliTohum.MuracaatTarihi, Firma.FirmaAdi, Urun.UrunAdi, SertifikaliTohum.Miktari SertifikaliTohum.OdemeDurumu from SertifikaliTohum inner join cks on cks.Id=SertifikaliTohum.CksId inner join firma on Firma.Id=SertifikaliTohum.FirmaId inner join Urun on Urun.Id=SertifikaliTohum.UrunId inner join Ciftciler on Ciftciler.Id=cks.CiftciId order by SertifikaliTohum.DosyaNo desc", connect);
             BaglantiAyarla();
             return command.ExecuteReader();
         }
@@ -84,8 +79,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("Update_SertifikaliTohum", connect);
-                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command = new SqlCommand("update SertifikaliTohum set CksId=@CksId,FirmaId=@FirmaId,UrunId=@UrunId,DosyaNo=@DosyaNo,MuracaatTarihi=@MuracaatTarihi,SertifikaNo=@SertifikaNo, FaturaNo=@FaturaNo,FaturaTarihi=@FaturaTarihi,Miktari=@Miktari,BirimFiyati=@BirimFiyati,ToplamMaliyet=@ToplamMaliyet,Note=@Note,KullaniciId=@KullaniciId, OdemeDurumu=@OdemeDurumu where Id=@Id", connect);
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = sertifikaliTohum.Id;
                 command.Parameters.Add("@CksId", SqlDbType.Int).Value = sertifikaliTohum.CksId;
                 command.Parameters.Add("@FirmaId", SqlDbType.Int).Value = sertifikaliTohum.FirmaId;

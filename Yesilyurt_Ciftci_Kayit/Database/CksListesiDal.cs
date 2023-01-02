@@ -10,11 +10,9 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             result = 0;
             try
             {
-                command = new SqlCommand("Add_Cks", connect);
-                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command = new SqlCommand("insert into Cks (CiftciId,DosyaNo,Note,KullaniciId,CreateTime,EvrakKayitNo,HavaleEdilenPersonel,MuracaatYeri) values (@CiftciId,@DosyaNo,@Note,@KullaniciId,@CreateTime,@EvrakKayitNo,@HavaleEdilenPersonel,@MuracaatYeri)", connect);
                 command.Parameters.Add("@CiftciId", SqlDbType.Int).Value = cksKaydi.CiftciId;
                 command.Parameters.Add("@DosyaNo", SqlDbType.Int).Value = cksKaydi.DosyaNo;
-                //command.Parameters.Add("@KoyMahalle", SqlDbType.NVarChar).Value = cksKaydi.KoyMahalle;
                 command.Parameters.Add("@Note", SqlDbType.NVarChar).Value = cksKaydi.Note;
                 command.Parameters.Add("@KullaniciId", SqlDbType.Int).Value = cksKaydi.KullaniciId;
                 command.Parameters.Add("@CreateTime", SqlDbType.DateTime).Value = cksKaydi.CreateTime;
@@ -39,8 +37,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             result = 0;
             try
             {
-                command = new SqlCommand("Delete_Cks", connect);
-                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command = new SqlCommand("delete from Cks where Id=@Id", connect);
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = cksKaydi.Id;
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
@@ -57,22 +54,20 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         }
         public SqlDataReader GetAll()
         {
-            command = new SqlCommand("GetAll_Cks", connect);
-            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command = new SqlCommand("select *from Cks", connect);
+           
             BaglantiAyarla();
             return command.ExecuteReader();
         }
         public SqlDataReader GetAll_CksDataGrid()
         {
-            command = new SqlCommand("GetAll_CksDataGrid", connect);
-            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command = new SqlCommand("select cks.Id, cks.DosyaNo,Ciftciler.TcKimlikNo, Ciftciler.NameSurname,Ciftciler.FatherName, Ciftciler.MobilePhone,Ciftciler.HomePhone,Ciftciler.Village,cks.Note,Cks.CreateTime,cks.EvrakKayitNo,cks.HavaleEdilenPersonel,cks.MuracaatYeri from Cks full  join Ciftciler on cks.CiftciId=Ciftciler.Id where Cks.DosyaNo is not null", connect);
             BaglantiAyarla();
             return command.ExecuteReader();
         }
         public SqlDataReader GetAll_CKS_ForPrint()
         {
-            command = new SqlCommand("GetAll_CKS_ForPrint", connect);
-            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command = new SqlCommand("select  cks.DosyaNo,Ciftciler.TcKimlikNo, Ciftciler.NameSurname,Ciftciler.FatherName,Ciftciler.MobilePhone,Ciftciler.HomePhone,Ciftciler.Village,Cks.CreateTime,cks.EvrakKayitNo,cks.HavaleEdilenPersonel,cks.MuracaatYeri from Cks inner  join Ciftciler on cks.CiftciId=Ciftciler.Id order by cks.DosyaNo desc", connect);
             BaglantiAyarla();
             return command.ExecuteReader();
         }
@@ -81,12 +76,12 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             result = 0;
             try
             {
-                command = new SqlCommand("Update_Cks", connect);
-                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command = new SqlCommand("update Cks set CiftciId=@CiftciId,DosyaNo=@DosyaNo,Note=@Note, KullaniciId=@KullaniciId,CreateTime=@CreateTime,EvrakKayitNo=@EvrakKayitNo,HavaleEdilenPersonel=@HavaleEdilenPersonel, MuracaatYeri=@MuracaatYeri where Id=@Id", connect);
+                
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = cksKaydi.Id;
                 command.Parameters.Add("@CiftciId", SqlDbType.NVarChar).Value = cksKaydi.CiftciId;
                 command.Parameters.Add("@DosyaNo", SqlDbType.NVarChar).Value = cksKaydi.DosyaNo;
-                //command.Parameters.Add("@KoyMahalle", SqlDbType.NVarChar).Value = cksKaydi.KoyMahalle;
+             
                 command.Parameters.Add("@Note", SqlDbType.NVarChar).Value = cksKaydi.Note;
                 command.Parameters.Add("@KullaniciId", SqlDbType.NVarChar).Value = cksKaydi.KullaniciId;
                 command.Parameters.Add("@CreateTime", SqlDbType.DateTime).Value = cksKaydi.CreateTime;
@@ -98,13 +93,13 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             }
             catch (System.Exception ex)
             {
-                if (ex.HResult.ToString()== "-2146232060")
+                if (ex.HResult.ToString() == "-2146232060")
                 {
                     Utilities.Mesaj.MessageBoxError("Dosya Numarasına ait kayıt mevcuttur.Dosya No değiştirin ve tekrar deneyin.");
                     return 0;
                 }
                 Utilities.Mesaj.MessageBoxError(ex.Message);
-                
+
             }
             finally
             {

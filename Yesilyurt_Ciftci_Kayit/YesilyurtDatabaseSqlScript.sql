@@ -885,5 +885,5 @@ go
 --getall with procedure 
 create procedure GetAll_Edevlet
 as
-select *from Edevlet
+select * from Edevlet
 go

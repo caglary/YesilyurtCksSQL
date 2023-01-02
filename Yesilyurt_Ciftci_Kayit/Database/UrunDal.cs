@@ -10,8 +10,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("Add_Urun", connect);
-                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command = new SqlCommand("insert into Urun (UrunAdi,UrunCesidi,KullaniciId) values (@UrunAdi,@UrunCesidi,@KullaniciId) ", connect);
                 command.Parameters.Add("@UrunAdi", SqlDbType.NVarChar).Value = urun.UrunAdi;
                 command.Parameters.Add("@UrunCesidi", SqlDbType.NVarChar).Value = urun.@UrunCesidi;
                 command.Parameters.Add("@KullaniciId", SqlDbType.Int).Value = urun.KullaniciId;
@@ -32,8 +31,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("Delete_Urun", connect);
-                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command = new SqlCommand("delete from Urun where Id=@Id ", connect);
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = urun.Id;
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
@@ -50,15 +48,13 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         }
         public SqlDataReader GetAll()
         {
-            command = new SqlCommand("GetAll_Urun", connect);
-            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command = new SqlCommand("select * from Urun", connect);
             BaglantiAyarla();
             return command.ExecuteReader();
         }
         public SqlDataReader GetAll_UrunDataGrid()
         {
-            command = new SqlCommand("GetAll_UrunDataGrid", connect);
-            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command = new SqlCommand("select Urun.Id, UrunAdi,UrunCesidi from Urun", connect);
             BaglantiAyarla();
             return command.ExecuteReader();
         }
@@ -66,8 +62,7 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("Update_Urun", connect);
-                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command = new SqlCommand("update Urun set UrunAdi=@UrunAdi, UrunCesidi=@UrunCesidi, KullaniciId=@KullaniciId where Id=@Id", connect);
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = urun.Id;
                 command.Parameters.Add("@UrunAdi", SqlDbType.NVarChar).Value = urun.UrunAdi;
                 command.Parameters.Add("@UrunCesidi", SqlDbType.NVarChar).Value = urun.UrunCesidi;
