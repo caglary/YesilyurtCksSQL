@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Yesilyurt_Ciftci_Kayit.Entities;
 using Yesilyurt_Ciftci_Kayit.Manager;
-
 namespace Yesilyurt_Ciftci_Kayit.Forms
 {
     public partial class TMOForm : Form
@@ -18,14 +17,10 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         CiftciManager _ciftciManager;
         UrunManager _urunManager;
         FirmaManager _firmaManager;
-
         //silme işlemi yaparken gerekli
         int silinecekKayitId;
-
         //datagrid her tıklandığında kayıt tutulsun
         TMO _tmoKayit;
-
-
         public TMOForm(Kullanici kullanici)
         {
             InitializeComponent();
@@ -38,10 +33,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             _urunManager = new UrunManager();
             _firmaManager = new FirmaManager();
             _tmoKayit = new TMO();
-
-
         }
-
         private void TMOForm_Load(object sender, EventArgs e)
         {
             this.Text = $"Hoşgeldin {_kullanici.KullaniciAdi}";
@@ -50,7 +42,6 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             btnArpa.Enabled = false;
             btnBugday.Enabled = false;
         }
-
         List<Entities.PrintTablo.TMOListPrint> AllList()
         {
             //Tüm Liste
@@ -67,16 +58,13 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             {
                 dataGridView1.DataSource = AllListByCksId(_cks.Id);
                 DataGridColumnsVisibleSetting();
-
             }
             else
             {
                 dataGridView1.DataSource = AllList();
                 DataGridColumnsVisibleSetting();
-
             }
         }
-
         private void DataGridColumnsVisibleSetting()
         {
             dataGridView1.Columns["Id"].Visible = false;
@@ -93,13 +81,10 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             dataGridView1.Columns["Not"].DisplayIndex = 10;
             dataGridView1.Columns["EvrakKayitNo"].DisplayIndex = 11;
             dataGridView1.Columns["Donem"].DisplayIndex = 12;
-
             groupBox3.Text = $" Toplam {_tmoManager.GetAll().Count()} adet fatura mevcuttur.";
             var kisiSayisi= _tmoManager.GetAll_TMOKayitlar_ForPrint().GroupBy(I => I.TcKimlikNo).Count();
             lblKisiSayisi.Text = $"Toplam Kişi Sayısı: {kisiSayisi}";
-
         }
-
         TMO CreateEntityAdd(int urunId, int firmaId)
         {
             bool kaydet = false;
@@ -113,14 +98,11 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             {
                 hangiDonem = "Normal Dönem";
                 kaydet = true;
-
             }
             else
             {
                 Utilities.Mesaj.MessageBoxWarning("Bir icmal dönemi seçiniz.");
                 kaydet = false;
-
-
             }
             //entity oluştururken id tanımlaması yapmıyoruz.
             TMO kayit = new TMO()
@@ -137,29 +119,20 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 EvrakKayitTarihi = dateTimePickerEvrakKayitTarihiAdd.Value,
                 FirmaId = firmaId,
                 Donem = hangiDonem
-
-
-
-
             };
             if (kaydet)
             {
                 return kayit;
-
             }
             else
             {
                 return null;
             }
         }
-
         void Kaydet(string urunAdi)
         {
-
-
             try
             {
-
             first:
                 var urun = _urunManager.GetAll().Where(I => I.UrunAdi == urunAdi && I.UrunCesidi == "Bilinmiyor").FirstOrDefault();
                 var firma = _firmaManager.GetAll().Where(I => I.FirmaAdi == "TMO").FirstOrDefault();
@@ -167,7 +140,6 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 {
                     Urun yeniUrun = new Urun() { CreateTime = DateTime.Now, KullaniciId = _kullanici.Id, UrunAdi = urunAdi, UrunCesidi = "Bilinmiyor" };
                     _urunManager.Add(yeniUrun);
-
                     goto first;
                 }
                 if (firma == null)
@@ -176,7 +148,6 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                     _firmaManager.Add(yeniFirma);
                     goto first;
                 }
-
                 var kayit = CreateEntityAdd(urun.Id, firma.Id);
                 if (kayit!=null)
                 {
@@ -184,8 +155,6 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                     DataGridViewYinele();
                 }
                 
-
-
             }
             catch (Exception ex)
             {
@@ -197,57 +166,39 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 {
                     Utilities.Mesaj.MessageBoxError(ex.Message);
                 }
-
             }
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
             if (!string.IsNullOrEmpty(txtTcKimlikNo.Text) && txtTcKimlikNo.Text.Length == 11)
             {
                 //ciftci cks kaydını getireceğiz.
                 _cks = _cksManager.GetByTc(txtTcKimlikNo.Text);
-
                 //çifçinin çks si yoksa işlem sonlanacak. ekrana mesaj verilecek.
                 if (_cks == null)
                 {
                     Utilities.Mesaj.MessageBoxInformation($"{txtTcKimlikNo.Text} T.C. Kimlik nolu çiftçinin çks kaydı yoktur.");
-
                     lblCiftciBilgi.Text = $"T.C. Kimlik numarası ile çiftçi arayınız.";
-
                     DataGridViewYinele();
                     return;
                 }
                 //çks kaydı varsa
                 //çiftçi bilgilerini al
                 _ciftci = _ciftciManager.GetByTc(txtTcKimlikNo.Text);
-
-
-
                 lblCiftciBilgi.Text = $"{_ciftci.IsimSoyisim}  -  Dosya No: {_cks.DosyaNo}";
-
-
                 DataGridViewYinele();
-
-
-
             }
             btnArpa.Enabled = true;
             btnBugday.Enabled = true;
-
-
         }
-
         private void btnArpa_Click(object sender, EventArgs e)
         {
             Kaydet("Arpa");
         }
-
         private void btnBugday_Click(object sender, EventArgs e)
         {
             Kaydet("Buğday");
         }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try
@@ -268,13 +219,9 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             }
             catch (Exception ex)
             {
-
                 Utilities.Mesaj.MessageBoxError(ex.Message);
             }
-
-
         }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = dataGridView1.CurrentRow.Index;
@@ -282,10 +229,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             _tmoKayit = _tmoManager.GetAll().Where(I => I.Id == silinecekKayitId).FirstOrDefault();
             UpdateFormFill(_tmoKayit);
             _tmoManager.ClipboardTC();
-
-
         }
-
         private void UpdateFormFill(TMO kayit)
         {
             txtUpdateFaturaNo.Text = kayit.FaturaNo;
@@ -294,9 +238,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             txtUpdateEvrakKayitNo.Text = kayit.EvrakKayitNo;
             dateTimePickerEvrakKayitTarihiUpdate.Value = Convert.ToDateTime(kayit.EvrakKayitTarihi);
             txtNoteUpdate.Text = kayit.Note;
-
         }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (_cks == null || _cks.Id == 0) return;
@@ -306,14 +248,10 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             _tmoKayit.EvrakKayitNo = txtUpdateEvrakKayitNo.Text;
             _tmoKayit.EvrakKayitTarihi = dateTimePickerEvrakKayitTarihiUpdate.Value;
             _tmoKayit.Note = txtNoteUpdate.Text;
-
             _tmoManager.Update(_tmoKayit);
             DataGridViewYinele();
-
             DataGridSelectRowById(_tmoKayit.Id);
-
         }
-
         private void DataGridSelectRowById(int id)
         {
             //güncellenen kaydı yinelenen listede işaretlemek için
@@ -324,7 +262,6 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 {
                     row.Selected = true;
                 }
-
             }
         }
         void ToExcel()
@@ -335,17 +272,13 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             Utilities.Mesaj.MessageBoxInformation("Kayıt işleminiz başladı.İşlem tamamlandığında bilgilendirileceksiniz.");
             Task.Run(() => { Utilities.ExcelExport.GenerateExcel(datatable, path); });
         }
-
         private void btnToExcel_Click(object sender, EventArgs e)
         {
             ToExcel();
         }
-
         private void btnTumListe_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = _tmoManager.GetAll_TMOKayitlar_ForPrint();
         }
     }
-
-
 }

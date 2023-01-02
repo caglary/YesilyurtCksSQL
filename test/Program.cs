@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Yesilyurt_Ciftci_Kayit.Entities;
 using Yesilyurt_Ciftci_Kayit.Manager;
 
@@ -177,14 +174,7 @@ namespace test
                 var result=_cksmanager.Add(cks);
                 Console.WriteLine(result);
                 Console.WriteLine(result);
-
-
-
             }
-
-
-
-
 
         }
 

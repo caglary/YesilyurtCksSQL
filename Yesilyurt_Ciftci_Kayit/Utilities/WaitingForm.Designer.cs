@@ -1,5 +1,4 @@
-﻿
-namespace Yesilyurt_Ciftci_Kayit.Utilities
+﻿namespace Yesilyurt_Ciftci_Kayit.Utilities
 {
     partial class WaitingForm
     {
@@ -7,7 +6,6 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -20,9 +18,7 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
             }
             base.Dispose(disposing);
         }
-
         #region Windows Form Designer generated code
-
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -62,11 +58,8 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
             this.Load += new System.EventHandler(this.WaitingForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
-
         #endregion
-
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ProgressBar progressBar1;
     }

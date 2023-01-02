@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace Yesilyurt_Ciftci_Kayit.Entities
 {
     public class Kullanici

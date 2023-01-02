@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace Yesilyurt_Ciftci_Kayit.Entities.PrintTablo
 {
     public class FarkOdemesiPrint
@@ -12,7 +11,5 @@ namespace Yesilyurt_Ciftci_Kayit.Entities.PrintTablo
         public string UrunAdi { get; set; }
         public string Miktari { get; set; }
         public string OdemeDurumu { get; set; }
-
-
     }
 }

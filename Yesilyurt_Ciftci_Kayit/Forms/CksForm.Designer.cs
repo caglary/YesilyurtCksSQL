@@ -1,5 +1,4 @@
-﻿
-namespace Yesilyurt_Ciftci_Kayit.Forms
+﻿namespace Yesilyurt_Ciftci_Kayit.Forms
 {
     partial class CksForm
     {
@@ -7,7 +6,6 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -20,9 +18,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             }
             base.Dispose(disposing);
         }
-
         #region Windows Form Designer generated code
-
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -38,6 +34,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.txtUpdateHomePhone = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBoxUpdateEDevlet = new System.Windows.Forms.CheckBox();
             this.comboBoxUpdateHavaleEdilenPersonel = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -57,6 +54,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.tabPageEkle = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxEdevlet = new System.Windows.Forms.CheckBox();
             this.dtpAddCreateTime = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCiftciGetir = new System.Windows.Forms.Button();
@@ -87,8 +85,8 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.checkBoxEdevlet = new System.Windows.Forms.CheckBox();
-            this.checkBoxUpdateEDevlet = new System.Windows.Forms.CheckBox();
+            this.txtEdevlet = new System.Windows.Forms.TextBox();
+            this.txtEdevletUpdate = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.tabPageEkle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -173,6 +171,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.groupBox2.Controls.Add(this.txtEdevletUpdate);
             this.groupBox2.Controls.Add(this.checkBoxUpdateEDevlet);
             this.groupBox2.Controls.Add(this.comboBoxUpdateHavaleEdilenPersonel);
             this.groupBox2.Controls.Add(this.label12);
@@ -204,6 +203,17 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.groupBox2.Size = new System.Drawing.Size(679, 350);
             this.groupBox2.TabIndex = 41;
             this.groupBox2.TabStop = false;
+            // 
+            // checkBoxUpdateEDevlet
+            // 
+            this.checkBoxUpdateEDevlet.AutoSize = true;
+            this.checkBoxUpdateEDevlet.Location = new System.Drawing.Point(283, 281);
+            this.checkBoxUpdateEDevlet.Name = "checkBoxUpdateEDevlet";
+            this.checkBoxUpdateEDevlet.Size = new System.Drawing.Size(84, 20);
+            this.checkBoxUpdateEDevlet.TabIndex = 84;
+            this.checkBoxUpdateEDevlet.Text = "E-Devlet ";
+            this.checkBoxUpdateEDevlet.UseVisualStyleBackColor = true;
+            this.checkBoxUpdateEDevlet.CheckedChanged += new System.EventHandler(this.checkBoxUpdateEDevlet_CheckedChanged);
             // 
             // comboBoxUpdateHavaleEdilenPersonel
             // 
@@ -376,6 +386,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.groupBox1.Controls.Add(this.txtEdevlet);
             this.groupBox1.Controls.Add(this.checkBoxEdevlet);
             this.groupBox1.Controls.Add(this.dtpAddCreateTime);
             this.groupBox1.Controls.Add(this.label4);
@@ -405,6 +416,17 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.groupBox1.Size = new System.Drawing.Size(710, 350);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
+            // 
+            // checkBoxEdevlet
+            // 
+            this.checkBoxEdevlet.AutoSize = true;
+            this.checkBoxEdevlet.Location = new System.Drawing.Point(254, 283);
+            this.checkBoxEdevlet.Name = "checkBoxEdevlet";
+            this.checkBoxEdevlet.Size = new System.Drawing.Size(249, 20);
+            this.checkBoxEdevlet.TabIndex = 76;
+            this.checkBoxEdevlet.Text = "E-Devlet üzerinden yapılan başvuru   ";
+            this.checkBoxEdevlet.UseVisualStyleBackColor = true;
+            this.checkBoxEdevlet.CheckedChanged += new System.EventHandler(this.checkBoxEdevlet_CheckedChanged);
             // 
             // dtpAddCreateTime
             // 
@@ -713,25 +735,19 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.panel2.Size = new System.Drawing.Size(1239, 347);
             this.panel2.TabIndex = 2;
             // 
-            // checkBoxEdevlet
+            // txtEdevlet
             // 
-            this.checkBoxEdevlet.AutoSize = true;
-            this.checkBoxEdevlet.Location = new System.Drawing.Point(149, 12);
-            this.checkBoxEdevlet.Name = "checkBoxEdevlet";
-            this.checkBoxEdevlet.Size = new System.Drawing.Size(240, 20);
-            this.checkBoxEdevlet.TabIndex = 76;
-            this.checkBoxEdevlet.Text = "E-Devlet üzerinden yapılan başvuru";
-            this.checkBoxEdevlet.UseVisualStyleBackColor = true;
+            this.txtEdevlet.Location = new System.Drawing.Point(496, 281);
+            this.txtEdevlet.Name = "txtEdevlet";
+            this.txtEdevlet.Size = new System.Drawing.Size(100, 22);
+            this.txtEdevlet.TabIndex = 77;
             // 
-            // checkBoxUpdateEDevlet
+            // txtEdevletUpdate
             // 
-            this.checkBoxUpdateEDevlet.AutoSize = true;
-            this.checkBoxUpdateEDevlet.Location = new System.Drawing.Point(181, 12);
-            this.checkBoxUpdateEDevlet.Name = "checkBoxUpdateEDevlet";
-            this.checkBoxUpdateEDevlet.Size = new System.Drawing.Size(240, 20);
-            this.checkBoxUpdateEDevlet.TabIndex = 84;
-            this.checkBoxUpdateEDevlet.Text = "E-Devlet üzerinden yapılan başvuru";
-            this.checkBoxUpdateEDevlet.UseVisualStyleBackColor = true;
+            this.txtEdevletUpdate.Location = new System.Drawing.Point(373, 279);
+            this.txtEdevletUpdate.Name = "txtEdevletUpdate";
+            this.txtEdevletUpdate.Size = new System.Drawing.Size(100, 22);
+            this.txtEdevletUpdate.TabIndex = 85;
             // 
             // CksForm
             // 
@@ -759,9 +775,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             this.tabControl1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
-
         #endregion
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
@@ -822,5 +836,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         private System.Windows.Forms.TextBox txtEvrakKayitNo;
         private System.Windows.Forms.CheckBox checkBoxUpdateEDevlet;
         private System.Windows.Forms.CheckBox checkBoxEdevlet;
+        private System.Windows.Forms.TextBox txtEdevlet;
+        private System.Windows.Forms.TextBox txtEdevletUpdate;
     }
 }

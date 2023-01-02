@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace Yesilyurt_Ciftci_Kayit.Entities
 {
     public class YemBitkisi
@@ -21,6 +20,5 @@ namespace Yesilyurt_Ciftci_Kayit.Entities
         public string KontrolDurumu { get; set; }
         public int KullaniciId { get; set; }
         public DateTime CreateTime { get; set; }
-
     }
 }

@@ -1,14 +1,11 @@
 -- create database
 create database YesilyurtDb2023
 go
-
 use  YesilyurtDb2023
 go
-
 -------------------------------------------------------------------
 --*****************   KULLANICI   *********************************
 -------------------------------------------------------------------
-
 create table Kullanici
 (
 Id int IDENTITY(1,1) primary key,
@@ -19,7 +16,6 @@ CreateTime datetime default GETDATE(),
 )
 go
 --Yetki Read / Write
-
 CREATE PROCEDURE Add_Kullanici 
 (
 @KullaniciAdi nvarchar(50), 
@@ -28,10 +24,8 @@ CREATE PROCEDURE Add_Kullanici
 as
 begin 
 insert into Kullanici (KullaniciAdi,Parola) values (@KullaniciAdi,@Parola)
-
 end
 go
-
 create procedure Delete_Kullanici
 (
 @Id int
@@ -41,7 +35,6 @@ begin
 delete from Kullanici where Id=@Id
 end
 go
-
 create procedure Update_Kullanici
 (
 @Id int,
@@ -53,24 +46,18 @@ as
 begin
 update Kullanici set KullaniciAdi=@KullaniciAdi, Parola=@Parola , Yetki=@Yetki where Id=@Id
 end
-
 go
 exec Add_Kullanici @KullaniciAdi='Admin', @Parola='1'
 go
-
 insert into Kullanici (KullaniciAdi,Parola,Yetki) values ('caglar','4817','Write')
-
 go
-
 create procedure GetAll_Kullanici
 as 
 select * from Kullanici
 go
-
 -------------------------------------------------------------------
 --*****************   CÝFTCÝLER   *********************************
 -------------------------------------------------------------------
-
 Create Table Ciftciler
 (
 Id int IDENTITY(1,1) primary key,
@@ -79,7 +66,6 @@ NameSurname nvarchar(50) not null,
 FatherName nvarchar(20) not null,
 MotherName nvarchar(20) not null,
 Birthday nvarchar(20)  default 'bilinmiyor' ,
-
 Gender nvarchar(20)  default 'bilinmiyor',
 MaritalStatus nvarchar(20) default 'bilinmiyor',
 MobilePhone nvarchar(20) default '000-0000',
@@ -92,10 +78,8 @@ Note varchar(250),
 KullaniciId int not null,
 CreateTime datetime default GETDATE(),
 FOREIGN KEY (KullaniciId) REFERENCES Kullanici(Id)
-
 )
 go
-
 create procedure Add_Ciftci
 (
 @TcKimlikNo nvarchar(11),
@@ -121,9 +105,7 @@ begin
  @FatherName,@MotherName,@Birthday,@Gender,@MaritalStatus,@MobilePhone,@HomePhone,@Email,@City,
  @Town,@Village,@Note,@KullaniciId)
 end
-
 go
-
 create procedure Delete_Ciftci
 (
 @Id int
@@ -132,9 +114,7 @@ as
 begin
 delete from Ciftciler where Id=@Id
 end
-
 go
-
 create procedure Update_Ciftci
 (
 @Id int,
@@ -143,7 +123,6 @@ create procedure Update_Ciftci
 @FatherName nvarchar(20),
 @MotherName nvarchar(20),
 @Birthday nvarchar(20) ,
-
 @Gender nvarchar(20),
 @MaritalStatus nvarchar(20),
 @MobilePhone nvarchar(20),
@@ -161,21 +140,14 @@ begin
  Birthday=@Birthday,Gender=@Gender,MaritalStatus=@MaritalStatus,MobilePhone=@MobilePhone,
  HomePhone=@HomePhone,Email=@Email,City=@City,Town=@Town,Village=@Village,Note=@Note,KullaniciId=@KullaniciId where Id=@Id
 end
-
-
-
 go
-
 create procedure GetAll_Ciftciler
 as 
 select * from Ciftciler
-
 go
-
 -------------------------------------------------------------------
 --*****************   CKS LÝSTESÝ   *********************************
 -------------------------------------------------------------------
-
 create table Cks
 (
 Id int identity(1,1) primary key ,
@@ -208,7 +180,6 @@ begin
 	(@CiftciId,@DosyaNo,@Note,@KullaniciId,@CreateTime,@EvrakKayitNo,@HavaleEdilenPersonel,@MuracaatYeri)
 end
 go
-
 create procedure Delete_Cks
 (
 @Id int
@@ -218,7 +189,6 @@ begin
 	delete from Cks where Id=@Id
 end
 go
-
 create procedure Update_Cks
 (
 @Id int,
@@ -242,13 +212,9 @@ create procedure GetAll_Cks
 as
 select *from Cks
 go
-
-
-
 -------------------------------------------------------------------
 --*****************   FÝRMA   *********************************
 -------------------------------------------------------------------
-
 create table Firma
 (
 Id int IDENTITY(1,1) primary key,
@@ -258,7 +224,6 @@ Note nvarchar(250),
 KullaniciId int not null,
 CreateTime datetime default GETDATE(),
 FOREIGN KEY (KullaniciId) REFERENCES Kullanici(Id)
-
 )
 go
 create procedure Add_Firma
@@ -273,7 +238,6 @@ begin
 	insert into Firma (FirmaAdi,VergiNo,Note,KullaniciId) values (@FirmaAdi,@VergiNo,@Note,@KullaniciId)
 end
 go
-
 create procedure Delete_Firma
 (@Id int)
 as 
@@ -281,7 +245,6 @@ begin
 delete from Firma where Id=@Id
 end
 go
-
 create procedure Update_Firma
 (
 @Id int,
@@ -295,17 +258,13 @@ begin
 update Firma set FirmaAdi=@FirmaAdi,VergiNo=@VergiNo,Note=@Note,KullaniciId=@KullaniciId where Id=@Id
 end
 go
-
 create procedure GetAll_Firma
 as
 select * from Firma
-
 go
-
 -------------------------------------------------------------------
 --*****************   ÜRÜN   *********************************
 -------------------------------------------------------------------
-
 create table Urun
 (
 Id int IDENTITY(1,1) primary key,
@@ -314,7 +273,6 @@ UrunCesidi nvarchar(100),
 KullaniciId int not null,
 CreateTime datetime default GETDATE(),
 FOREIGN KEY (KullaniciId) REFERENCES Kullanici(Id)
-
 )
 go
 create procedure Add_Urun
@@ -328,7 +286,6 @@ begin
 insert into Urun (UrunAdi,UrunCesidi,KullaniciId) values (@UrunAdi,@UrunCesidi,@KullaniciId)
 end
 go
-
 create procedure Delete_Urun
 (@Id int)
 as
@@ -336,7 +293,6 @@ begin
 delete from Urun where Id=@Id
 end
 go
-
 create procedure Update_Urun
 (
 @Id int,
@@ -348,15 +304,11 @@ as
 begin
 update Urun set UrunAdi=@UrunAdi, UrunCesidi=@UrunCesidi, KullaniciId=@KullaniciId where Id=@Id
 end
-
 go
-
 create procedure GetAll_Urun
 as
 select * from Urun
 go
-
-
 -------------------------------------------------------------------
 --*****************   YEM BÝTKÝLERÝ   *********************************
 -------------------------------------------------------------------
@@ -379,14 +331,11 @@ Note nvarchar(250),
 KontrolDurumu nvarchar(30) default 'Kontrol Edilmedi',
 KullaniciId int not null,
 CreateTime datetime default GETDATE()
-
 FOREIGN KEY (CksId) REFERENCES Cks(Id),
 FOREIGN KEY (UrunId) REFERENCES Urun(Id),
 FOREIGN KEY (KullaniciId) REFERENCES Kullanici(Id)
-
 )
 go
-
 create procedure Add_YemBitkileri
 (
 @CksId int,
@@ -404,7 +353,6 @@ create procedure Add_YemBitkileri
 @Note nvarchar(250),
 @KontrolDurumu nvarchar(30) ,
 @KullaniciId int
-
 )
 as 
 begin 
@@ -415,12 +363,10 @@ KontrolTarihi,KontrolEdenler,Note,KontrolDurumu,KullaniciId) values
 @TespitEdilenAlan,@KontrolTarihi,@KontrolEdenler,@Note,@KontrolDurumu,@KullaniciId)
 end
 go
-
 create procedure Delete_YemBitkileri @Id int
 as 
 delete from YemBitkileri where Id=@Id
 go
-
 create procedure Update_YemBitkileri
 (
 @Id int,
@@ -448,16 +394,13 @@ MuracaatAlani=@MuracaatAlani,TespitEdilenAlan=@TespitEdilenAlan,KontrolTarihi=@K
 KullaniciId=@KullaniciId, @CreateTime=CreateTime where Id=@Id
 end
 go
-
 create procedure GetAll_YemBitkileri
 as
 select * from YemBitkileri
 go
-
 -------------------------------------------------------------------
 --*****************   SERTÝFÝKALI TOHUM   *********************************
 -------------------------------------------------------------------
-
 create table SertifikaliTohum
 (
 Id int IDENTITY(1,1) primary key,
@@ -476,12 +419,10 @@ Note nvarchar(250),
 OdemeDurumu nvarchar(30) default 'Ödeme Bekliyor',
 KullaniciId int not null,
 CreateTime datetime default GETDATE(),
-
 FOREIGN KEY (CksId) REFERENCES Cks(Id),
 FOREIGN KEY (FirmaId) REFERENCES Firma(Id),
 FOREIGN KEY (UrunId) REFERENCES Urun(Id),
 FOREIGN KEY (KullaniciId) REFERENCES Kullanici(Id)
-
 )
 go
 create procedure Add_SertifikaliTohum
@@ -506,12 +447,10 @@ insert into SertifikaliTohum (CksId,FirmaId,UrunId,DosyaNo,MuracaatTarihi,Sertif
 values (@CksId,@FirmaId,@UrunId,@DosyaNo,@MuracaatTarihi,@SertifikaNo,@FaturaNo,@FaturaTarihi,@Miktari,@BirimFiyati,@ToplamMaliyet,@Note,@KullaniciId)
 end
 go
-
 create procedure Delete_SertifikaliTohum @Id int
 as
 delete from SertifikaliTohum where Id=@Id
 go
-
 create procedure Update_SertifikaliTohum
 (
 @Id int,
@@ -545,19 +484,10 @@ go
 -------------------------------------------------------------------
 --*****************   SERTÝFÝKALI FÝDAN KULLANIM DESTEÐÝ   *********************************
 -------------------------------------------------------------------
-
-
-
 -- will code
-
-
-
-
-
 -------------------------------------------------------------------
 --*****************   FARK ÖDEMESÝ   *********************************
 -------------------------------------------------------------------
-
 create table FarkOdemesi
 (
 Id int IDENTITY(1,1) primary key,
@@ -575,14 +505,12 @@ Note nvarchar(250),
 OdemeDurumu nvarchar(30) default 'Ödeme Bekliyor',
 KullaniciId int not null,
 CreateTime datetime default GETDATE(),
-
 FOREIGN KEY (CksId) REFERENCES Cks(Id),
 FOREIGN KEY (FirmaId) REFERENCES Firma(Id),
 FOREIGN KEY (UrunId) REFERENCES Urun(Id),
 FOREIGN KEY (KullaniciId) REFERENCES Kullanici(Id)
 )
 go
-
 create procedure Add_FarkOdemesi
 (
 @CksId int,
@@ -604,12 +532,10 @@ begin
  (@CksId,@FirmaId,@UrunId,@DosyaNo,@MuracaatTarihi,@FaturaNo,@FaturaTarihi,@Miktari,@BirimFiyati,@ToplamMaliyet,@Note,@KullaniciId)
 end
 go
-
 create procedure Delete_FarkOdemesi @Id int
 as
 delete from FarkOdemesi where Id=@Id
 go
-
 create procedure Update_FarkOdemesi
 (
 @Id int,
@@ -634,24 +560,18 @@ FaturaTarihi=@FaturaTarihi,Miktari=@Miktari,BirimFiyati=@BirimFiyati,ToplamMaliy
 where Id=@Id
 end
 go
-
 create procedure GetAll_FarkOdemesi
 as
 select * from FarkOdemesi
 go
-
 -------------------------------------------------------------------
 --*****************   TABLOLAR   *********************************
 -------------------------------------------------------------------
-
 --CÝFTCÝLER
-
 create procedure GetAll_CiftciDataGrid as
 select Ciftciler.Id, TcKimlikNo,NameSurname,FatherName,MotherName,Village from Ciftciler
 go
-
 --CKS LÝSTESÝ
-
 create procedure GetAll_CksDataGrid
 as
 select cks.Id, cks.DosyaNo,Ciftciler.TcKimlikNo, Ciftciler.NameSurname,Ciftciler.FatherName,
@@ -660,9 +580,7 @@ from Cks full  join Ciftciler
 on cks.CiftciId=Ciftciler.Id
 where Cks.DosyaNo is not null
 go
-
 --YEM BÝTKÝSÝ
-
 create procedure GetAll_YemBitkisiDataGrid
 as
 select 
@@ -683,9 +601,7 @@ on YemBitkileri.CksId=cks.Id
 inner join Urun
 on YemBitkileri.UrunId=Urun.Id
 go
-
 --FARK ÖDEMESÝ
-
 create procedure GetAll_FarkOdemesiDataGrid
 as
 select 
@@ -700,12 +616,8 @@ from FarkOdemesi
 inner join cks on FarkOdemesi.CksId=cks.Id
 inner join Firma on FarkOdemesi.FirmaId=Firma.Id
 inner join Urun on FarkOdemesi.UrunId=Urun.Id
-
-
 go
-
 --SERTÝFÝKALI TOHUM
-
 create procedure GetAll_SertifikaliTohumDataGrid
 as
 select 
@@ -723,36 +635,27 @@ inner join Firma on SertifikaliTohum.FirmaId=Firma.Id
 inner join Urun on SertifikaliTohum.UrunId=Urun.Id
  --Id ve CiftciId gerekli kolonlar...
  --id ile kayýta CiftciId ile ciftciye ait kayýda ulaþýlýyor.
-
 go
 --KULLANICI
-
 create procedure GetAll_KullaniciDataGrid
 as
 select Kullanici.Id,
 KullaniciAdi from Kullanici
-
 go
-
 --FÝRMA
-
 create procedure GetAll_FirmaDataGrid
 as
 select Firma.Id, FirmaAdi from Firma
 go
-
 --ÜRÜN 
 create procedure GetAll_UrunDataGrid
 as
 select Urun.Id, UrunAdi,UrunCesidi from Urun
 go
-
 ---------------------------------------------
 ---          TABLE FOR PRÝNT        ---------
 ---------------------------------------------
-
 -- YEM BÝTKÝLERÝ FOR PRÝNT
-
 create procedure GetAll_YemBitkileri_ForPrint
 as
 SELECT 
@@ -773,9 +676,7 @@ inner join Ciftciler on Cks.CiftciId=Ciftciler.Id
 inner join Urun on YemBitkileri.UrunId=Urun.Id
 order by YemBitkileri.DosyaNo desc
 go
-
 -- Fark Odemesi FOR PRÝNT
-
 create procedure GetAll_FarkOdemesi_ForPrint
 as
 select 
@@ -794,9 +695,7 @@ inner join Ciftciler on Ciftciler.Id=cks.CiftciId
 inner join Urun on Urun.Id=fark.UrunId
 order by fark.DosyaNo desc
 go
-
 -- Sertifikalý Tohum FOR PRÝNT
-
 create procedure GetAll_SertifikaliTohum_ForPrint
 as
 select
@@ -815,9 +714,7 @@ inner join Urun on Urun.Id=SertifikaliTohum.UrunId
 inner join Ciftciler on Ciftciler.Id=cks.CiftciId
 order by SertifikaliTohum.DosyaNo desc
 go
-
 --  CKS Listesi FOR PRÝNT
-
 create procedure GetAll_CKS_ForPrint
 as
 select  cks.DosyaNo,Ciftciler.TcKimlikNo, Ciftciler.NameSurname,Ciftciler.FatherName,
@@ -826,42 +723,32 @@ from Cks inner  join Ciftciler
 on cks.CiftciId=Ciftciler.Id
 order by cks.DosyaNo desc
 go
-
 ---------------------------------------------
 ---          TMOKayitlar        ---------
 ---------------------------------------------
 --Create Table
-
 create Table TMOKayitlar
 (
 Id int IDENTITY(1,1) primary key,
 CksId int not null,
-
 --Tmo kayýt tutarken dilekçe numarasý evrak kayýt numarasý olarak girilecek.
 EvrakKayitNo nvarchar(50) not null,
 EvrakKayitTarihi datetime not null,
 Note nvarchar(250),
-
 FirmaId int not null,
 FaturaNo nvarchar(50) not null,
 FaturaTarihi datetime not null,
 ProductId int not null,
 Amount nvarchar(50) not null,
-
-
 KullaniciId int not null,
 CreateTime datetime default GETDATE(),
 Donem nvarchar(20) not null,
-
 FOREIGN KEY (CksId) REFERENCES Cks(Id),
 FOREIGN KEY (FirmaId) REFERENCES Firma(Id),
 FOREIGN KEY (ProductId) REFERENCES Urun(Id),
 FOREIGN KEY (KullaniciId) REFERENCES Kullanici(Id)
-
 )
-
 go
-
 ---- Add Entity with Procedure for TMO Kayýt 
 create procedure Add_TMO_Kayit
 (
@@ -884,7 +771,6 @@ begin
 	values (@CksId,@EvrakKayitNo,@EvrakKayitTarihi,@Note,@FirmaId,@FaturaNo,@FaturaTarihi,@ProductId,@Amount,@KullaniciId,@CreateTime,@Donem)
 end
 go
-
 ---- Delete Entity with Procedure for TMO Kayýt 
 create procedure Delete_TMO_Kayit
 (
@@ -895,7 +781,6 @@ begin
 	delete from TMOKayitlar where Id=@Id
 end
 go
-
 ---- Update Entity with Procedure for TMO Kayýt 
 create procedure Update_TMO_Kayit
 (
@@ -904,14 +789,11 @@ create procedure Update_TMO_Kayit
 @EvrakKayitNo nvarchar(50),
 @EvrakKayitTarihi datetime,
 @Note nvarchar(250),
-
 @FirmaId int,
 @FaturaNo nvarchar(50) ,
 @FaturaTarihi datetime ,
 @ProductId int ,
 @Amount nvarchar(50),
-
-
 @KullaniciId int ,
 @CreateTime datetime,
 @Donem nvarchar(20)
@@ -923,14 +805,11 @@ begin
 	Donem=@Donem where Id=@Id
 end
 go
-
 ----Get All Entity with Procedure for TMO Kayýt 
 create procedure GetAll_TMO_Kayit
 as
 select * from TMOKayitlar
 go
-
-
 ---Print GetAll for Excel
 create procedure GetAll_TMOKayitlar_ForPrint
 as
@@ -949,12 +828,62 @@ TMOKayitlar.Note as [Not],
 TMOKayitlar.EvrakKayitNo as [Evrak Kayýt No],
 Cks.Id as [cksId],
 TMOKayitlar.Donem
-
 from TMOKayitlar
 inner join Cks on Cks.Id=TMOKayitlar.CksId
 inner join Ciftciler on Ciftciler.Id=Cks.CiftciId
 inner join Urun on Urun.Id=TMOKayitlar.ProductId
 order by cks.DosyaNo desc
-
-
-
+---------------------------------------------
+---          Edevlet                ---------
+---------------------------------------------
+--create table
+create table Edevlet
+(
+Id int identity(1,1) primary key ,
+CksId int ,
+DosyaNoEdevlet nvarchar(15) unique,
+KullaniciId int not null,
+CreateTime datetime default GETDATE()
+FOREIGN KEY (CksId) REFERENCES Cks(Id),
+)
+go
+--add with procedure
+create procedure Add_Edevlet
+(
+@CksId int ,
+@DosyaNoEdevlet nvarchar(15) ,
+@KullaniciId int 
+)
+as 
+begin
+	insert into Edevlet (CksId,DosyaNoEdevlet,KullaniciId) values 
+	(@CksId,@DosyaNoEdevlet,@KullaniciId)
+end
+go
+--delete with procedure
+create procedure Delete_Edevlet
+(
+@Id int
+)
+as
+begin
+	delete from Edevlet where Id=@Id
+end
+go
+--update with procedure
+create procedure Update_Edevlet
+(
+@Id int,
+@DosyaNoEdevlet nvarchar(15) ,
+@KullaniciId int
+)
+as
+begin
+	update Edevlet set DosyaNoEdevlet=@DosyaNoEdevlet,KullaniciId=@KullaniciId where Id=@Id
+end
+go
+--getall with procedure 
+create procedure GetAll_Edevlet
+as
+select *from Edevlet
+go

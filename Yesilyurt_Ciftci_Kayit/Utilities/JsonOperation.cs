@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
-
 namespace Yesilyurt_Ciftci_Kayit.Utilities
 {
     public static class JsonOperation
@@ -12,7 +11,6 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
         public static List<T> JsonDeserialize<T>(string seralized)
         {
             return JsonConvert.DeserializeObject<List<T>>(seralized);
-
         }
     }
 }

@@ -1,6 +1,4 @@
 ﻿using System;
-
-
 namespace Yesilyurt_Ciftci_Kayit.Entities.PrintTablo
 {
     public class CksListesiPrint
@@ -17,8 +15,5 @@ namespace Yesilyurt_Ciftci_Kayit.Entities.PrintTablo
         public string EvrakKayitNo { get; set; }
         public string HavaleEdilenPersonel { get; set; }
         public string MuracaatYeri { get; set; }
-
-
-
     }
 }

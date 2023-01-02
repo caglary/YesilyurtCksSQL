@@ -1,5 +1,4 @@
 ﻿using System.Data.SqlClient;
-
 namespace Yesilyurt_Ciftci_Kayit.Database
 {
     public class BaseDal
@@ -12,8 +11,6 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             connect = new SqlConnection();
             connect.ConnectionString = Utilities.ConnectionString.Get();
-
-
         }
         public void BaglantiAyarla()
         {

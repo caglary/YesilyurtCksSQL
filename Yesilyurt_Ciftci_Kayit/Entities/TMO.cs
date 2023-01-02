@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace Yesilyurt_Ciftci_Kayit.Entities
 {
     public class TMO
@@ -18,7 +17,6 @@ namespace Yesilyurt_Ciftci_Kayit.Entities
         public DateTime FaturaTarihi { get; set; }
         public int ProductId { get; set; }
         public string Amount { get; set; }
-
         public int KullaniciId { get; set; }
         public DateTime CreateTime { get; set; }
         public string Donem { get; set; }

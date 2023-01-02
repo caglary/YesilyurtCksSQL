@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using Yesilyurt_Ciftci_Kayit.Forms;
-
 namespace Yesilyurt_Ciftci_Kayit
 {
     static class Program
@@ -15,8 +14,6 @@ namespace Yesilyurt_Ciftci_Kayit
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());
-
-
         }
     }
 }

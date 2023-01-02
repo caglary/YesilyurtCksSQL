@@ -7,7 +7,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
 namespace Yesilyurt_Ciftci_Kayit.Properties {
     using System;
     

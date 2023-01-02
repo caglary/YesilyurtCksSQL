@@ -2,7 +2,6 @@
 using System.Data;
 using System.Data.SqlClient;
 using Yesilyurt_Ciftci_Kayit.Entities;
-
 namespace Yesilyurt_Ciftci_Kayit.Database
 {
     public class UrunDal : BaseDal, IBaseDal<Urun>
@@ -16,14 +15,11 @@ namespace Yesilyurt_Ciftci_Kayit.Database
                 command.Parameters.Add("@UrunAdi", SqlDbType.NVarChar).Value = urun.UrunAdi;
                 command.Parameters.Add("@UrunCesidi", SqlDbType.NVarChar).Value = urun.@UrunCesidi;
                 command.Parameters.Add("@KullaniciId", SqlDbType.Int).Value = urun.KullaniciId;
-
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
-
             }
             catch (System.Exception ex)
             {
-
                 Utilities.Mesaj.MessageBoxError(ex.Message);
             }
             finally
@@ -32,7 +28,6 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             }
             return result;
         }
-
         public int Delete(Urun urun)
         {
             try
@@ -40,14 +35,11 @@ namespace Yesilyurt_Ciftci_Kayit.Database
                 command = new SqlCommand("Delete_Urun", connect);
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = urun.Id;
-
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
-
             }
             catch (System.Exception ex)
             {
-
                 Utilities.Mesaj.MessageBoxError(ex.Message);
             }
             finally
@@ -56,7 +48,6 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             }
             return result;
         }
-
         public SqlDataReader GetAll()
         {
             command = new SqlCommand("GetAll_Urun", connect);
@@ -71,7 +62,6 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             BaglantiAyarla();
             return command.ExecuteReader();
         }
-
         public int Update(Urun urun)
         {
             try
@@ -82,14 +72,11 @@ namespace Yesilyurt_Ciftci_Kayit.Database
                 command.Parameters.Add("@UrunAdi", SqlDbType.NVarChar).Value = urun.UrunAdi;
                 command.Parameters.Add("@UrunCesidi", SqlDbType.NVarChar).Value = urun.UrunCesidi;
                 command.Parameters.Add("@KullaniciId", SqlDbType.Int).Value = urun.KullaniciId;
-
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
-
             }
             catch (System.Exception ex)
             {
-
                 Utilities.Mesaj.MessageBoxError(ex.Message);
             }
             finally

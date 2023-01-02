@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using Yesilyurt_Ciftci_Kayit.Entities;
-
 namespace Yesilyurt_Ciftci_Kayit.Manager
 {
     public class LoginManager
@@ -33,7 +32,6 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
             return true;
             
         }
-
         public Kullanici GetKullanici(Kullanici k)
         {
             return kullaniciManager.GetAll().Where(I => I.KullaniciAdi.ToLower() == k.KullaniciAdi.ToLower()).FirstOrDefault();
