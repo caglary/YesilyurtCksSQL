@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Yesilyurt_Ciftci_Kayit.Database;
 using Yesilyurt_Ciftci_Kayit.Entities;
 using Yesilyurt_Ciftci_Kayit.Manager;
 
@@ -146,7 +147,8 @@ namespace test
 
 
             };
-            CksManager _cksmanager = new CksManager();
+            CksListesiDal cksListesiDal=new CksListesiDal();
+            CksManager cksManager=new CksManager();
 
             foreach (var item in list)
             {
@@ -162,16 +164,21 @@ namespace test
                 Cks cks = new Cks()
                 {
                     CiftciId = _ciftci.Id,
-                    DosyaNo = _cksmanager.DosyaNoFactory(),
+                    DosyaNo = cksManager.DosyaNoFactory(),
                     CreateTime = Convert.ToDateTime(item.tarih),
                     KullaniciId = 1,
                     Note = "",
                     EvrakKayitNo = "",
                     HavaleEdilenPersonel = "",
-
+                    MuracaatYeri = "E-Devlet Üzerinden yapılan başvuru",
                 };
-                cks.MuracaatYeri = "E-Devlet Üzerinden yapılan başvuru";
-                var result=_cksmanager.Add(cks);
+                Edevlet edevlet = new Edevlet()
+                {
+                    DosyaNoEdevlet = item.dilekceno,
+                    KullaniciId = 1,
+                    
+                };
+                var result = cksManager.Add(cks,edevlet);
                 Console.WriteLine(result);
                 Console.WriteLine(result);
             }
