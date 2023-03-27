@@ -10,7 +10,8 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("insert into YemBitkileri (CksId,UrunId,DosyaNo,MuracaatTarihi,EkilisYili,AraziMahalle,Ada,Parsel,MuracaatAlani,TespitEdilenAlan, KontrolTarihi,KontrolEdenler,Note,KontrolDurumu,KullaniciId) values (@CksId,@UrunId,@DosyaNo,@MuracaatTarihi,@EkilisYili,@AraziMahalle,@Ada,@Parsel,@MuracaatAlani,@TespitEdilenAlan,@KontrolTarihi,@KontrolEdenler,@Note,@KontrolDurumu,@KullaniciId)", connect);
+                command = new SqlCommand("Add_YemBitkileri", connect);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("@CksId", SqlDbType.Int).Value = yemBitkisi.CksId;
                 command.Parameters.Add("@UrunId", SqlDbType.Int).Value = yemBitkisi.UrunId;
                 command.Parameters.Add("@DosyaNo", SqlDbType.Int).Value = yemBitkisi.DosyaNo;
@@ -43,7 +44,8 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("delete from YemBitkileri where Id=@Id", connect);
+                command = new SqlCommand("Delete_YemBitkileri", connect);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = yemBitkisi.Id;
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
@@ -60,19 +62,22 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         }
         public SqlDataReader GetAll()
         {
-            command = new SqlCommand("select * from YemBitkileri", connect);
+            command = new SqlCommand("GetAll_YemBitkileri", connect);
+            command.CommandType = System.Data.CommandType.StoredProcedure;
             BaglantiAyarla();
             return command.ExecuteReader();
         }
         public SqlDataReader GetAll_YemBitkisiDataGrid()
         {
-            command = new SqlCommand("select  YemBitkileri.Id, YemBitkileri.DosyaNo, Urun.UrunAdi, YemBitkileri.EkilisYili, YemBitkileri.AraziMahalle, YemBitkileri.Ada, YemBitkileri.Parsel, YemBitkileri.MuracaatAlani, YemBitkileri.MuracaatTarihi, YemBitkileri.CksId, YemBitkileri.KontrolDurumu, YemBitkileri.TespitEdilenAlan from YemBitkileri inner join Cks  on YemBitkileri.CksId=cks.Id inner join Urun on YemBitkileri.UrunId=Urun.Id", connect);
+            command = new SqlCommand("GetAll_YemBitkisiDataGrid", connect);
+            command.CommandType = System.Data.CommandType.StoredProcedure;
             BaglantiAyarla();
             return command.ExecuteReader();
         }
         public SqlDataReader GetAll_YemBitkileri_ForPrint()
         {
-            command = new SqlCommand("SELECT  YemBitkileri.DosyaNo as [Dosya No], Ciftciler.TcKimlikNo as TcNo, ciftciler.NameSurname as [İsim Soyisim], YemBitkileri.MuracaatTarihi as [Başvuru Tarih] , YemBitkileri.AraziMahalle as [Köy/Mahalle], Urun.UrunAdi as [Ürün], YemBitkileri.Ada, YemBitkileri.Parsel, YemBitkileri.MuracaatAlani as [Başvuru Alan], YemBitkileri.KontrolDurumu as [Kontrol Durumu], YemBitkileri.TespitEdilenAlan as [Tespit Edilen Alan] FROM YemBitkileri inner join Cks on YemBitkileri.CksId=Cks.Id inner join Ciftciler on Cks.CiftciId=Ciftciler.Id inner join Urun on YemBitkileri.UrunId=Urun.Id order by YemBitkileri.DosyaNo desc", connect);
+            command = new SqlCommand("GetAll_YemBitkileri_ForPrint", connect);
+            command.CommandType = System.Data.CommandType.StoredProcedure;
             BaglantiAyarla();
             return command.ExecuteReader();
         }
@@ -80,7 +85,8 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("update YemBitkileri set CksId=@CksId, UrunId=@UrunId,DosyaNo=@DosyaNo,MuracaatTarihi=@MuracaatTarihi,EkilisYili=@EkilisYili,AraziMahalle=@AraziMahalle,Ada=@Ada,Parsel=@Parsel,MuracaatAlani=@MuracaatAlani,TespitEdilenAlan=@TespitEdilenAlan,KontrolTarihi=@KontrolTarihi,KontrolEdenler=@KontrolEdenler,Note=@Note,KontrolDurumu=@KontrolDurumu,KullaniciId=@KullaniciId, @CreateTime=CreateTime where Id=@Id ", connect);
+                command = new SqlCommand("Update_YemBitkileri", connect);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = yemBitkisi.Id;
                 command.Parameters.Add("@CksId", SqlDbType.Int).Value = yemBitkisi.CksId;
                 command.Parameters.Add("@UrunId", SqlDbType.Int).Value = yemBitkisi.UrunId;

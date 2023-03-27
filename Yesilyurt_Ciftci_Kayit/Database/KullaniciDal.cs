@@ -10,7 +10,8 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("insert into Kullanici (KullaniciAdi,Parola) values (@KullaniciAdi,@Parola) ", connect);
+                command = new SqlCommand("Add_Kullanici", connect);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("@KullaniciAdi", SqlDbType.NVarChar).Value = k.KullaniciAdi;
                 command.Parameters.Add("@Parola", SqlDbType.NVarChar).Value = k.Parola;
                 BaglantiAyarla();
@@ -30,7 +31,8 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("delete from Kullanici where Id=@Id ", connect);
+                command = new SqlCommand("Delete_Kullanici", connect);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = k.Id;
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
@@ -47,14 +49,15 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         }
         public SqlDataReader GetAll()
         {
-            command = new SqlCommand("select * from Kullanici", connect);
-            
+            command = new SqlCommand("GetAll_Kullanici", connect);
+            command.CommandType = System.Data.CommandType.StoredProcedure;
             BaglantiAyarla();
             return command.ExecuteReader();
         }
         public SqlDataReader GetAll_KullaniciDataGrid()
         {
-            command = new SqlCommand("select Kullanici.Id,KullaniciAdi from Kullanici", connect);
+            command = new SqlCommand("GetAll_KullaniciDataGrid", connect);
+            command.CommandType = System.Data.CommandType.StoredProcedure;
             BaglantiAyarla();
             return command.ExecuteReader();
         }
@@ -62,7 +65,8 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("update Kullanici set KullaniciAdi=@KullaniciAdi, Parola=@Parola , Yetki=@Yetki where Id=@Id ", connect);
+                command = new SqlCommand("Update_Kullanici", connect);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = k.Id;
                 command.Parameters.Add("@KullaniciAdi", SqlDbType.NVarChar).Value = k.KullaniciAdi;
                 command.Parameters.Add("@Parola", SqlDbType.NVarChar).Value = k.Parola;

@@ -108,9 +108,7 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
                         IsimSoyisim = _reader.IsDBNull(2) ? "" : _reader.GetString(2),
                         BabaAdi = _reader.IsDBNull(3) ? "" : _reader.GetString(3),
                         AnneAdi = _reader.IsDBNull(4) ? "" : _reader.GetString(4),
-                        MahalleKoy = _reader.IsDBNull(5) ? "" : _reader.GetString(5),
-                        CreateTime= _reader.IsDBNull(6) ? "" : _reader.GetDateTime(6).ToString()
-
+                        MahalleKoy = _reader.IsDBNull(5) ? "" : _reader.GetString(5)
                     });
                 }
                 _reader.Close();
@@ -125,7 +123,7 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
             }
             return Ciftcilerim.ToList();
         }
-        public Ciftci GetByTc(string tcNumarasi)
+        internal Ciftci GetByTc(string tcNumarasi)
         {
             if (tcNumarasi.Length != 11)
             {

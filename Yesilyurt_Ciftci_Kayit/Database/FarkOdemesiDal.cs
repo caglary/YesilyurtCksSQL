@@ -9,7 +9,8 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("insert into FarkOdemesi (CksId,FirmaId,UrunId,DosyaNo,MuracaatTarihi,FaturaNo,FaturaTarihi,Miktari,BirimFiyati,ToplamMaliyet,Note,KullaniciId) values(@CksId,@FirmaId,@UrunId,@DosyaNo,@MuracaatTarihi,@FaturaNo,@FaturaTarihi,@Miktari,@BirimFiyati,@ToplamMaliyet,@Note,@KullaniciId)", connect);
+                command = new SqlCommand("Add_FarkOdemesi", connect);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("@CksId", SqlDbType.Int).Value = farkOdemesi.CksId;
                 command.Parameters.Add("@FirmaId", SqlDbType.Int).Value = farkOdemesi.FirmaId;
                 command.Parameters.Add("@UrunId", SqlDbType.Int).Value = farkOdemesi.UrunId;
@@ -39,8 +40,8 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("delete from FarkOdemesi where Id=@Id", connect);
-               
+                command = new SqlCommand("Delete_FarkOdemesi", connect);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = farkOdemesi.Id;
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
@@ -57,19 +58,22 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         }
         public SqlDataReader GetAll()
         {
-            command = new SqlCommand("select * from FarkOdemesi", connect);
+            command = new SqlCommand("GetAll_FarkOdemesi", connect);
+            command.CommandType = System.Data.CommandType.StoredProcedure;
             BaglantiAyarla();
             return command.ExecuteReader();
         }
         public SqlDataReader GetAll_FarkOdemesiDataGrid()
         {
-            command = new SqlCommand("select FarkOdemesi.Id,FarkOdemesi.DosyaNo,Firma.FirmaAdi,Urun.UrunAdi,FarkOdemesi.Miktari,FarkOdemesi.Note,FarkOdemesi.OdemeDurumu from FarkOdemesi inner join cks on FarkOdemesi.CksId=cks.Id inner join Firma on FarkOdemesi.FirmaId=Firma.Id inner join Urun on FarkOdemesi.UrunId=Urun.Id", connect);
+            command = new SqlCommand("GetAll_FarkOdemesiDataGrid", connect);
+            command.CommandType = System.Data.CommandType.StoredProcedure;
             BaglantiAyarla();
             return command.ExecuteReader();
         }
         public SqlDataReader GetAll_FarkOdemesi_ForPrint()
         {
-            command = new SqlCommand("select  Ciftciler.TcKimlikNo, Ciftciler.NameSurname, fark.DosyaNo, fark.MuracaatTarihi, firma.FirmaAdi, Urun.UrunAdi, fark.Miktari, fark.OdemeDurumu from FarkOdemesi as fark inner join cks on fark.CksId=cks.Id inner join Firma on firma.Id=fark.FirmaId inner join Ciftciler on Ciftciler.Id=cks.CiftciId inner join Urun on Urun.Id=fark.UrunId order by fark.DosyaNo desc", connect);
+            command = new SqlCommand("GetAll_FarkOdemesi_ForPrint", connect);
+            command.CommandType = System.Data.CommandType.StoredProcedure;
             BaglantiAyarla();
             return command.ExecuteReader();
         }
@@ -77,7 +81,8 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("update FarkOdemesi set CksId=@CksId,FirmaId=@FirmaId,UrunId=@UrunId,DosyaNo=@DosyaNo,MuracaatTarihi=@MuracaatTarihi,FaturaNo=@FaturaNo,FaturaTarihi=@FaturaTarihi,Miktari=@Miktari,BirimFiyati=@BirimFiyati,ToplamMaliyet=@ToplamMaliyet,Note=@Note,OdemeDurumu=@OdemeDurumu,KullaniciId=@KullaniciId  where Id=@Id", connect);
+                command = new SqlCommand("Update_FarkOdemesi", connect);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = farkOdemesi.Id;
                 command.Parameters.Add("@CksId", SqlDbType.Int).Value = farkOdemesi.CksId;
                 command.Parameters.Add("@FirmaId", SqlDbType.Int).Value = farkOdemesi.FirmaId;

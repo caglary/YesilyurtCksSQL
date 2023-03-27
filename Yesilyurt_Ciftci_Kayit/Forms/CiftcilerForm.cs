@@ -1,5 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Yesilyurt_Ciftci_Kayit.Entities;
 using Yesilyurt_Ciftci_Kayit.Manager;
@@ -104,16 +110,6 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             txtTown.Text = "";
             comboBoxVillage.Text = "";
             txtNote.Text = "";
-
-            comboBoxGender.DataSource = Utilities.RequiredLists.GenderList();
-            comboBoxMaritalStatus.DataSource = Utilities.RequiredLists.MaritalStatusList();
-            comboBoxVillage.DataSource = Utilities.RequiredLists.VillageNameList();
-            comboBoxUpdateGender.DataSource = Utilities.RequiredLists.GenderList();
-            comboBoxUpdateMaritalStatus.DataSource = Utilities.RequiredLists.MaritalStatusList();
-            comboBoxUpdateVillage.DataSource = Utilities.RequiredLists.VillageNameList();
-            DataGridYinele();
-            txtCity.Text = "TOKAT";
-            txtTown.Text = "YEŞİLYURT";
         }
         private void PersonToFormForUpdate(Ciftci person)
         {

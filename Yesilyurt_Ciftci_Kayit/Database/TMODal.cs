@@ -9,7 +9,8 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("insert into TMOKayitlar (CksId,EvrakKayitNo,EvrakKayitTarihi,Note,FirmaId,FaturaNo,FaturaTarihi,ProductId,Amount,KullaniciId,CreateTime,Donem) values (@CksId,@EvrakKayitNo,@EvrakKayitTarihi,@Note,@FirmaId,@FaturaNo,@FaturaTarihi,@ProductId,@Amount,@KullaniciId,@CreateTime,@Donem) ", connect);
+                command = new SqlCommand("Add_TMO_Kayit", connect);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("@CksId", SqlDbType.Int).Value = Entity.CksId;
                 command.Parameters.Add("@EvrakKayitNo", SqlDbType.NVarChar).Value = Entity.EvrakKayitNo;
                 command.Parameters.Add("@EvrakKayitTarihi", SqlDbType.DateTime).Value = Entity.EvrakKayitTarihi;
@@ -39,7 +40,8 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("delete from TMOKayitlar where Id=@Id", connect);
+                command = new SqlCommand("Delete_TMO_Kayit", connect);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = Entity.Id;
                 BaglantiAyarla();
                 result = command.ExecuteNonQuery();
@@ -56,13 +58,15 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         }
         public SqlDataReader GetAll()
         {
-            command = new SqlCommand("select * from TMOKayitlar", connect);
+            command = new SqlCommand("GetAll_TMO_Kayit", connect);
+            command.CommandType = System.Data.CommandType.StoredProcedure;
             BaglantiAyarla();
             return command.ExecuteReader();
         }
         public SqlDataReader GetAll_TMOKayitlar_ForPrint()
         {
-            command = new SqlCommand("select TMOKayitlar.Id, Cks.DosyaNo as [ÇKS Dosya No], Ciftciler.TcKimlikNo  Ciftciler.NameSurname as [İsim Soyisim], Ciftciler.Village as [Mahalle/Köy], Ciftciler.MobilePhone as [Cep Telefonu], TMOKayitlar.FaturaNo as [Fatura No], TMOKayitlar.FaturaTarihi as [Fatura Tarihi], Urun.UrunAdi as [Ürün], TMOKayitlar.Amount as [Miktar (kg)], TMOKayitlar.Note as [Not],  TMOKayitlar.EvrakKayitNo as [Evrak Kayıt No], Cks.Id as [cksId], TMOKayitlar.Donem from TMOKayitlar  inner join Cks on Cks.Id=TMOKayitlar.CksId inner join Ciftciler on Ciftciler.Id=Cks.CiftciId inner join Urun on Urun.Id=TMOKayitlar.ProductId order by cks.DosyaNo desc", connect);
+            command = new SqlCommand("GetAll_TMOKayitlar_ForPrint", connect);
+            command.CommandType = System.Data.CommandType.StoredProcedure;
             BaglantiAyarla();
             return command.ExecuteReader();
         }
@@ -70,8 +74,8 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         {
             try
             {
-                command = new SqlCommand("update TMOKayitlar set CksId=@CksId,FirmaId=@FirmaId ,EvrakKayitNo=@EvrakKayitNo, EvrakKayitTarihi=@EvrakKayitTarihi, Note=@Note, FaturaNo=@FaturaNo, FaturaTarihi=@FaturaTarihi,ProductId=@ProductId, Amount=@Amount , KullaniciId=@KullaniciId , CreateTime=@CreateTime, Donem=@Donem where Id=@Id", connect);
-               
+                command = new SqlCommand("Update_TMO_Kayit", connect);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
                 command.Parameters.Add("@Id", SqlDbType.Int).Value = Entity.Id;
                 command.Parameters.Add("@CksId", SqlDbType.Int).Value = Entity.CksId;
                 command.Parameters.Add("@EvrakKayitNo", SqlDbType.NVarChar).Value = Entity.EvrakKayitNo;

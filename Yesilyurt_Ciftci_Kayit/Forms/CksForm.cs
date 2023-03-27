@@ -438,7 +438,6 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 UpdateFormuBoşalt();
                 _ciftci = null;
                 DataGridYinele(_ciftci);
-                tabControl1.SelectedTab = tabPageEkle;
             }
         }
         private void btnYemBitkisiDestegi_Click(object sender, EventArgs e)

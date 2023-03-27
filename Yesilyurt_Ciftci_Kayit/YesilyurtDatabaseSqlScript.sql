@@ -389,7 +389,9 @@ create procedure Update_YemBitkileri
 )
 as
 begin
-update YemBitkileri set CksId=@CksId, UrunId=@UrunId,DosyaNo=@DosyaNo,MuracaatTarihi=@MuracaatTarihi,EkilisYili=@EkilisYili,AraziMahalle=@AraziMahalle,Ada=@Ada,Parsel=@Parsel,MuracaatAlani=@MuracaatAlani,TespitEdilenAlan=@TespitEdilenAlan,KontrolTarihi=@KontrolTarihi,KontrolEdenler=@KontrolEdenler,Note=@Note,KontrolDurumu=@KontrolDurumu,KullaniciId=@KullaniciId, @CreateTime=CreateTime where Id=@Id
+update YemBitkileri set CksId=@CksId, UrunId=@UrunId,DosyaNo=@DosyaNo,MuracaatTarihi=@MuracaatTarihi,EkilisYili=@EkilisYili,AraziMahalle=@AraziMahalle,Ada=@Ada,Parsel=@Parsel,
+MuracaatAlani=@MuracaatAlani,TespitEdilenAlan=@TespitEdilenAlan,KontrolTarihi=@KontrolTarihi,KontrolEdenler=@KontrolEdenler,Note=@Note,KontrolDurumu=@KontrolDurumu,
+KullaniciId=@KullaniciId, @CreateTime=CreateTime where Id=@Id
 end
 go
 create procedure GetAll_YemBitkileri
@@ -883,5 +885,5 @@ go
 --getall with procedure 
 create procedure GetAll_Edevlet
 as
-select * from Edevlet
+select *from Edevlet
 go

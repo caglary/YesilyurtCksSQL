@@ -136,6 +136,12 @@
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SelectYearForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectYearForm.Designer.cs">
+      <DependentUpon>SelectYearForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SertifikaliTohumForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectYearForm.resx">
+      <DependentUpon>SelectYearForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SertifikaliTohumForm.resx">
       <DependentUpon>SertifikaliTohumForm.cs</DependentUpon>
