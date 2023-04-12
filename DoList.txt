@@ -1,6 +1,0 @@
-- Yedekleme iþlemleri
-	json olarak yedekleri al.
-	Excel olarak bütün listeleri kaydet.
-
-e-devlet eklenecek.
-
