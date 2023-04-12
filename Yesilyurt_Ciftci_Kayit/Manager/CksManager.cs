@@ -97,22 +97,46 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
                 _reader = dal.GetAll_CksDataGrid();
                 while (_reader.Read())
                 {
-                    cksListesi.Add(new CksDatagrid()
+                    if (Utilities.ConnectionString.year=="2023")
                     {
-                        Id = _reader.IsDBNull(0) ? 0 : _reader.GetInt32(0),
-                        DosyaNo = _reader.IsDBNull(1) ? 0 : _reader.GetInt32(1),
-                        TcKimlikNo = _reader.IsDBNull(2) ? "" : _reader.GetString(2),
-                        IsimSoyisim = _reader.IsDBNull(3) ? "" : _reader.GetString(3),
-                        BabaAdi = _reader.IsDBNull(4) ? "" : _reader.GetString(4),
-                        MobilePhone = _reader.IsDBNull(5) ? "" : _reader.GetString(5),
-                        HomePhone = _reader.IsDBNull(6) ? "" : _reader.GetString(6),
-                        KoyMahalle = _reader.IsDBNull(7) ? "" : _reader.GetString(7),
-                        Note = _reader.IsDBNull(8) ? "" : _reader.GetString(8),
-                        CreateTime = _reader.IsDBNull(9) ? DateTime.MinValue : _reader.GetDateTime(9),
-                        EvrakKayitNo = _reader.IsDBNull(10) ? "" : _reader.GetString(10),
-                        HavaleEdilenPersonel = _reader.IsDBNull(11) ? "" : _reader.GetString(11),
-                        MuracaatYeri = _reader.IsDBNull(12) ? "" : _reader.GetString(12)
-                    });
+                        cksListesi.Add(new CksDatagrid()
+                        {
+                            Id = _reader.IsDBNull(0) ? 0 : _reader.GetInt32(0),
+                            DosyaNo = _reader.IsDBNull(1) ? 0 : _reader.GetInt32(1),
+                            TcKimlikNo = _reader.IsDBNull(2) ? "" : _reader.GetString(2),
+                            IsimSoyisim = _reader.IsDBNull(3) ? "" : _reader.GetString(3),
+                            BabaAdi = _reader.IsDBNull(4) ? "" : _reader.GetString(4),
+                            MobilePhone = _reader.IsDBNull(5) ? "" : _reader.GetString(5),
+                            HomePhone = _reader.IsDBNull(6) ? "" : _reader.GetString(6),
+                            KoyMahalle = _reader.IsDBNull(7) ? "" : _reader.GetString(7),
+                            Note = _reader.IsDBNull(8) ? "" : _reader.GetString(8),
+                            CreateTime = _reader.IsDBNull(9) ? DateTime.MinValue : _reader.GetDateTime(9),
+                            EvrakKayitNo = _reader.IsDBNull(10) ? "" : _reader.GetString(10),
+                            HavaleEdilenPersonel = _reader.IsDBNull(11) ? "" : _reader.GetString(11),
+                            MuracaatYeri = _reader.IsDBNull(12) ? "" : _reader.GetString(12)
+                        });
+                    }
+                    else
+                    {
+
+                        cksListesi.Add(new CksDatagrid()
+                        {
+                            Id = _reader.IsDBNull(0) ? 0 : _reader.GetInt32(0),
+                            DosyaNo = _reader.IsDBNull(1) ? 0 : _reader.GetInt32(1),
+                            TcKimlikNo = _reader.IsDBNull(2) ? "" : _reader.GetString(2),
+                            IsimSoyisim = _reader.IsDBNull(3) ? "" : _reader.GetString(3),
+                            BabaAdi = _reader.IsDBNull(4) ? "" : _reader.GetString(4),
+                            MobilePhone = _reader.IsDBNull(5) ? "" : _reader.GetString(5),
+                            HomePhone = _reader.IsDBNull(6) ? "" : _reader.GetString(6),
+                            KoyMahalle = _reader.IsDBNull(7) ? "" : _reader.GetString(7),
+                            Note = _reader.IsDBNull(8) ? "" : _reader.GetString(8),
+                            CreateTime = _reader.IsDBNull(9) ? DateTime.MinValue : _reader.GetDateTime(9),
+                            EvrakKayitNo = "",
+                            HavaleEdilenPersonel ="",
+                            MuracaatYeri = ""
+                        });
+                    }
+                   
                 }
                 _reader.Close();
             }
@@ -134,20 +158,40 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
                 _reader = dal.GetAll_CKS_ForPrint();
                 while (_reader.Read())
                 {
-                    cksListesi.Add(new CksListesiPrint()
+                    if (Utilities.ConnectionString.year == "2023")
                     {
-                        DosyaNo = _reader.IsDBNull(0) ? 0 : _reader.GetInt32(0),
-                        TcKimlikNo = _reader.IsDBNull(1) ? "" : _reader.GetString(1),
-                        IsimSoyisim = _reader.IsDBNull(2) ? "" : _reader.GetString(2),
-                        BabaAdi = _reader.IsDBNull(3) ? "" : _reader.GetString(3),
-                        CepTelefonu = _reader.IsDBNull(4) ? "" : _reader.GetString(4),
-                        EvTelefonu = _reader.IsDBNull(5) ? "" : _reader.GetString(5),
-                        KoyMahalle = _reader.IsDBNull(6) ? "" : _reader.GetString(6),
-                        MuracaatTarihi = _reader.IsDBNull(7) ? DateTime.MinValue : _reader.GetDateTime(7),
-                        EvrakKayitNo = _reader.IsDBNull(8) ? "" : _reader.GetString(8),
-                        HavaleEdilenPersonel = _reader.IsDBNull(9) ? "" : _reader.GetString(9),
-                        MuracaatYeri = _reader.IsDBNull(10) ? "" : _reader.GetString(10)
-                    });
+                        cksListesi.Add(new CksListesiPrint()
+                        {
+                            DosyaNo = _reader.IsDBNull(0) ? 0 : _reader.GetInt32(0),
+                            TcKimlikNo = _reader.IsDBNull(1) ? "" : _reader.GetString(1),
+                            IsimSoyisim = _reader.IsDBNull(2) ? "" : _reader.GetString(2),
+                            BabaAdi = _reader.IsDBNull(3) ? "" : _reader.GetString(3),
+                            CepTelefonu = _reader.IsDBNull(4) ? "" : _reader.GetString(4),
+                            EvTelefonu = _reader.IsDBNull(5) ? "" : _reader.GetString(5),
+                            KoyMahalle = _reader.IsDBNull(6) ? "" : _reader.GetString(6),
+                            MuracaatTarihi = _reader.IsDBNull(7) ? DateTime.MinValue : _reader.GetDateTime(7),
+                            EvrakKayitNo = _reader.IsDBNull(8) ? "" : _reader.GetString(8),
+                            HavaleEdilenPersonel = _reader.IsDBNull(9) ? "" : _reader.GetString(9),
+                            MuracaatYeri = _reader.IsDBNull(10) ? "" : _reader.GetString(10)
+                        });
+                    }
+                    else
+                    {
+                        cksListesi.Add(new CksListesiPrint()
+                        {
+                            DosyaNo = _reader.IsDBNull(0) ? 0 : _reader.GetInt32(0),
+                            TcKimlikNo = _reader.IsDBNull(1) ? "" : _reader.GetString(1),
+                            IsimSoyisim = _reader.IsDBNull(2) ? "" : _reader.GetString(2),
+                            BabaAdi = _reader.IsDBNull(3) ? "" : _reader.GetString(3),
+                            CepTelefonu = _reader.IsDBNull(4) ? "" : _reader.GetString(4),
+                            EvTelefonu = _reader.IsDBNull(5) ? "" : _reader.GetString(5),
+                            KoyMahalle = _reader.IsDBNull(6) ? "" : _reader.GetString(6),
+                            MuracaatTarihi = _reader.IsDBNull(7) ? DateTime.MinValue : _reader.GetDateTime(7),
+                            //EvrakKayitNo = _reader.IsDBNull(8) ? "" : _reader.GetString(8),
+                            //HavaleEdilenPersonel = _reader.IsDBNull(9) ? "" : _reader.GetString(9),
+                            //MuracaatYeri = _reader.IsDBNull(10) ? "" : _reader.GetString(10)
+                        });
+                    }
                 }
                 _reader.Close();
             }

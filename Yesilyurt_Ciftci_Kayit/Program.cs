@@ -13,7 +13,7 @@ namespace Yesilyurt_Ciftci_Kayit
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SelectYearForm());
+            Application.Run(new LoginForm());
         }
     }
 }

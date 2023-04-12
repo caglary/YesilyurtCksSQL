@@ -26,7 +26,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Anasayfa));
-            this.btnExit = new System.Windows.Forms.Button();
             this.pictureBoxCiftciler = new System.Windows.Forms.PictureBox();
             this.pictureBoxCksIslemleri = new System.Windows.Forms.PictureBox();
             this.pictureBoxFirmalar = new System.Windows.Forms.PictureBox();
@@ -44,22 +43,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTMO)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(1115, 11);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(74, 78);
-            this.btnExit.TabIndex = 1;
-            this.btnExit.Text = "KAPAT";
-            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // pictureBoxCiftciler
             // 
             this.pictureBoxCiftciler.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -76,7 +59,7 @@
             // 
             this.pictureBoxCksIslemleri.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxCksIslemleri.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCksIslemleri.Image")));
-            this.pictureBoxCksIslemleri.Location = new System.Drawing.Point(390, 83);
+            this.pictureBoxCksIslemleri.Location = new System.Drawing.Point(250, 217);
             this.pictureBoxCksIslemleri.Name = "pictureBoxCksIslemleri";
             this.pictureBoxCksIslemleri.Size = new System.Drawing.Size(119, 128);
             this.pictureBoxCksIslemleri.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -124,7 +107,7 @@
             // 
             this.pictureBoxListeter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxListeter.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxListeter.Image")));
-            this.pictureBoxListeter.Location = new System.Drawing.Point(250, 217);
+            this.pictureBoxListeter.Location = new System.Drawing.Point(390, 83);
             this.pictureBoxListeter.Name = "pictureBoxListeter";
             this.pictureBoxListeter.Size = new System.Drawing.Size(119, 128);
             this.pictureBoxListeter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -138,7 +121,7 @@
             this.labelYear.BackColor = System.Drawing.Color.Transparent;
             this.labelYear.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelYear.ForeColor = System.Drawing.Color.Moccasin;
-            this.labelYear.Location = new System.Drawing.Point(466, 11);
+            this.labelYear.Location = new System.Drawing.Point(250, 11);
             this.labelYear.Name = "labelYear";
             this.labelYear.Size = new System.Drawing.Size(278, 59);
             this.labelYear.TabIndex = 18;
@@ -161,6 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Bisque;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -174,15 +158,15 @@
             this.Controls.Add(this.pictureBoxTMO);
             this.Controls.Add(this.pictureBoxListeter);
             this.Controls.Add(this.pictureBoxCiftciler);
-            this.Controls.Add(this.btnExit);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Anasayfa";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Anasayfa";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Anasayfa_FormClosed);
             this.Load += new System.EventHandler(this.Anasayfa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCiftciler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCksIslemleri)).EndInit();
@@ -193,9 +177,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTMO)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
         #endregion
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.PictureBox pictureBoxCiftciler;
         private System.Windows.Forms.PictureBox pictureBoxCksIslemleri;
         private System.Windows.Forms.PictureBox pictureBoxFirmalar;

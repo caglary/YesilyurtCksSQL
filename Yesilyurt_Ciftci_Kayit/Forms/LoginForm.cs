@@ -13,6 +13,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             InitializeComponent();
             loginManager = new LoginManager();
             _kullanici = new Kullanici();
+
         }
         private void btnExit_Click(object sender, System.EventArgs e)
         {
@@ -24,33 +25,41 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             _kullanici.Parola = txtParola.Text.ToLower();
             if (loginManager.KullaniciGirisOnay(_kullanici))
             {
-                var k = loginManager.GetKullanici(_kullanici);
-                Anasayfa anasayfa = new Anasayfa(k);
-                anasayfa.Show();
-                this.Hide();
+                OpenMenuForm(_kullanici);
+
             }
         }
         private void LoginForm_Activated(object sender, EventArgs e)
         {
             string macAddress = Utilities.MacAddress.GetMacAddress();
             string machineName = Environment.MachineName; // Lenovo için ekleme yapıldı...
-            
+
             if (machineName == "DESKTOP-ITQCLKI" || machineName == "M601102-0042")
             {
                 _kullanici.KullaniciAdi = "caglar";
-                var k = loginManager.GetKullanici(_kullanici);
-                Anasayfa anasayfa = new Anasayfa(k);
-                anasayfa.Show();
-                this.Hide();
+                OpenMenuForm(_kullanici);
+
+
             }
-            else if(machineName == "M601102-0044")
+            else if (machineName == "M601102-0044")
             {
                 _kullanici.KullaniciAdi = "burak";
-                var k = loginManager.GetKullanici(_kullanici);
-                Anasayfa anasayfa = new Anasayfa(k);
-                anasayfa.Show();
+                OpenMenuForm(_kullanici);
+            }
+        }
+        
+        private void OpenMenuForm(Kullanici _kullanici)
+        {
+            var kullanici = loginManager.GetKullanici(_kullanici);
+            Form Menu=Application.OpenForms["Menu"];
+
+            if (kullanici != null && Menu==null)
+            {
+                Menu selectYearForm = new Menu(kullanici);
+                selectYearForm.Show();
                 this.Hide();
             }
         }
+
     }
 }

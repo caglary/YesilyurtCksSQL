@@ -62,13 +62,21 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 btnUpdate.Enabled = false;
                 btnDelete.Enabled = false;
             }
-            string[] havaleEdilenPersoneller = { "İlkay ÇOBAN", "Mustafa ÇİÇEK", "Burak SOLMAZ", "Çağlar YURDAKUL" };
+            string[] havaleEdilenPersoneller = { "Mustafa ÇİÇEK", "Burak SOLMAZ", "Çağlar YURDAKUL" };
             comboBoxHavaleEdilenPersonel.DataSource = havaleEdilenPersoneller;
             comboBoxUpdateHavaleEdilenPersonel.DataSource = havaleEdilenPersoneller;
             comboBoxHavaleEdilenPersonel.Text = "";
             comboBoxUpdateHavaleEdilenPersonel.Text = "";
             txtEdevlet.Visible = false;
             txtEdevletUpdate.Visible = false;
+
+            if (Utilities.ConnectionString.year == "2023")
+            {
+               btnUpdate.Enabled = false;
+                btnDelete.Enabled = false;
+                btnAdd.Enabled = false;
+               
+            }
         }
         private void DataGridYinele(Ciftci ciftci = null)
         {
@@ -157,8 +165,15 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (Utilities.ConnectionString.year == "2023")
+            {
+                Utilities.Mesaj.MessageBoxWarning("İşlem yapmak için süreniz dolmuştur.");
+                return;
+
+            }
             try
             {
+               
                 Edevlet edevlet = new Edevlet();
                 aksiyon = Aksiyon.btnAddClick;
                 txtAddTc.Text = txtAddTc.Text.Trim();
@@ -361,6 +376,12 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (Utilities.ConnectionString.year == "2023")
+            {
+                Utilities.Mesaj.MessageBoxWarning("İşlem yapmak için süreniz dolmuştur.");
+                return;
+
+            }
             aksiyon = Aksiyon.btnUpdateClick;
             string tcNo = txtupdateTc.Text;
             _ciftci = _ciftciManager.GetByTc(tcNo);
@@ -430,6 +451,12 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (Utilities.ConnectionString.year == "2023")
+            {
+                Utilities.Mesaj.MessageBoxWarning("İşlem yapmak için süreniz dolmuştur.");
+                return;
+
+            }
             aksiyon = Aksiyon.btnDeleteClick;
             var silinecekCksKayit = _cksmanager.GetAll().Where(I => I.CiftciId == _ciftci.Id).FirstOrDefault();
             int result = _cksmanager.Delete(silinecekCksKayit);
