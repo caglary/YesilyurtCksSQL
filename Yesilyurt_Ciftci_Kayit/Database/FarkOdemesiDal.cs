@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 using Yesilyurt_Ciftci_Kayit.Entities;
 namespace Yesilyurt_Ciftci_Kayit.Database
 {
-    public class FarkOdemesiDal : BaseDal, IBaseDal<FarkOdemesi>
+    public class icmalFarkOdemesiDal : BaseDal, IBaseDal<FarkOdemesi>
     {
         public int Add(FarkOdemesi farkOdemesi)
         {

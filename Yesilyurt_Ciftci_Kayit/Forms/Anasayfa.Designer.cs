@@ -34,6 +34,7 @@
             this.pictureBoxListeter = new System.Windows.Forms.PictureBox();
             this.labelYear = new System.Windows.Forms.Label();
             this.pictureBoxTMO = new System.Windows.Forms.PictureBox();
+            this.btn_icmaller = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCiftciler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCksIslemleri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFirmalar)).BeginInit();
@@ -140,6 +141,16 @@
             this.pictureBoxTMO.TabStop = false;
             this.pictureBoxTMO.Click += new System.EventHandler(this.pictureBoxTMO_Click);
             // 
+            // btn_icmaller
+            // 
+            this.btn_icmaller.Location = new System.Drawing.Point(1113, 635);
+            this.btn_icmaller.Name = "btn_icmaller";
+            this.btn_icmaller.Size = new System.Drawing.Size(75, 44);
+            this.btn_icmaller.TabIndex = 19;
+            this.btn_icmaller.Text = "İcmaller";
+            this.btn_icmaller.UseVisualStyleBackColor = true;
+            this.btn_icmaller.Click += new System.EventHandler(this.btn_icmaller_Click);
+            // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -150,6 +161,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1200, 691);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_icmaller);
             this.Controls.Add(this.labelYear);
             this.Controls.Add(this.pictureBoxSifreDegistir);
             this.Controls.Add(this.pictureBoxUrunler);
@@ -188,5 +200,6 @@
         private System.Windows.Forms.PictureBox pictureBoxListeter;
         private System.Windows.Forms.Label labelYear;
         private System.Windows.Forms.PictureBox pictureBoxTMO;
+        private System.Windows.Forms.Button btn_icmaller;
     }
 }

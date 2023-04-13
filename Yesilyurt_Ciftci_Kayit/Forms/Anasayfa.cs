@@ -34,11 +34,13 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 pictureBoxTMO.Visible = false;
                 pictureBoxCksIslemleri.Visible= false;
                 labelYear.ForeColor=Color.White;
+                btn_icmaller.Visible= false;
             }
             else if (uretimSezonuYili == "2022")
             {
                 pictureBoxTMO.Visible = false;
                 pictureBoxCksIslemleri.Visible = false;
+                btn_icmaller.Visible = false;
 
                 labelYear.ForeColor = Color.Red;
 
@@ -87,6 +89,11 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         private void pictureBoxTMO_Click(object sender, EventArgs e)
         {
             Utilities.FormProperties.FormOpen("TMOForm", new TMOForm(kullanici), this, true);
+        }
+
+        private void btn_icmaller_Click(object sender, EventArgs e)
+        {
+            Utilities.FormProperties.FormOpen("icmaller", new icmallerForm(), this, true);
         }
     }
 }

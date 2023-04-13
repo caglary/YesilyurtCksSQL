@@ -11,11 +11,11 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
     public class FarkOdemesiManager : IBaseManager<FarkOdemesi>
     {
         //database class bağlı olacak..
-        FarkOdemesiDal dal;
+        icmalFarkOdemesiDal dal;
         SqlDataReader _reader;
         public FarkOdemesiManager()
         {
-            dal = new FarkOdemesiDal();
+            dal = new icmalFarkOdemesiDal();
         }
         public int Result { get; set; }
         public int Add(FarkOdemesi farkOdemesi)

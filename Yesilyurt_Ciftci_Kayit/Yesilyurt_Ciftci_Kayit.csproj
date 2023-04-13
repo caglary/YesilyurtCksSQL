@@ -59,6 +59,12 @@
     <Compile Include="Database\EdevletDal.cs" />
     <Compile Include="Database\FarkOdemesiDal.cs" />
     <Compile Include="Database\FirmaDal.cs" />
+    <Compile Include="Database\icmaller\icmalFarkOdemesiDestegiYagliTohumluDal.cs" />
+    <Compile Include="Database\icmaller\icmalFarkOdemsiDal.cs" />
+    <Compile Include="Database\icmaller\icmalKoogDal.cs" />
+    <Compile Include="Database\icmaller\icmalMgdDal.cs" />
+    <Compile Include="Database\icmaller\icmalStkdDal.cs" />
+    <Compile Include="Database\icmaller\icmalTmoDal.cs" />
     <Compile Include="Database\Interface\IBaseDal.cs" />
     <Compile Include="Database\KullaniciDal.cs" />
     <Compile Include="Database\SertifikaliTohumDal.cs" />
@@ -70,6 +76,12 @@
     <Compile Include="Entities\Edevlet.cs" />
     <Compile Include="Entities\FarkOdemesi.cs" />
     <Compile Include="Entities\Firma.cs" />
+    <Compile Include="Entities\icmaller\icmalTmo.cs" />
+    <Compile Include="Entities\icmaller\icmalStkd.cs" />
+    <Compile Include="Entities\icmaller\icmalMgd.cs" />
+    <Compile Include="Entities\icmaller\icmalFarkOdemesi.cs" />
+    <Compile Include="Entities\icmaller\icmalKoog.cs" />
+    <Compile Include="Entities\icmaller\icmalFarkOdemesiYagliTohumlu.cs" />
     <Compile Include="Entities\Kullanici.cs" />
     <Compile Include="Entities\PrintTablo\CksListesiPrint.cs" />
     <Compile Include="Entities\PrintTablo\FarkOdemesiPrint.cs" />
@@ -105,6 +117,12 @@
     </Compile>
     <Compile Include="Forms\CksForm.Designer.cs">
       <DependentUpon>CksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\icmallerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\icmallerForm.Designer.cs">
+      <DependentUpon>icmallerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ListelerForm.cs">
       <SubType>Form</SubType>
@@ -171,6 +189,12 @@
     <Compile Include="Manager\EdevletManager.cs" />
     <Compile Include="Manager\FarkOdemesiManager.cs" />
     <Compile Include="Manager\FirmaManager.cs" />
+    <Compile Include="Manager\icmaller\icmalFarkOdemesiDestegiYagliTohumluManager.cs" />
+    <Compile Include="Manager\icmaller\icmalFarkOdemsiManager.cs" />
+    <Compile Include="Manager\icmaller\icmalKoogManager.cs" />
+    <Compile Include="Manager\icmaller\icmalMgdManager.cs" />
+    <Compile Include="Manager\icmaller\icmalStkdManager.cs" />
+    <Compile Include="Manager\icmaller\icmalTmoManager.cs" />
     <Compile Include="Manager\Interface\IBaseManager.cs" />
     <Compile Include="Manager\LoginManager.cs" />
     <Compile Include="Manager\KullaniciManager.cs" />
@@ -204,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CksForm.resx">
       <DependentUpon>CksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\icmallerForm.resx">
+      <DependentUpon>icmallerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ListelerForm.resx">
       <DependentUpon>ListelerForm.cs</DependentUpon>
@@ -265,6 +292,7 @@
   <ItemGroup>
     <Content Include="379478_farmer_icon.ico" />
     <None Include="Resources\tmo.png" />
+    <Content Include="Entities\icmaller\icmallerSqlScritp.txt" />
     <Content Include="YesilyurtDatabaseSqlScript.sql" />
   </ItemGroup>
   <ItemGroup>
