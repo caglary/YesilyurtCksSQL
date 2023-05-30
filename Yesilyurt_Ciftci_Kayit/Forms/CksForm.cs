@@ -74,8 +74,11 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             {
                btnUpdate.Enabled = false;
                 btnDelete.Enabled = false;
-                btnAdd.Enabled = false;
-               
+                //kullanıcı adı çağlar değilse buton pasif olacak                
+                if(_kullanici.KullaniciAdi!="caglar")
+                    btnAdd.Enabled = false;
+
+
             }
         }
         private void DataGridYinele(Ciftci ciftci = null)
@@ -165,12 +168,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (Utilities.ConnectionString.year == "2023")
-            {
-                Utilities.Mesaj.MessageBoxWarning("İşlem yapmak için süreniz dolmuştur.");
-                return;
-
-            }
+           
             try
             {
                
@@ -376,12 +374,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (Utilities.ConnectionString.year == "2023")
-            {
-                Utilities.Mesaj.MessageBoxWarning("İşlem yapmak için süreniz dolmuştur.");
-                return;
-
-            }
+            
             aksiyon = Aksiyon.btnUpdateClick;
             string tcNo = txtupdateTc.Text;
             _ciftci = _ciftciManager.GetByTc(tcNo);

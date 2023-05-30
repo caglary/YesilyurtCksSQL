@@ -10,8 +10,10 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             result = 0;
             try
             {
-                command = new SqlCommand("Add_Cks", connect);
-                command.CommandType = System.Data.CommandType.StoredProcedure;
+                //command = new SqlCommand("Add_Cks", connect);
+                //command.CommandType = System.Data.CommandType.StoredProcedure;
+                command = new SqlCommand("insert into Cks (CiftciId,DosyaNo,Note,KullaniciId,CreateTime,EvrakKayitNo,HavaleEdilenPersonel,MuracaatYeri) values (@CiftciId,@DosyaNo,@Note,@KullaniciId,@CreateTime,@EvrakKayitNo,@HavaleEdilenPersonel,@MuracaatYeri);", connect);
+
                 command.Parameters.Add("@CiftciId", SqlDbType.Int).Value = cksKaydi.CiftciId;
                 command.Parameters.Add("@DosyaNo", SqlDbType.Int).Value = cksKaydi.DosyaNo;
                 //command.Parameters.Add("@KoyMahalle", SqlDbType.NVarChar).Value = cksKaydi.KoyMahalle;
@@ -98,13 +100,13 @@ namespace Yesilyurt_Ciftci_Kayit.Database
             }
             catch (System.Exception ex)
             {
-                if (ex.HResult.ToString()== "-2146232060")
+                if (ex.HResult.ToString() == "-2146232060")
                 {
                     Utilities.Mesaj.MessageBoxError("Dosya Numarasına ait kayıt mevcuttur.Dosya No değiştirin ve tekrar deneyin.");
                     return 0;
                 }
                 Utilities.Mesaj.MessageBoxError(ex.Message);
-                
+
             }
             finally
             {
