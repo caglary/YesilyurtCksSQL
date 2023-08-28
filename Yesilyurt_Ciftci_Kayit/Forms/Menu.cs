@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Net.Configuration;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Yesilyurt_Ciftci_Kayit.Entities;
+using Yesilyurt_Ciftci_Kayit.Utilities;
 
 namespace Yesilyurt_Ciftci_Kayit.Forms
 {
@@ -21,22 +16,55 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             _kullanici = user;
 
         }
-     
+        private void butonControl(Button button)
+        {
+            foreach (Control item in this.Controls)
+            {
+                if (item.Name == "panel1")
+                {
+                    foreach (var items in item.Controls)
+                    {
+                        if (items.GetType() == typeof(Button))
+                        {
+                            Button btn = (Button)items;
+                            if (btn.Text != button.Text)
+                            {
+                                btn.BackColor = Color.WhiteSmoke;
+                                btn.Font=new Font("Microsoft Sans Serif", 8);
+                              
+                               
+                            }
+                            else
+                            {
+                                btn.BackColor = Color.Wheat;
+                                btn.Font = new Font("Microsoft Sans Serif", 12);
+                              
+
+                            }
+
+                        }
+                    }
+                }
+
+            }
+        }
         private void btn_2021_Click(object sender, EventArgs e)
         {
-           
-
+          
+            Button btnSender= (Button)sender;
+            butonControl(btnSender);
             OpenAnasayfaForm("2021");
-
             
-
+           
+            
         }
 
         private void btn_2022_Click(object sender, EventArgs e)
         {
-
+            Button btnSender = (Button)sender;
+            butonControl(btnSender);
             OpenAnasayfaForm("2022");
-
+           
 
 
         }
@@ -44,7 +72,8 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         private void btn_2023_Click(object sender, EventArgs e)
         {
 
-
+            Button btnSender = (Button)sender;
+            butonControl(btnSender);
             OpenAnasayfaForm("2023");
 
 
@@ -62,8 +91,8 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
 
         private void OpenAnasayfaForm(string year)
         {
-            string seciliYil = Yesilyurt_Ciftci_Kayit.Utilities.ConnectionString.year;
-            Yesilyurt_Ciftci_Kayit.Utilities.ConnectionString.year = year;
+            string seciliYil = ConnectionString.year;
+            ConnectionString.year = year;
 
             var anasayfa = Application.OpenForms["Anasayfa"];
             if (year == seciliYil)
@@ -100,6 +129,8 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
 
         private void btn_2024_Click(object sender, EventArgs e)
         {
+            Button btnSender = (Button)sender;
+            butonControl(btnSender);
             OpenAnasayfaForm("2024");
         }
     }

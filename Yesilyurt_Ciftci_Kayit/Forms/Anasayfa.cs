@@ -54,6 +54,10 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 pictureBoxTMO.Visible = false;
                 labelYear.ForeColor = Color.Blue;
                 btn_icmaller.Visible = false;
+                pictureBoxFirmalar.Visible = false;
+                pictureBoxUrunler.Visible = false;
+                pictureBoxSifreDegistir.Visible= false;
+               
             }
         }
         private void btnCiftciler_Click(object sender, EventArgs e)

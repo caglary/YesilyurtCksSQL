@@ -293,6 +293,8 @@
     <Content Include="379478_farmer_icon.ico" />
     <None Include="Resources\tmo.png" />
     <Content Include="Entities\icmaller\icmallerSqlScritp.txt" />
+    <Content Include="Resources\image2.jpeg" />
+    <None Include="Resources\pexels-photo-2332736.jpeg" />
     <Content Include="YesilyurtDatabaseSqlScript.sql" />
   </ItemGroup>
   <ItemGroup>
