@@ -1,8 +1,6 @@
-﻿using Microsoft.Office.Interop.Excel;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 using Yesilyurt_Ciftci_Kayit.Entities;
 namespace Yesilyurt_Ciftci_Kayit.Forms
 {
@@ -49,12 +47,13 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             else if (uretimSezonuYili == "2023")
             {
                 pictureBoxTMO.Visible = false;
-              
-
                 labelYear.ForeColor = Color.Yellow;
-                
-
-
+            }
+            else if (uretimSezonuYili == "2024")
+            {
+                pictureBoxTMO.Visible = false;
+                labelYear.ForeColor = Color.Blue;
+                btn_icmaller.Visible = false;
             }
         }
         private void btnCiftciler_Click(object sender, EventArgs e)

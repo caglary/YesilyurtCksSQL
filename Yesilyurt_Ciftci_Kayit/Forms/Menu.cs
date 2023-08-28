@@ -21,12 +21,15 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             _kullanici = user;
 
         }
-
+     
         private void btn_2021_Click(object sender, EventArgs e)
         {
            
 
             OpenAnasayfaForm("2021");
+
+            
+
         }
 
         private void btn_2022_Click(object sender, EventArgs e)
@@ -93,6 +96,11 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
 
             }
 
+        }
+
+        private void btn_2024_Click(object sender, EventArgs e)
+        {
+            OpenAnasayfaForm("2024");
         }
     }
 }

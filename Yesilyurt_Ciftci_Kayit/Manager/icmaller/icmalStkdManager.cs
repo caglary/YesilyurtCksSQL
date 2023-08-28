@@ -24,13 +24,15 @@ namespace Yesilyurt_Ciftci_Kayit.Database.icmaller
                 {
                     list.Add(new icmalStkd()
                     {
-                        Id = _reader.IsDBNull(0) ? 0 : _reader.GetInt32(0),
-                        KimlikNo = _reader.IsDBNull(1) ? "" : _reader.GetString(1),
-                        Urun = _reader.IsDBNull(3) ? "" : _reader.GetString(2),
-                        FaturaMiktari = _reader.IsDBNull(3) ? 0 : _reader.GetDecimal(3),
-                        DesteklemeAlani = _reader.IsDBNull(4) ? 0 : _reader.GetDecimal(4),
-                        DesteklemeMiktari = _reader.IsDBNull(5) ? 0 : _reader.GetDecimal(5),
-                      
+                        //siraNo = _reader.IsDBNull(0) ? 0 : _reader.GetFloat(0),
+                        //KimlikNo = _reader.IsDBNull(4) ? "" : _reader.GetString(4),
+                        //Urun = _reader.IsDBNull(9) ? "" : _reader.GetString(9),
+                        //FaturaMiktari = _reader.IsDBNull(10) ? 0 : _reader.GetFloat(10),
+                        //DesteklemeAlani = _reader.IsDBNull(11) ? 0 : _reader.GetFloat(11),
+                        //DesteklemeMiktari = _reader.IsDBNull(12) ? 0 : _reader.GetFloat(12),
+                        DesteklemeMiktari = _reader.GetFloat(12),
+
+
 
 
                     }); ; ;

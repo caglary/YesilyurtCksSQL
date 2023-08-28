@@ -2,12 +2,12 @@
 {
     public class icmalStkd
     {
-        public int Id { get; set; }
+        public float siraNo { get; set; }
         public string KimlikNo { get; set; }
         public string Urun { get; set; }
-        public decimal FaturaMiktari { get; set; }
-        public decimal DesteklemeAlani { get; set; }
-        public decimal DesteklemeMiktari { get; set; }
+        public float FaturaMiktari { get; set; }
+        public float DesteklemeAlani { get; set; }
+        public float DesteklemeMiktari { get; set; }
 
     }
 }

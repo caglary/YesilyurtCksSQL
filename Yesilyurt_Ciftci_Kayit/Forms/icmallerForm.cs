@@ -61,7 +61,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 }
                 foreach (var stkd in stkds)
                 {
-                    liste.Add(new Destek { Tutar = stkd.DesteklemeMiktari, DestekAdi = "STKD" });
+                    liste.Add(new Destek { Tutar =Convert.ToDecimal( stkd.DesteklemeMiktari), DestekAdi = "STKD" });
 
                 }
                 foreach (var tmo in tmos)
