@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Excel;
+using System;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,7 +33,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             activeButon = Butonclick.Yembitkileri;
             var liste = _yemBitkisiManager.GetAll_YemBitkileri_ForPrint();
             dgwListe.DataSource = liste;
-            Button buton = (Button)sender;
+            System.Windows.Forms.Button buton = (System.Windows.Forms.Button)sender;
             lblKayitSayisi.Text = $"{buton.Text} Toplam Kayıt Sayısı:  {liste.Count}  Adet";
         }
         private void btnFarkOdemesiDestegi_Click(object sender, EventArgs e)
@@ -40,7 +42,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             activeButon = Butonclick.FarkOdemesi;
             var liste = _farkOdemesiManager.GetAll_FarkOdemesi_ForPrint();
             dgwListe.DataSource = liste;
-            Button buton = (Button)sender;
+            System.Windows.Forms.Button buton = (System.Windows.Forms.Button)sender;
             lblKayitSayisi.Text = $"{buton.Text} Toplam Kayıt Sayısı:  {liste.Count}  Adet";
         }
         private void btnSertifikaliTohumDestegi_Click(object sender, EventArgs e)
@@ -49,7 +51,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             activeButon = Butonclick.Sertifikalı;
             var liste = _sertifikaliTohumManager.GetAll_SertifikaliTohum_ForPrint();
             dgwListe.DataSource = liste;
-            Button buton = (Button)sender;
+            System.Windows.Forms.Button buton = (System.Windows.Forms.Button)sender;
             lblKayitSayisi.Text = $"{buton.Text} Toplam Kayıt Sayısı:  {liste.Count}  Adet";
         }
         private void btnCksListesi_Click(object sender, EventArgs e)
@@ -59,7 +61,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             dgwListe.DataSource = null;
             var liste = _cksManager.GetAll_CKS_ForPrint();
             dgwListe.DataSource = liste;
-            Button buton = (Button)sender;
+            System.Windows.Forms.Button buton = (System.Windows.Forms.Button)sender;
             lblKayitSayisi.Text = $"{buton.Text} Toplam Kayıt Sayısı:  {liste.Count}  Adet";
         }
         private void txtSearchByName_TextChanged(object sender, EventArgs e)
@@ -279,6 +281,38 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             catch (Exception exception)
             {
                 Utilities.Mesaj.MessageBoxError(exception.Message);
+            }
+        }
+
+        private void btnJson_Click(object sender, EventArgs e)
+        {
+
+
+            switch (activeButon)
+            {
+                case Butonclick.FarkOdemesi:
+                    break;
+                case Butonclick.Yembitkileri:
+                    break;
+                case Butonclick.Sertifikalı:
+                    break;
+                case Butonclick.Empty:
+                    break;
+                case Butonclick.CksListesi:
+                    var path = Utilities.FolderBrowser.Path();
+                    if (path != "")
+                    {
+                        path = path + $"\\Çks Müracaatları_{Utilities.ConnectionString.TeachYearFromFile()}.json";
+                      
+                        var liste = _cksManager.GetAll_CKS_ForPrint();
+                        var listeJson = Utilities.JsonOperation.JsonSerialize<CksListesiPrint>(liste);
+                        File.WriteAllText(path, listeJson);
+                        Utilities.Mesaj.MessageBoxInformation($"liste {path} olarak kayıt edildi.");
+                    }
+
+                    break;
+                default:
+                    break;
             }
         }
     }
