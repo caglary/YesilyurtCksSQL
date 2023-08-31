@@ -185,34 +185,48 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             {
                 var datatable = Utilities.ExcelExport.ConvertToDataTable<YemBitkileriPrint>(_yemBitkisiManager.GetAll_YemBitkileri_ForPrint());
                 var path = Utilities.FolderBrowser.Path();
-                path = path + $"\\Yem_Bitkisi_Müracaatları_{Utilities.ConnectionString.TeachYearFromFile()}.xlsx";
-                Utilities.Mesaj.MessageBoxInformation("Kayıt işleminiz başladı.İşlem tamamlandığında bilgilendirileceksiniz.");
-                Task.Run(() => { Utilities.ExcelExport.GenerateExcel(datatable, path); });
+                if (path != "")
+                {
+                    path = path + $"\\Yem_Bitkisi_Müracaatları_{Utilities.ConnectionString.TeachYearFromFile()}.xlsx";
+                    Utilities.Mesaj.MessageBoxInformation("Kayıt işleminiz başladı.İşlem tamamlandığında bilgilendirileceksiniz.");
+                    Task.Run(() => { Utilities.ExcelExport.GenerateExcel(datatable, path); });
+                }
             }
             if (activeButon == Butonclick.Sertifikalı)
             {
                 var datatable = Utilities.ExcelExport.ConvertToDataTable<SertifikaliTohumPrint>(_sertifikaliTohumManager.GetAll_SertifikaliTohum_ForPrint());
                 var path = Utilities.FolderBrowser.Path();
-                path = path + $"\\Sertifikalı_Tohum_Kullanım_Müracaatları_{Utilities.ConnectionString.TeachYearFromFile()}.xlsx";
-                Utilities.Mesaj.MessageBoxInformation("Kayıt işleminiz başladı.İşlem tamamlandığında bilgilendirileceksiniz.");
-                Task.Run(() => { Utilities.ExcelExport.GenerateExcel(datatable, path); });
+                if (path != "")
+                {
+                    path = path + $"\\Sertifikalı_Tohum_Kullanım_Müracaatları_{Utilities.ConnectionString.TeachYearFromFile()}.xlsx";
+                    Utilities.Mesaj.MessageBoxInformation("Kayıt işleminiz başladı.İşlem tamamlandığında bilgilendirileceksiniz.");
+                    Task.Run(() => { Utilities.ExcelExport.GenerateExcel(datatable, path); });
+                }
             }
             if (activeButon == Butonclick.FarkOdemesi)
             {
                 var datatable = Utilities.ExcelExport.ConvertToDataTable<FarkOdemesiPrint>(_farkOdemesiManager.GetAll_FarkOdemesi_ForPrint());
                 var path = Utilities.FolderBrowser.Path();
-                path = path + $"\\Fark_Ödemesi_Destekleme_Müracaatları_{Utilities.ConnectionString.TeachYearFromFile()}.xlsx";
-                Utilities.Mesaj.MessageBoxInformation("Kayıt işleminiz başladı.İşlem tamamlandığında bilgilendirileceksiniz.");
-                Task.Run(() => { Utilities.ExcelExport.GenerateExcel(datatable, path); });
+                if (path != "")
+                {
+                    path = path + $"\\Fark_Ödemesi_Destekleme_Müracaatları_{Utilities.ConnectionString.TeachYearFromFile()}.xlsx";
+                    Utilities.Mesaj.MessageBoxInformation("Kayıt işleminiz başladı.İşlem tamamlandığında bilgilendirileceksiniz.");
+                    Task.Run(() => { Utilities.ExcelExport.GenerateExcel(datatable, path); });
+                }
             }
             if (activeButon == Butonclick.CksListesi)
             {
-                var liste=_cksManager.GetAll();
+                var liste = _cksManager.GetAll();
                 var datatable = Utilities.ExcelExport.ConvertToDataTable<CksListesiPrint>(_cksManager.GetAll_CKS_ForPrint());
                 var path = Utilities.FolderBrowser.Path();
-                path = path + $"\\ÇKS_Müracaatları_{Utilities.ConnectionString.TeachYearFromFile()}.xlsx";
-                Utilities.Mesaj.MessageBoxInformation("Kayıt işleminiz başladı.İşlem tamamlandığında bilgilendirileceksiniz.");
-                Task.Run(() => { Utilities.ExcelExport.GenerateExcel(datatable, path); });
+                if (path != "")
+                {
+                    path = path + $"\\ÇKS_Müracaatları_{Utilities.ConnectionString.TeachYearFromFile()}.xlsx";
+                    Utilities.Mesaj.MessageBoxInformation("Kayıt işleminiz başladı.İşlem tamamlandığında bilgilendirileceksiniz.");
+                    Task.Run(() => { Utilities.ExcelExport.GenerateExcel(datatable, path); });
+                }
+
+
             }
         }
         private void ListelerForm_Load(object sender, EventArgs e)
