@@ -7,7 +7,7 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
     {
         public static List<string> VillageNameList()
         {
-            var initiliazeList = new List<string> { "BAHÇEBAŞI", "KARACAÖREN", "GOP", "MERKEZ", "SEKÜCEK", "ÇIKRIK", "ÇERKEZDANİŞMENT", "DAMLALI", "BÜĞET", "ŞEHİTLER", "ÇIRDAK", "KUŞÇU", "KAVUNLUK", "DOĞLACIK", "YAĞMUR", "EKİNLİ", "YENİKÖY", "GÜNDOĞAN", "SİVRİ", "KARAGÖZGÖLLÜALAN", "KARAOLUK", "YÜZÜNCÜYIL", "EVRENPAŞA" };
+            var initiliazeList = new List<string> { "BAHÇEBAŞI ", "KARACAÖREN", "GOP", "SEKÜCEK", "ÇIKRIK", "ÇERKEZDANİŞMENT", "DAMLALI", "BÜĞET", "ŞEHİTLER", "ÇIRDAK", "KUŞÇU", "KAVUNLUK", "DOĞLACIK", "YAĞMUR", "EKİNLİ", "YENİKÖY", "GÜNDOĞAN", "SİVRİ", "KARAGÖZGÖLLÜALAN", "KARAOLUK", "YÜZÜNCÜYIL", "EVRENPAŞA" };
             string currentDirectory = Directory.GetCurrentDirectory();
             string path = currentDirectory + @"\Villages.txt";
             if (File.Exists(path))

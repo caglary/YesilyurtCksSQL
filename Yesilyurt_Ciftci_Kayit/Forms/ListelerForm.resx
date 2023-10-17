@@ -53,6 +53,7 @@
     value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
+
     mimetype: application/x-microsoft.net.object.bytearray.base64
     value   : The object must be serialized into a byte array 
             : using a System.ComponentModel.TypeConverter
@@ -120,7 +121,7 @@
   <data name="btnSertifikaliTohumDestegi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAADYNJREFUeF7tW2lQVUcWTs2P+TE1v2ZqqgKyPBZZHu+B7IIssgkoPEAEZBF30bhg
+        EgAACxIB0t1+/AAADYNJREFUeF7tW2lQVUcWTs2P+TE1v2ZqqgKyPBZZHu+B7IIssgkoPEAEZBF30bhg
         RgmLC2gUI5K4axgFVMAlYhYdE41b3CMq4EwSx4kmUZPS6CgaFZennunT3be98C6omfseqSlP1Vd1X/d9
         p09/t5dzTt/72it5Ja/kpcTa2u3P1g669dYO+pvWGv35XhpdHq+yuFjb68YTOy6gLb0cdOvQNl5lPiGN
         HejloAc5rDT6JF5tMbGy1yV3toPYtp9Xm0det/dwx4b0ngHw7a73YVHRRNa4RreR32IxIU98E7ZdOTUL
@@ -225,7 +226,7 @@
   <data name="btnYemBitkisiDestegi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAACYtJREFUeF7tm3tw1cUVx7nJvXlDYh68wtNAIBpCSCBIQkNIkPBGQ0KAhPcrvCLV
+        EgAACxIB0t1+/AAACYtJREFUeF7tm3tw1cUVx7nJvXlDYh68wtNAIBpCSCBIQkNIkPBGQ0KAhPcrvCLV
         ghIGHzAKMoQglYog+GBGqbV2hpe1CrQlPAwQBdT+1U7tw2md2qoIjEJy+v3u7+7emwcEMCT33vbMfCa7
         57e7vz3729/Z3fO7afN/aR3JBu+Cr5z8GmSB/wlZDGqB1KMGlACflmRw1WZrI2sfSpcvTpXIP0+WyFOl
         6UIdrznL+KTYwAkgD89OlWt/WF4H6ngNHHeW9TmZA5SRX1cvUUbrPNPU6TyYDXxK7gJfAGNw/QFwz4N/
@@ -272,7 +273,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAFmFJREFUeF7tXQlcVEead/a+Zve3M3vN7mwS3mvwdhKPVWPGRHN5oWDiTGZ2Z7OZ
+        EgAACxIB0t1+/AAAFmFJREFUeF7tXQlcVEead/a+Zve3M3vN7mwS3mvwdhKPVWPGRHN5oWDiTGZ2Z7OZ
         ZDImUTEX3Y0iKtFB+uD0wBtEQKOJJmpQUZpGggqSqEQBnWg0KhqPIHgkatzve1QV9R7V2NDdpF/zvt/v
         /4Ou+l5Vvfr+dR+vmyGGGGKIIYYYYoghhhhiiO9idkh9LTZpnsUuJxloG2a7NN+aHNaPZF1oiMUuHYeX
         u2vAa3xtsYUPJtmnfwFWfyN4SQNtwGyTGmIdpiEkC/UtPAGKqn9VvKv6OZcBNYqqnyvmCUAQGjUBT4Bj
@@ -424,7 +425,7 @@
   <data name="btnCksListesi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAABSRJREFUaEPtl2loXFUYhq/YmTtjWvcFVBC3Ci6/BHEXjKi4IW4goj9q9YfignYB
+        EgAACxIB0t1+/AAABSRJREFUaEPtl2loXFUYhq/YmTtjWvcFVBC3Ci6/BHEXjKi4IW4goj9q9YfignYB
         FyIuaWfuvUlT10oVqVS0NYVaQUGxtSBqjVrbe8+kAbe6oOLS1sZobRrf99x3kszMnaQzKRLxPnCYOe85
         5/u+s5/rpKSkpKSkpKRMMtwgvNj1oxVZP/qCCf+73aK5UMWTmKGhvbKeecr1zRB+N2d9syRO0TfSFrKO
         ak8+sl40m4FixNudRT0ZyQ7/Qy/aThTN3VL/XVyv9+isV7o8F5jznGBzXvII0Fwv2sqlI6UGlK9CJ351

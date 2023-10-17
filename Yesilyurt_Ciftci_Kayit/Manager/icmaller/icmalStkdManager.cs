@@ -1,6 +1,5 @@
-﻿using System.Collections.Generic;
-using System;
-using System.Data;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using Yesilyurt_Ciftci_Kayit.Entities.icmaller;
 
@@ -24,13 +23,13 @@ namespace Yesilyurt_Ciftci_Kayit.Database.icmaller
                 {
                     list.Add(new icmalStkd()
                     {
-                        //siraNo = _reader.IsDBNull(0) ? 0 : _reader.GetFloat(0),
-                        //KimlikNo = _reader.IsDBNull(4) ? "" : _reader.GetString(4),
-                        //Urun = _reader.IsDBNull(9) ? "" : _reader.GetString(9),
-                        //FaturaMiktari = _reader.IsDBNull(10) ? 0 : _reader.GetFloat(10),
-                        //DesteklemeAlani = _reader.IsDBNull(11) ? 0 : _reader.GetFloat(11),
-                        //DesteklemeMiktari = _reader.IsDBNull(12) ? 0 : _reader.GetFloat(12),
-                        DesteklemeMiktari = _reader.GetFloat(12),
+                        siraNo = _reader.IsDBNull(0) ? 0 : _reader.GetInt32(0),
+                        KimlikNo = _reader.IsDBNull(4) ? "" : _reader.GetString(4),
+                        
+                        Urun = _reader.IsDBNull(9) ? "" : _reader.GetString(9),
+                        FaturaMiktari = _reader.IsDBNull(10) ? 0 : _reader.GetDecimal(10),
+                        DesteklemeAlani = _reader.IsDBNull(11) ? 0 : _reader.GetDecimal(11),
+                        DesteklemeMiktari = _reader.IsDBNull(12) ? 0 : _reader.GetDecimal(12),
 
 
 

@@ -48,6 +48,7 @@
             this.radioButtonAraziKontrolEdilmedi = new System.Windows.Forms.RadioButton();
             this.radioButtonUygunDegil = new System.Windows.Forms.RadioButton();
             this.radioButtonUygun = new System.Windows.Forms.RadioButton();
+            this.btnJson = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwListe)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -157,7 +158,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(125, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 17);
+            this.label3.Size = new System.Drawing.Size(128, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "Dosya No ile Arama";
             // 
@@ -175,7 +176,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(125, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 17);
+            this.label2.Size = new System.Drawing.Size(142, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tc Kimlik No ile Arama";
             // 
@@ -193,7 +194,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(125, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 17);
+            this.label1.Size = new System.Drawing.Size(142, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "İsim Soyisim ile Arama";
             // 
@@ -239,7 +240,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label4.Location = new System.Drawing.Point(27, -5);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(491, 29);
+            this.label4.Size = new System.Drawing.Size(489, 28);
             this.label4.TabIndex = 1;
             this.label4.Text = "Görmek istediğiniz listeye ait butona tıklayınız.";
             // 
@@ -267,7 +268,7 @@
             this.lblKayitSayisi.ForeColor = System.Drawing.Color.Sienna;
             this.lblKayitSayisi.Location = new System.Drawing.Point(25, 247);
             this.lblKayitSayisi.Name = "lblKayitSayisi";
-            this.lblKayitSayisi.Size = new System.Drawing.Size(22, 23);
+            this.lblKayitSayisi.Size = new System.Drawing.Size(22, 22);
             this.lblKayitSayisi.TabIndex = 1;
             this.lblKayitSayisi.Text = "--";
             // 
@@ -325,6 +326,18 @@
             this.radioButtonUygun.UseVisualStyleBackColor = true;
             this.radioButtonUygun.Click += new System.EventHandler(this.radioButtonUygun_Click);
             // 
+            // btnJson
+            // 
+            this.btnJson.Location = new System.Drawing.Point(213, 175);
+            this.btnJson.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnJson.Name = "btnJson";
+            this.btnJson.Size = new System.Drawing.Size(66, 57);
+            this.btnJson.TabIndex = 3;
+            this.btnJson.Text = "JSON";
+            this.btnJson.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnJson.UseVisualStyleBackColor = true;
+            this.btnJson.Click += new System.EventHandler(this.btnJson_Click);
+            // 
             // ListelerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -335,6 +348,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnJson);
             this.Controls.Add(this.btnExcel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ListelerForm";
@@ -351,6 +365,7 @@
             this.groupBoxYemKontrolDurumu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
         #endregion
         private System.Windows.Forms.Button btnSertifikaliTohumDestegi;
@@ -375,5 +390,6 @@
         private System.Windows.Forms.RadioButton radioButtonAraziKontrolEdilmedi;
         private System.Windows.Forms.RadioButton radioButtonUygunDegil;
         private System.Windows.Forms.RadioButton radioButtonUygun;
+        private System.Windows.Forms.Button btnJson;
     }
 }
