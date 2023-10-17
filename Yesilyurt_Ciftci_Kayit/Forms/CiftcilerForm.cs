@@ -101,13 +101,13 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             txtFatherName.Text = "";
             txtMotherName.Text = "";
             dtpBirthday.Text = "";
-            comboBoxGender.Text = "";
-            comboBoxMaritalStatus.Text = "";
+            //comboBoxGender.Text = "";
+            //comboBoxMaritalStatus.Text = "";
             txtMobilePhone.Text = "";
             txtHomePhone.Text = "";
             txtEmail.Text = "";
-            txtCity.Text = "";
-            txtTown.Text = "";
+            //txtCity.Text = "";
+            //txtTown.Text = "";
             comboBoxVillage.Text = "";
             txtNote.Text = "";
         }

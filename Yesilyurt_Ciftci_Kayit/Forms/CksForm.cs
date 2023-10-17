@@ -237,6 +237,8 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         private void EkleFormuBoşalt()
         {
             txtAddTc.Text = "";
+            txtAddTc.Focus();
+
             txtAddNameSurname.Text = "";
             txtAddMobilePhone.Text = "";
             txtAddHomePhone.Text = "";

@@ -64,7 +64,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         {
             if (kullanici.Yetki == "Write")
             {
-                Utilities.FormProperties.FormOpen("CiftcilerForm", new CiftcilerForm(kullanici), this, true);
+                Utilities.FormProperties.FormOpen("CiftcilerForm", new CiftcilerForm(kullanici), this, false);
             }
         }
         private void btnFirmalar_Click(object sender, EventArgs e)
@@ -82,12 +82,12 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
        
         private void pictureBoxListeter_Click(object sender, EventArgs e)
         {
-            Utilities.FormProperties.FormOpen("ListelerForm", new ListelerForm(kullanici), this, true);
+            Utilities.FormProperties.FormOpen("ListelerForm", new ListelerForm(kullanici), this, false);
         }
         private void pictureBoxCksIslemleri_Click(object sender, EventArgs e)
         {
            
-            Utilities.FormProperties.FormOpen("CksForm", new CksForm(kullanici), this, true);
+            Utilities.FormProperties.FormOpen("CksForm", new CksForm(kullanici), this, false);
         }
         private void pictureBoxTMO_Click(object sender, EventArgs e)
         {
