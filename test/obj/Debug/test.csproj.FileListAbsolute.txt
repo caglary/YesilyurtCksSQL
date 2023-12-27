@@ -40,3 +40,17 @@ D:\Github\YesilyurtCksSQL\test\obj\Debug\test.csproj.CoreCompileInputs.cache
 D:\Github\YesilyurtCksSQL\test\obj\Debug\test.csproj.CopyComplete
 D:\Github\YesilyurtCksSQL\test\obj\Debug\test.exe
 D:\Github\YesilyurtCksSQL\test\obj\Debug\test.pdb
+C:\Users\cagla\Desktop\YesilyurtCksSQL\test\bin\Debug\test.exe.config
+C:\Users\cagla\Desktop\YesilyurtCksSQL\test\bin\Debug\test.exe
+C:\Users\cagla\Desktop\YesilyurtCksSQL\test\bin\Debug\test.pdb
+C:\Users\cagla\Desktop\YesilyurtCksSQL\test\bin\Debug\Yesilyurt_Ciftci_Kayit.exe
+C:\Users\cagla\Desktop\YesilyurtCksSQL\test\bin\Debug\Newtonsoft.Json.dll
+C:\Users\cagla\Desktop\YesilyurtCksSQL\test\bin\Debug\Yesilyurt_Ciftci_Kayit.pdb
+C:\Users\cagla\Desktop\YesilyurtCksSQL\test\bin\Debug\Yesilyurt_Ciftci_Kayit.exe.config
+C:\Users\cagla\Desktop\YesilyurtCksSQL\test\bin\Debug\Newtonsoft.Json.xml
+C:\Users\cagla\Desktop\YesilyurtCksSQL\test\obj\Debug\test.csproj.AssemblyReference.cache
+C:\Users\cagla\Desktop\YesilyurtCksSQL\test\obj\Debug\test.csproj.SuggestedBindingRedirects.cache
+C:\Users\cagla\Desktop\YesilyurtCksSQL\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+C:\Users\cagla\Desktop\YesilyurtCksSQL\test\obj\Debug\test.csproj.CopyComplete
+C:\Users\cagla\Desktop\YesilyurtCksSQL\test\obj\Debug\test.exe
+C:\Users\cagla\Desktop\YesilyurtCksSQL\test\obj\Debug\test.pdb

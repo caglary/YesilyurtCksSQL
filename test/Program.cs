@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Yesilyurt_Ciftci_Kayit.Database;
 using Yesilyurt_Ciftci_Kayit.Entities;
-using Yesilyurt_Ciftci_Kayit.Entities.PrintTablo;
 using Yesilyurt_Ciftci_Kayit.Manager;
 
 namespace test
@@ -37,8 +32,11 @@ namespace test
                     Console.WriteLine("tc bulunamadı");
                     goto etiket;
                 }
-                Console.WriteLine(ciftci.IsimSoyisim + " " + cks.DosyaNo);
-
+                Console.WriteLine(ciftci.IsimSoyisim + " (2023 yılı çks dosya no : " + cks.DosyaNo+" )");
+                var benzerCksKaydiVarMi=farkOdemesiManager.GetAll().Where(I=>I.CksId==cks.Id).FirstOrDefault();
+                if (benzerCksKaydiVarMi != null) {
+                    Console.WriteLine("tc numarasına ait kayıt mevcuttur.");
+                    goto etiket; }
                 FarkOdemesi farkOdemesi = new FarkOdemesi();
                 farkOdemesi.CksId = cks.Id;
 
