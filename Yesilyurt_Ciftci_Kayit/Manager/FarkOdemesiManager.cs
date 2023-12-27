@@ -138,5 +138,47 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
             }
             return farkOdemesiListe;
         }
+        public List<FarkOdemesi> GetAll_FarkOdemesi()
+        {
+            List<FarkOdemesi> farkOdemesiListe = new List<FarkOdemesi>();
+            try
+            {
+                _reader = dal.GetAll();
+                while (_reader.Read())
+                {
+                    farkOdemesiListe.Add(new FarkOdemesi()
+                    {
+                        Id = _reader.IsDBNull(0) ? 0 : _reader.GetInt32(0),
+                        CksId= _reader.IsDBNull(1) ? 0 : _reader.GetInt32(1),
+                        FirmaId= _reader.IsDBNull(2) ? 0 : _reader.GetInt32(2),
+                        UrunId= _reader.IsDBNull(3) ? 0 : _reader.GetInt32(3),
+                        DosyaNo = _reader.IsDBNull(4) ? 0 : _reader.GetInt32(4),
+                        MuracaatTarihi = _reader.IsDBNull(5) ? DateTime.MinValue : _reader.GetDateTime(5),
+                        FaturaNo= _reader.IsDBNull(6) ? "" : _reader.GetString(6),
+                        FaturaTarihi = _reader.IsDBNull(7) ? DateTime.MinValue : _reader.GetDateTime(7),
+                        Miktari = _reader.IsDBNull(8) ? "" : _reader.GetString(8),
+                        BirimFiyati= _reader.IsDBNull(9) ? "" : _reader.GetString(9),
+                        ToplamMaliyet= _reader.IsDBNull(10) ? "" : _reader.GetString(10),
+                        Note= _reader.IsDBNull(11) ? "" : _reader.GetString(11),
+                        OdemeDurumu = _reader.IsDBNull(12) ? "" : _reader.GetString(12),
+                        KullaniciId = _reader.IsDBNull(13) ? 1 : _reader.GetInt32(13),
+                        CreateTime= _reader.IsDBNull(14) ? DateTime.MinValue : _reader.GetDateTime(14),
+                      
+                        
+                      
+                    });
+                }
+                _reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Utilities.Mesaj.MessageBoxError(ex.Message);
+            }
+            finally
+            {
+                dal.BaglantiAyarla();
+            }
+            return farkOdemesiListe;
+        }
     }
 }

@@ -62,7 +62,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 btnUpdate.Enabled = false;
                 btnDelete.Enabled = false;
             }
-            string[] havaleEdilenPersoneller = { "Mustafa ÇİÇEK", "Burak SOLMAZ", "Çağlar YURDAKUL" };
+            string[] havaleEdilenPersoneller = {  "Çağlar YURDAKUL" };
             comboBoxHavaleEdilenPersonel.DataSource = havaleEdilenPersoneller;
             comboBoxUpdateHavaleEdilenPersonel.DataSource = havaleEdilenPersoneller;
             comboBoxHavaleEdilenPersonel.Text = "";

@@ -16,7 +16,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         CksManager _cksManager;
         FarkOdemesi _farkOdemesi;
         int _index;
-        public FarkOdemesiForm(Kullanici kullanici, Ciftci ciftci,string FormAdi)
+        public FarkOdemesiForm(Kullanici kullanici, Ciftci ciftci, string FormAdi)
         {
             InitializeComponent();
             _kullanici = kullanici;
@@ -30,7 +30,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         }
         private void FarkOdemesiForm_Load(object sender, EventArgs e)
         {
-            if (_kullanici.Yetki=="Read")
+            if (_kullanici.Yetki == "Read")
             {
                 btnAdd.Enabled = false;
                 btnUpdate.Enabled = false;
@@ -45,34 +45,58 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         private void RefreshList()
         {
             dgwListe.DataSource = _farkOdemesiManager.GetAll_FarkOdemesiDataGrid();
-            Utilities.Datagrid.DataGridSettings(dgwListe, new string[] {"Id" });
+            Utilities.Datagrid.DataGridSettings(dgwListe, new string[] { "Id" });
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
+
                 int idUrun = (int)comboBoxAddUrun.SelectedValue;
                 int idFirma = (int)comboBoxAddFirma.SelectedValue;
                 FarkOdemesi farkOdemesi = new FarkOdemesi();
                 farkOdemesi.CksId = _cksManager.GetAll().Where(I => I.CiftciId == _ciftci.Id).FirstOrDefault().Id;
-                farkOdemesi.FirmaId = Convert.ToInt32(idFirma);
-                farkOdemesi.UrunId = Convert.ToInt32(idUrun);
-                farkOdemesi.DosyaNo = Convert.ToInt32(txtAddDosyaNo.Text);
-                farkOdemesi.MuracaatTarihi = dtpAddMuracaatTarihi.Value;
-                farkOdemesi.FaturaNo = txtAddFaturaNo.Text;
-                farkOdemesi.FaturaTarihi = dtpAddFaturaTarihi.Value;
-                farkOdemesi.Miktari = txtAddMiktari.Text;
-                farkOdemesi.BirimFiyati = txtAddBirimFiyati.Text;
-                decimal miktar = Convert.ToDecimal(farkOdemesi.Miktari);
-                decimal birimFiyati = Convert.ToDecimal(farkOdemesi.BirimFiyati);
-                decimal toplamMaliyet = miktar * birimFiyati;
-                farkOdemesi.ToplamMaliyet =toplamMaliyet.ToString();
-                farkOdemesi.Note = txtAddNote.Text;
+                //2023 yılınca dosyaları için sadece isim soyisim olarak kayıt yapabilme imkanı olduğundan dolayı
+                //aşagıdaki kod parçacıkları eklenmiştir.
+                if (Utilities.ConnectionString.year == "2023")
+                {
+                    farkOdemesi.FirmaId = 10;
+                    farkOdemesi.UrunId = 29;
+                    farkOdemesi.DosyaNo = 0;
+                    farkOdemesi.MuracaatTarihi = Convert.ToDateTime("01/01/2000");
+                    farkOdemesi.FaturaNo = "0000";
+                    farkOdemesi.FaturaTarihi = Convert.ToDateTime("01/01/2000");
+                    farkOdemesi.Miktari = "0";
+                    farkOdemesi.BirimFiyati = "0";
+                    decimal miktar = Convert.ToDecimal(farkOdemesi.Miktari);
+                    decimal birimFiyati = Convert.ToDecimal(farkOdemesi.BirimFiyati);
+                    decimal toplamMaliyet = miktar * birimFiyati;
+                    farkOdemesi.ToplamMaliyet = toplamMaliyet.ToString();
+                    farkOdemesi.Note ="fatura bilgileri kayıt altına alınmadı.";
+                }
+                else
+                {
+                    farkOdemesi.FirmaId = Convert.ToInt32(idFirma);
+                    farkOdemesi.UrunId = Convert.ToInt32(idUrun);
+                    farkOdemesi.DosyaNo = Convert.ToInt32(txtAddDosyaNo.Text);
+                    farkOdemesi.MuracaatTarihi = dtpAddMuracaatTarihi.Value;
+                    farkOdemesi.FaturaNo = txtAddFaturaNo.Text;
+                    farkOdemesi.FaturaTarihi = dtpAddFaturaTarihi.Value;
+                    farkOdemesi.Miktari = txtAddMiktari.Text;
+                    farkOdemesi.BirimFiyati = txtAddBirimFiyati.Text;
+                    decimal miktar = Convert.ToDecimal(farkOdemesi.Miktari);
+                    decimal birimFiyati = Convert.ToDecimal(farkOdemesi.BirimFiyati);
+                    decimal toplamMaliyet = miktar * birimFiyati;
+                    farkOdemesi.ToplamMaliyet = toplamMaliyet.ToString();
+                    farkOdemesi.Note = txtAddNote.Text;
+                }
+
+
                 farkOdemesi.KullaniciId = _kullanici.Id;
                 int result = _farkOdemesiManager.Add(farkOdemesi);
                 if (result == 1)
                 {
-                   
+
                     txtAddFaturaNo.Text = "";
                     txtAddMiktari.Text = "";
                     txtAddBirimFiyati.Text = "";
@@ -145,9 +169,9 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 _farkOdemesi.MuracaatTarihi = dtpUpdateMuracaatTarihi.Value;
                 _farkOdemesi.FaturaNo = txtUpdateFaturaNo.Text;
                 _farkOdemesi.FaturaTarihi = dtpUpdateFaturaTarihi.Value;
-                _farkOdemesi.Miktari = txtUpdateMiktari.Text.Replace(".",",");
+                _farkOdemesi.Miktari = txtUpdateMiktari.Text.Replace(".", ",");
                 _farkOdemesi.BirimFiyati = txtUpdateBirimFiyati.Text.Replace(".", ",");
-               
+
                 decimal miktar = decimal.Parse(_farkOdemesi.Miktari);
                 decimal birimFiyati = decimal.Parse(_farkOdemesi.BirimFiyati);
                 decimal toplamMaliyet = miktar * birimFiyati;

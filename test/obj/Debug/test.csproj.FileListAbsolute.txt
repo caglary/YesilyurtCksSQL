@@ -26,3 +26,17 @@ C:\laragon\www\GitRepository\caglary\YesilyurtCksSQL\test\obj\Debug\test.csproj.
 C:\laragon\www\GitRepository\caglary\YesilyurtCksSQL\test\obj\Debug\test.csproj.CopyComplete
 C:\laragon\www\GitRepository\caglary\YesilyurtCksSQL\test\obj\Debug\test.exe
 C:\laragon\www\GitRepository\caglary\YesilyurtCksSQL\test\obj\Debug\test.pdb
+D:\Github\YesilyurtCksSQL\test\bin\Debug\test.exe.config
+D:\Github\YesilyurtCksSQL\test\bin\Debug\test.exe
+D:\Github\YesilyurtCksSQL\test\bin\Debug\test.pdb
+D:\Github\YesilyurtCksSQL\test\bin\Debug\Yesilyurt_Ciftci_Kayit.exe
+D:\Github\YesilyurtCksSQL\test\bin\Debug\Newtonsoft.Json.dll
+D:\Github\YesilyurtCksSQL\test\bin\Debug\Yesilyurt_Ciftci_Kayit.pdb
+D:\Github\YesilyurtCksSQL\test\bin\Debug\Yesilyurt_Ciftci_Kayit.exe.config
+D:\Github\YesilyurtCksSQL\test\bin\Debug\Newtonsoft.Json.xml
+D:\Github\YesilyurtCksSQL\test\obj\Debug\test.csproj.AssemblyReference.cache
+D:\Github\YesilyurtCksSQL\test\obj\Debug\test.csproj.SuggestedBindingRedirects.cache
+D:\Github\YesilyurtCksSQL\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+D:\Github\YesilyurtCksSQL\test\obj\Debug\test.csproj.CopyComplete
+D:\Github\YesilyurtCksSQL\test\obj\Debug\test.exe
+D:\Github\YesilyurtCksSQL\test\obj\Debug\test.pdb
