@@ -10,6 +10,12 @@ namespace test
         static void Main(string[] args)
         {
 
+
+        }
+        public static void farkOdemesiKayitEkle2023()
+        {
+            //Fark ödemesi destekleme müracaat listesini programa işlemek için yazıldı. 
+            //Kayıtlar 2023 yılı için veritabanını kullanıyor.
             try
             {
                 Yesilyurt_Ciftci_Kayit.Utilities.ConnectionString.year = "2023";
@@ -20,8 +26,8 @@ namespace test
                 CiftciManager ciftciManager = new CiftciManager();
                 FarkOdemesiManager farkOdemesiManager = new FarkOdemesiManager();
 
-                listele(farkOdemesiManager,cksManager,ciftciManager);
-                etiket:
+                listele(farkOdemesiManager, cksManager, ciftciManager);
+            etiket:
                 Console.Write("Tc numarası giriniz: ");
 
                 string tc = Console.ReadLine();
@@ -32,11 +38,13 @@ namespace test
                     Console.WriteLine("tc bulunamadı");
                     goto etiket;
                 }
-                Console.WriteLine(ciftci.IsimSoyisim + " (2023 yılı çks dosya no : " + cks.DosyaNo+" )");
-                var benzerCksKaydiVarMi=farkOdemesiManager.GetAll().Where(I=>I.CksId==cks.Id).FirstOrDefault();
-                if (benzerCksKaydiVarMi != null) {
+                Console.WriteLine(ciftci.IsimSoyisim + " (2023 yılı çks dosya no : " + cks.DosyaNo + " )");
+                var benzerCksKaydiVarMi = farkOdemesiManager.GetAll().Where(I => I.CksId == cks.Id).FirstOrDefault();
+                if (benzerCksKaydiVarMi != null)
+                {
                     Console.WriteLine("tc numarasına ait kayıt mevcuttur.");
-                    goto etiket; }
+                    goto etiket;
+                }
                 FarkOdemesi farkOdemesi = new FarkOdemesi();
                 farkOdemesi.CksId = cks.Id;
 
@@ -82,10 +90,7 @@ namespace test
 
                 //hata fırlat...
             }
-
-
         }
-
         private static void listele(FarkOdemesiManager farkOdemesiManager, CksManager cksManager, CiftciManager ciftciManager)
         {
             var liste = farkOdemesiManager.GetAll();
@@ -96,19 +101,19 @@ namespace test
                 Console.WriteLine("--------------------------");
                 for (int i = liste.Count - 1; i > liste.Count - 10; i--)
                 {
-                    var cks=cksManager.GetAll().Where(I => I.Id== liste[i].CksId).FirstOrDefault();
+                    var cks = cksManager.GetAll().Where(I => I.Id == liste[i].CksId).FirstOrDefault();
                     var ciftci = ciftciManager.GetAll().Where(I => I.Id == cks.CiftciId).FirstOrDefault();
 
-                    Console.WriteLine("isim : "+ciftci.IsimSoyisim+"   2023 çks dosya no : " + liste[i].CksId +"   Tc No:"+ciftci.TcKimlikNo);
+                    Console.WriteLine("isim : " + ciftci.IsimSoyisim + "   2023 çks dosya no : " + liste[i].CksId + "   Tc No:" + ciftci.TcKimlikNo);
 
                 }
                 Console.WriteLine("--------------------------");
             }
 
-         
+
         }
 
-        
+
     }
 
 }
