@@ -34,6 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtUpdateHomePhone = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtEdevletUpdate = new System.Windows.Forms.TextBox();
             this.checkBoxUpdateEDevlet = new System.Windows.Forms.CheckBox();
             this.comboBoxUpdateHavaleEdilenPersonel = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@
             this.tabPageEkle = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtEdevlet = new System.Windows.Forms.TextBox();
             this.checkBoxEdevlet = new System.Windows.Forms.CheckBox();
             this.dtpAddCreateTime = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
@@ -85,8 +87,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtEdevlet = new System.Windows.Forms.TextBox();
-            this.txtEdevletUpdate = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.tabPageEkle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -203,6 +203,13 @@
             this.groupBox2.Size = new System.Drawing.Size(679, 350);
             this.groupBox2.TabIndex = 41;
             this.groupBox2.TabStop = false;
+            // 
+            // txtEdevletUpdate
+            // 
+            this.txtEdevletUpdate.Location = new System.Drawing.Point(373, 279);
+            this.txtEdevletUpdate.Name = "txtEdevletUpdate";
+            this.txtEdevletUpdate.Size = new System.Drawing.Size(100, 22);
+            this.txtEdevletUpdate.TabIndex = 85;
             // 
             // checkBoxUpdateEDevlet
             // 
@@ -417,6 +424,14 @@
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             // 
+            // txtEdevlet
+            // 
+            this.txtEdevlet.Enabled = false;
+            this.txtEdevlet.Location = new System.Drawing.Point(496, 281);
+            this.txtEdevlet.Name = "txtEdevlet";
+            this.txtEdevlet.Size = new System.Drawing.Size(100, 22);
+            this.txtEdevlet.TabIndex = 77;
+            // 
             // checkBoxEdevlet
             // 
             this.checkBoxEdevlet.AutoSize = true;
@@ -474,6 +489,7 @@
             // 
             // comboBoxHavaleEdilenPersonel
             // 
+            this.comboBoxHavaleEdilenPersonel.Enabled = false;
             this.comboBoxHavaleEdilenPersonel.FormattingEnabled = true;
             this.comboBoxHavaleEdilenPersonel.Location = new System.Drawing.Point(461, 100);
             this.comboBoxHavaleEdilenPersonel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -588,6 +604,7 @@
             // 
             // txtEvrakKayitNo
             // 
+            this.txtEvrakKayitNo.Enabled = false;
             this.txtEvrakKayitNo.Location = new System.Drawing.Point(461, 57);
             this.txtEvrakKayitNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEvrakKayitNo.Name = "txtEvrakKayitNo";
@@ -735,20 +752,6 @@
             this.panel2.Size = new System.Drawing.Size(1239, 347);
             this.panel2.TabIndex = 2;
             // 
-            // txtEdevlet
-            // 
-            this.txtEdevlet.Location = new System.Drawing.Point(496, 281);
-            this.txtEdevlet.Name = "txtEdevlet";
-            this.txtEdevlet.Size = new System.Drawing.Size(100, 22);
-            this.txtEdevlet.TabIndex = 77;
-            // 
-            // txtEdevletUpdate
-            // 
-            this.txtEdevletUpdate.Location = new System.Drawing.Point(373, 279);
-            this.txtEdevletUpdate.Name = "txtEdevletUpdate";
-            this.txtEdevletUpdate.Size = new System.Drawing.Size(100, 22);
-            this.txtEdevletUpdate.TabIndex = 85;
-            // 
             // CksForm
             // 
             this.AcceptButton = this.btnUpdateTcAra;
@@ -775,6 +778,7 @@
             this.tabControl1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
         #endregion
         private System.Windows.Forms.Button btnUpdate;

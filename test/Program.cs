@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Linq;
 using Yesilyurt_Ciftci_Kayit.Entities;
 using Yesilyurt_Ciftci_Kayit.Manager;
@@ -10,7 +11,67 @@ namespace test
         static void Main(string[] args)
         {
 
+            cks2024EdevletKayitEkle();
+        }
+        public static void cks2024EdevletKayitEkle()
+        {
+            try
+            {
+                Yesilyurt_Ciftci_Kayit.Utilities.ConnectionString.year = "2024";
+                string connectionString = Yesilyurt_Ciftci_Kayit.Utilities.ConnectionString.Get();
+                Console.WriteLine(connectionString);
+                CksManager cksManager = new CksManager();
+                CiftciManager ciftciManager = new CiftciManager();
 
+            etiket:
+                tc_gir:
+                Console.Write("Tc numarası giriniz: ");
+                string tc = Console.ReadLine();
+                if (string.IsNullOrEmpty(tc))
+                {
+                    goto tc_gir;
+                }
+                var ciftci = ciftciManager.GetAll().Where(I => I.TcKimlikNo == tc).FirstOrDefault();
+                if (ciftci == null)
+                {
+                    Console.WriteLine("tc bulunamadı");
+                    goto etiket;
+                }
+               
+                Console.WriteLine(ciftci.IsimSoyisim);
+
+            
+                cksManager.Add(new Cks
+                {
+                    CiftciId = ciftci.Id,
+                    CreateTime = DateTime.Now,
+                    DosyaNo = cksManager.DosyaNoFactory(),
+                    EvrakKayitNo = "bilinmiyor",
+                    HavaleEdilenPersonel = "bilinmiyor",
+                    KullaniciId = 2,
+                    MuracaatYeri = "E-Devlet Üzerinden yapılan başvuru",
+                    Note = ""
+
+
+
+                }) ;
+
+
+                //listele
+                var liste = cksManager.GetAllCksDataGrid();
+
+                for (int i = 0; i < 10; i++)
+                {
+                    Console.WriteLine(liste[i].DosyaNo + " -> " + liste[i].IsimSoyisim);
+                }
+                goto etiket;
+
+            }
+            catch (Exception)
+            {
+
+             
+            }
         }
         public static void farkOdemesiKayitEkle2023()
         {
