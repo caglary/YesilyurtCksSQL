@@ -1,0 +1,12 @@
+C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\bin\Debug\icmaller.exe
+C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\bin\Debug\icmaller.pdb
+C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.csproj.AssemblyReference.cache
+C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.Form1.resources
+C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.Properties.Resources.resources
+C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.csproj.GenerateResource.cache
+C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.csproj.CoreCompileInputs.cache
+C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.exe
+C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.pdb
+C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\bin\Debug\Newtonsoft.Json.dll
+C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\bin\Debug\Newtonsoft.Json.xml
+C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.csproj.CopyComplete

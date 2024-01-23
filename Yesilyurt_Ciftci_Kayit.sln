@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yesilyurt_Ciftci_Kayit", "Y
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{CA1E6DD8-6F4C-420D-B706-5F267F022D80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "icmaller", "icmaller\icmaller.csproj", "{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CA1E6DD8-6F4C-420D-B706-5F267F022D80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA1E6DD8-6F4C-420D-B706-5F267F022D80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA1E6DD8-6F4C-420D-B706-5F267F022D80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

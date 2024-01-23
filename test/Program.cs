@@ -1,6 +1,12 @@
-﻿using System;
+﻿using icmaller.Entities;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
+using System.Xml;
 using Yesilyurt_Ciftci_Kayit.Entities;
 using Yesilyurt_Ciftci_Kayit.Manager;
 
@@ -11,7 +17,80 @@ namespace test
         static void Main(string[] args)
         {
 
-            cks2024EdevletKayitEkle();
+            DatabaseToJson("select *  from icmal_fark_odemesi_2023", "FarkÖdemesiListe");
+            DatabaseToJson("select  * from icmal_sertifikali_tohum_2023", "SertifikalıTohumListe");
+            DatabaseToJson("select * from icmal_yem_bitkileri_2023", "YemBitkileriListe");
+            DatabaseToJson("select *  from icmal_mgd_2023", "MgdListe");
+
+            // JSON dosyasının yolunu belirtin
+            string jsonFilePath = "FarkÖdemesiListe" + ".json";
+
+            // JSON dosyasındaki veriyi okuyun
+            string jsonData = File.ReadAllText(jsonFilePath);
+
+            // JSON verisini C# nesnesine dönüştürün
+            List<icmaller.Entities.EntityFarkOdemesi> data = JsonConvert.DeserializeObject<List<EntityFarkOdemesi>>(jsonData);
+            // Listeyi yazdır
+            Console.WriteLine("Liste İçeriği:");
+
+            
+            foreach (var item in data)
+            {
+                Console.WriteLine(item.isletme_adi);
+            }
+
+        }
+  
+        public static void DatabaseToJson(string query,string fileName)
+        {
+            // Veritabanı bağlantı dizesi
+            string connectionString = "Server=localhost\\SQLEXPRESS;Database=YesilyurtDb2024;Trusted_Connection=True;";
+
+            // Veritabanı bağlantısını oluştur
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // SQL sorgusu
+                string sqlQuery = query;
+
+                // SQL komutunu oluştur
+                using (SqlCommand command = new SqlCommand(sqlQuery, connection))
+                {
+                    // Verileri oku
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // JSON için liste oluştur
+                        List<Dictionary<string, object>> data = new List<Dictionary<string, object>>();
+
+                        // Verileri oku ve liste oluştur
+                        while (reader.Read())
+                        {
+                            Dictionary<string, object> row = new Dictionary<string, object>();
+
+                            for (int i = 0; i < reader.FieldCount; i++)
+                            {
+                                row[reader.GetName(i)] = reader[i];
+                            }
+
+                            data.Add(row);
+                        }
+
+                        // Listeyi JSON'a dönüştür
+                        string jsonData = JsonConvert.SerializeObject(data, Newtonsoft.Json.Formatting.Indented);
+
+                        // JSON'u dosyaya yaz
+                        string filePath = fileName+".json";
+
+                        using (StreamWriter sw = new StreamWriter(filePath))
+                        {
+                            sw.Write(jsonData);
+                        }
+
+                        Console.WriteLine("JSON verileri dosyaya başarıyla kaydedildi. Dosya Yolu: " + filePath);
+                    }
+                }
+            }
         }
         public static void cks2024EdevletKayitEkle()
         {
@@ -152,6 +231,8 @@ namespace test
                 //hata fırlat...
             }
         }
+
+        //farkOdemesiKayitEkle2023 metodu içerisinde kullanılıyor.
         private static void listele(FarkOdemesiManager farkOdemesiManager, CksManager cksManager, CiftciManager ciftciManager)
         {
             var liste = farkOdemesiManager.GetAll();
