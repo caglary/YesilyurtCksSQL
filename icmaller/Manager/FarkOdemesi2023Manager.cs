@@ -13,7 +13,7 @@ namespace icmaller.Manager
     public class FarkOdemesi2023Manager
     {
 
-
+       
         private List<EntityFarkOdemesi> Get(string tc)
         {
             try

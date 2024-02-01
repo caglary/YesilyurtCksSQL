@@ -15,10 +15,10 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
             string Lenovo2024 = @"Server=localhost\SQLEXPRESS;Database=YesilyurtDb2024;Trusted_Connection=True;";
 
 
-            string Work2022 = @"data source=M601102-0042\SQLEXPRESS; Initial Catalog=YesilyurtDb2022;User Id=sa;Password=caglar.123;Trusted_Connection=True;";
-            string Work2021 = @"data source=M601102-0042\SQLEXPRESS; Initial Catalog=YesilyurtDb2021;User Id=sa;Password=caglar.123;Trusted_Connection=True;";
-            string Work2023 = @"data source=M601102-0042\SQLEXPRESS; Initial Catalog=YesilyurtDb2023;User Id=sa;Password=caglar.123;Trusted_Connection=True;";
-            string Work2024 = @"data source=M601102-0042\SQLEXPRESS; Initial Catalog=YesilyurtDb2024;User Id=sa;Password=caglar.123;Trusted_Connection=True;";
+            string Work2022 = @"data source=M601102-0003\SQLEXPRESS; Initial Catalog=YesilyurtDb2022;User Id=sa;Password=caglar.123;Trusted_Connection=True;";
+            string Work2021 = @"data source=M601102-0003\SQLEXPRESS; Initial Catalog=YesilyurtDb2021;User Id=sa;Password=caglar.123;Trusted_Connection=True;";
+            string Work2023 = @"data source=M601102-0003\SQLEXPRESS; Initial Catalog=YesilyurtDb2023;User Id=sa;Password=caglar.123;Trusted_Connection=True;";
+            string Work2024 = @"data source=M601102-0003\SQLEXPRESS; Initial Catalog=YesilyurtDb2024;User Id=sa;Password=caglar.123;Trusted_Connection=True;";
 
 
             string Year = year;
