@@ -26,7 +26,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             
             this.Text = $"Hoşgeldin {kullanici.KullaniciAdi} - {Utilities.ConnectionString.TeachYearFromFile()} Yılı için çalışıyorsunuz.  {connectionstring}";
             string uretimSezonuYili = Utilities.ConnectionString.TeachYearFromFile();
-            labelYear.Text= $"{uretimSezonuYili} yılı için yapılan kayıtlar";
+            labelYear.Text= $"{uretimSezonuYili} yılı için yapılan kayıtlar     "+Environment.MachineName;
             if (uretimSezonuYili=="2021")
             {
                 pictureBoxTMO.Visible = false;

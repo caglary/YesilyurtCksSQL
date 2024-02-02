@@ -42,7 +42,7 @@
             this.btn_2021.Location = new System.Drawing.Point(12, 12);
             this.btn_2021.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_2021.Name = "btn_2021";
-            this.btn_2021.Size = new System.Drawing.Size(100, 73);
+            this.btn_2021.Size = new System.Drawing.Size(75, 39);
             this.btn_2021.TabIndex = 0;
             this.btn_2021.Text = "2021";
             this.btn_2021.UseVisualStyleBackColor = true;
@@ -50,10 +50,10 @@
             // 
             // btn_2022
             // 
-            this.btn_2022.Location = new System.Drawing.Point(117, 12);
+            this.btn_2022.Location = new System.Drawing.Point(93, 12);
             this.btn_2022.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_2022.Name = "btn_2022";
-            this.btn_2022.Size = new System.Drawing.Size(100, 73);
+            this.btn_2022.Size = new System.Drawing.Size(75, 39);
             this.btn_2022.TabIndex = 0;
             this.btn_2022.Text = "2022";
             this.btn_2022.UseVisualStyleBackColor = true;
@@ -61,10 +61,10 @@
             // 
             // btn_2023
             // 
-            this.btn_2023.Location = new System.Drawing.Point(224, 12);
+            this.btn_2023.Location = new System.Drawing.Point(174, 12);
             this.btn_2023.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_2023.Name = "btn_2023";
-            this.btn_2023.Size = new System.Drawing.Size(100, 73);
+            this.btn_2023.Size = new System.Drawing.Size(75, 39);
             this.btn_2023.TabIndex = 0;
             this.btn_2023.Text = "2023";
             this.btn_2023.UseVisualStyleBackColor = true;
@@ -72,6 +72,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.panel1.Controls.Add(this.welcome);
             this.panel1.Controls.Add(this.btn_2021);
             this.panel1.Controls.Add(this.btn_2024);
@@ -81,14 +82,14 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1263, 117);
+            this.panel1.Size = new System.Drawing.Size(1263, 59);
             this.panel1.TabIndex = 3;
             // 
             // welcome
             // 
-            this.welcome.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.welcome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.welcome.AutoSize = true;
-            this.welcome.Location = new System.Drawing.Point(1096, 12);
+            this.welcome.Location = new System.Drawing.Point(1090, 12);
             this.welcome.Name = "welcome";
             this.welcome.Size = new System.Drawing.Size(61, 16);
             this.welcome.TabIndex = 1;
@@ -98,10 +99,10 @@
             // 
             this.btn_2024.BackColor = System.Drawing.SystemColors.Control;
             this.btn_2024.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_2024.Location = new System.Drawing.Point(330, 11);
+            this.btn_2024.Location = new System.Drawing.Point(255, 12);
             this.btn_2024.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_2024.Name = "btn_2024";
-            this.btn_2024.Size = new System.Drawing.Size(100, 73);
+            this.btn_2024.Size = new System.Drawing.Size(75, 39);
             this.btn_2024.TabIndex = 0;
             this.btn_2024.Text = "2024";
             this.btn_2024.UseVisualStyleBackColor = true;

@@ -37,7 +37,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                             else
                             {
                                 btn.BackColor = Color.Wheat;
-                                btn.Font = new Font("Microsoft Sans Serif", 12);
+                                btn.Font = new Font("Microsoft Sans Serif", 10);
                               
 
                             }
@@ -81,7 +81,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
 
         private void SelectYearForm_Load(object sender, EventArgs e)
         {
-            welcome.Text = "Hoşgeldin, " + _kullanici.KullaniciAdi;
+            welcome.Text = "Hoşgeldin, " + _kullanici.KullaniciAdi+"\n"+DateTime.Now.ToShortDateString();
         }
 
         private void SelectYearForm_FormClosed(object sender, FormClosedEventArgs e)

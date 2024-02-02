@@ -237,6 +237,8 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             Utilities.Datagrid.DataGridSettings(dgwListe);
             lblKayitSayisi.Text = "";
             groupBoxYemKontrolDurumu.Visible = false;
+            string hangiListe = this.Text+" ("+Utilities.ConnectionString.TeachYearFromFile()+" Yılı)";
+            this.Text= hangiListe;
         }
         private void radioButtonUygun_Click(object sender, EventArgs e)
         {
