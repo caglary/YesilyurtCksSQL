@@ -56,3 +56,4 @@ C:\Users\cagla\Desktop\YesilyurtCksSQL\test\obj\Debug\test.exe
 C:\Users\cagla\Desktop\YesilyurtCksSQL\test\obj\Debug\test.pdb
 C:\Users\cagla\Desktop\YesilyurtCksSQL\test\bin\Debug\icmaller.exe
 C:\Users\cagla\Desktop\YesilyurtCksSQL\test\bin\Debug\icmaller.pdb
+C:\Users\cagla\Desktop\YesilyurtCksSQL\test\bin\Debug\icmaller.exe.config

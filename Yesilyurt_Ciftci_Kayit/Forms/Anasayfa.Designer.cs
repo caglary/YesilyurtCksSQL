@@ -35,6 +35,7 @@
             this.labelYear = new System.Windows.Forms.Label();
             this.pictureBoxTMO = new System.Windows.Forms.PictureBox();
             this.btn_icmaller = new System.Windows.Forms.Button();
+            this.btnIcmal2023 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCiftciler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCksIslemleri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFirmalar)).BeginInit();
@@ -151,6 +152,19 @@
             this.btn_icmaller.UseVisualStyleBackColor = true;
             this.btn_icmaller.Click += new System.EventHandler(this.btn_icmaller_Click);
             // 
+            // btnIcmal2023
+            // 
+            this.btnIcmal2023.BackColor = System.Drawing.Color.Coral;
+            this.btnIcmal2023.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnIcmal2023.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnIcmal2023.Location = new System.Drawing.Point(1092, 615);
+            this.btnIcmal2023.Name = "btnIcmal2023";
+            this.btnIcmal2023.Size = new System.Drawing.Size(96, 64);
+            this.btnIcmal2023.TabIndex = 20;
+            this.btnIcmal2023.Text = "2023 icmaller";
+            this.btnIcmal2023.UseVisualStyleBackColor = false;
+            this.btnIcmal2023.Click += new System.EventHandler(this.btnIcmal2023_Click);
+            // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -161,6 +175,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1200, 691);
             this.ControlBox = false;
+            this.Controls.Add(this.btnIcmal2023);
             this.Controls.Add(this.btn_icmaller);
             this.Controls.Add(this.labelYear);
             this.Controls.Add(this.pictureBoxSifreDegistir);
@@ -201,5 +216,6 @@
         private System.Windows.Forms.Label labelYear;
         private System.Windows.Forms.PictureBox pictureBoxTMO;
         private System.Windows.Forms.Button btn_icmaller;
+        private System.Windows.Forms.Button btnIcmal2023;
     }
 }

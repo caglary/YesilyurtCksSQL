@@ -31,7 +31,6 @@
             this.txtTc = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.btnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -88,20 +87,6 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(628, 602);
             this.listBox1.TabIndex = 5;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.IndianRed;
-            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExit.Location = new System.Drawing.Point(1037, 10);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(41, 36);
-            this.btnExit.TabIndex = 6;
-            this.btnExit.Text = "X";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label1
             // 
@@ -346,7 +331,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(1090, 673);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -371,7 +355,6 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtTc);
@@ -389,7 +372,6 @@
         private System.Windows.Forms.TextBox txtTc;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

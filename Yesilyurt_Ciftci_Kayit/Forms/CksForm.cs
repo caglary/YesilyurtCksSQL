@@ -85,7 +85,11 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         {
             UpdateButtonDurum(ciftci);
             lblToplamKayitSayisi.Text = $"Toplam ÇKS Kayıt Sayısı: {_cksmanager.GetAll().Count.ToString()} Adet";
-            var yeniListe = _cksmanager.GetAllCksDataGrid().OrderByDescending(I => I.DosyaNo).ToList();
+            var allList=_cksmanager.GetAllCksDataGrid();
+            var desiredDataList = allList.Select(d => new { d.DosyaNo, d.TcKimlikNo, d.IsimSoyisim, d.BabaAdi, d.MobilePhone, d.KoyMahalle,d.Note }).ToList();
+
+
+            var yeniListe = desiredDataList.OrderByDescending(I => I.DosyaNo).ToList();
             //listede eleman yok ise 
             if (yeniListe == null || yeniListe.Count < 1)
             {
@@ -97,35 +101,33 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             if (ciftci == null)
             {
                 dgwListe.DataSource = yeniListe;
-                Utilities.Datagrid.DataGridSettings(dgwListe);
-                DataGridHeaderTextSettings();
+               
                 return;
             }
             //Listede kayıt var ve etkin çiftçi VAR ise ciftcinin olduğu kayıt
             if (ciftci != null)
             {
                 dgwListe.DataSource = yeniListe.Where(I => I.TcKimlikNo == _ciftci.TcKimlikNo).ToList();
-                Utilities.Datagrid.DataGridSettings(dgwListe);
-                DataGridHeaderTextSettings();
+             
                 return;
             }
         }
-        private void DataGridHeaderTextSettings()
-        {
-            Utilities.Datagrid.DataGridSettings(dgwListe, new string[] { "Id" });
-            dgwListe.Columns[1].HeaderText = "Dosya No";
-            dgwListe.Columns[2].HeaderText = "TC Kimlik No";
-            dgwListe.Columns[3].HeaderText = "İsim Soyisim";
-            dgwListe.Columns[4].HeaderText = "Baba Adı";
-            dgwListe.Columns[5].HeaderText = "Cep Tel";
-            dgwListe.Columns[6].HeaderText = "Ev Tel";
-            dgwListe.Columns[7].HeaderText = "Köy/Mahalle";
-            dgwListe.Columns[8].HeaderText = "Not";
-            dgwListe.Columns[9].HeaderText = "Kayıt Tarihi";
-            dgwListe.Columns[10].HeaderText = "Evrak Kayıt No";
-            dgwListe.Columns[11].HeaderText = "Havale Edilen Personel";
-            dgwListe.Columns[12].HeaderText = "Müracaat Yeri";
-        }
+        //private void DataGridHeaderTextSettings()
+        //{
+        //    Utilities.Datagrid.DataGridSettings(dgwListe, new string[] { "Id" });
+        //    dgwListe.Columns[1].HeaderText = "Dosya No";
+        //    dgwListe.Columns[2].HeaderText = "TC Kimlik No";
+        //    dgwListe.Columns[3].HeaderText = "İsim Soyisim";
+        //    dgwListe.Columns[4].HeaderText = "Baba Adı";
+        //    dgwListe.Columns[5].HeaderText = "Cep Tel";
+        //    dgwListe.Columns[6].HeaderText = "Ev Tel";
+        //    dgwListe.Columns[7].HeaderText = "Köy/Mahalle";
+        //    dgwListe.Columns[8].HeaderText = "Not";
+        //    dgwListe.Columns[9].HeaderText = "Kayıt Tarihi";
+        //    dgwListe.Columns[10].HeaderText = "Evrak Kayıt No";
+        //    dgwListe.Columns[11].HeaderText = "Havale Edilen Personel";
+        //    dgwListe.Columns[12].HeaderText = "Müracaat Yeri";
+        //}
         private void UpdateButtonDurum(Ciftci ciftci)
         {
             // Guncelle kısmında aktif çiftçi olup olmamasına göre butonlar aktif yada pasif olacak.
@@ -274,11 +276,11 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 tabControl1.SelectedTab = tabPageGuncelle;
                 _ciftci = _ciftciManager.GetByTc(tcNo);
                 Cks cksKayit = _cksmanager.GetByTc(tcNo);
-                Edevlet edevletKayit = _edevletManager.GetAll().Where(I => I.CksId == cksKayit.Id).FirstOrDefault();
-                if (edevletKayit != null)
-                {
-                    txtEdevletUpdate.Text = edevletKayit.DosyaNoEdevlet;
-                }
+                //Edevlet edevletKayit = _edevletManager.GetAll().Where(I => I.CksId == cksKayit.Id).FirstOrDefault();
+                //if (edevletKayit != null)
+                //{
+                //    txtEdevletUpdate.Text = edevletKayit.DosyaNoEdevlet;
+                //}
                 txtupdateTc.Text = tcNo;
                 txtUpdateNameSurname.Text = _ciftci.IsimSoyisim;
                 txtUpdateMobile.Text = _ciftci.CepTelefonu;
@@ -289,14 +291,14 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 txtUpdateNote.Text = cksKayit.Note;
                 txtUpdateEvrakKayitNo.Text = cksKayit.EvrakKayitNo;
                 comboBoxUpdateHavaleEdilenPersonel.Text = cksKayit.HavaleEdilenPersonel;
-                if (cksKayit.MuracaatYeri == "E-Devlet Üzerinden yapılan başvuru")
-                {
-                    checkBoxUpdateEDevlet.Checked = true;
-                }
-                else
-                {
-                    checkBoxUpdateEDevlet.Checked = false;
-                }
+                //if (cksKayit.MuracaatYeri == "E-Devlet Üzerinden yapılan başvuru")
+                //{
+                //    checkBoxUpdateEDevlet.Checked = true;
+                //}
+                //else
+                //{
+                //    checkBoxUpdateEDevlet.Checked = false;
+                //}
                 DataGridYinele(_ciftci);
             }
             catch (Exception exception)

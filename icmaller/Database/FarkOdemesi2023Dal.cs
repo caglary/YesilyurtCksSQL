@@ -13,6 +13,14 @@ namespace icmaller.Database
             BaglantiAyarla();
             return command.ExecuteReader();
         }
+        public SqlDataReader GetAll()
+        {
+
+            command = new SqlCommand("select * from icmal_fark_odemesi_2023", connect);
+            
+            BaglantiAyarla();
+            return command.ExecuteReader();
+        }
         public int ToplamKayitSayisi()
         {
             try

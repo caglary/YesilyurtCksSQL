@@ -10,3 +10,5 @@ C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.pdb
 C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\bin\Debug\Newtonsoft.Json.dll
 C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\bin\Debug\Newtonsoft.Json.xml
 C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.csproj.CopyComplete
+C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\bin\Debug\icmaller.exe.config
+C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.csproj.SuggestedBindingRedirects.cache

@@ -1,10 +1,8 @@
 ﻿using icmaller.Database;
 using icmaller.Entities;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 
@@ -13,16 +11,43 @@ namespace icmaller.Manager
     public class FarkOdemesi2023Manager
     {
 
-       
+        FarkOdemesi2023Dal _dal;
+        public FarkOdemesi2023Manager()
+        {
+            _dal=new FarkOdemesi2023Dal();
+        }
+
         private List<EntityFarkOdemesi> Get(string tc)
         {
             try
             {
-                List<EntityFarkOdemesi> datas = GetAll();
-                var result = from data in datas
-                             where data.kimlikNo == tc
-                             select data;
-                return result.ToList();
+               var result=_dal.Get(tc);
+                List<EntityFarkOdemesi> kayitlar = new List<EntityFarkOdemesi>();
+                while (result.Read())
+                {
+                    EntityFarkOdemesi entity=new EntityFarkOdemesi();
+                    entity.sira_no = Convert.ToInt32(result[1]);
+                    entity.il = result[2].ToString();
+                    entity.ilce = result[3].ToString();
+                    entity.mahalle_koy = result[4].ToString();
+                    entity.isletme_adi = result[5].ToString();
+                    entity.baba_adi = result[6].ToString();
+                    if (DBNull.Value.Equals(result[7]))
+                        entity.dogum_tarihi = DateTime.MinValue;
+                    else
+                        entity.dogum_tarihi = Convert.ToDateTime(result[7]);
+                    entity.kimlikNo = result[8].ToString();
+                    entity.dilekce_no = result[9].ToString();
+                    entity.urun_grubu = result[10].ToString();
+                    entity.destege_tabi_alan = Convert.ToDecimal(result[11]);
+                    entity.destege_tabi_uretim_miktari = Convert.ToDecimal(result[12]);
+                    entity.satis_miktari = Convert.ToDecimal(result[13]);
+                    entity.destege_tabi_miktar = Convert.ToDecimal(result[14]);
+                    entity.destek_tutari = Convert.ToDecimal(result[15]);
+                    kayitlar.Add(entity);
+                }
+                result.Close();
+                return kayitlar;
             }
             catch (Exception ex)
             {
@@ -30,51 +55,55 @@ namespace icmaller.Manager
                 throw ex;
 
             }
-
+            finally
+            {
+                _dal.BaglantiAyarla();
+            }
 
         }
 
-        private static List<EntityFarkOdemesi> GetAll()
+        public  List<EntityFarkOdemesi> GetAll()
         {
-            // JSON dosyasının yolunu belirtin
-            string jsonFilePath = "FarkÖdemesiListe" + ".json";
-
-            // JSON dosyasındaki veriyi okuyun
-            string jsonData = File.ReadAllText(jsonFilePath);
-
-            // JSON verisini JArray nesnesine dönüştürme
-            JArray jsonArray = JArray.Parse(jsonData);
-            List<EntityFarkOdemesi> liste = new List<EntityFarkOdemesi>();
-            // JObject üzerinde foreach döngüsü
-            foreach (var property in jsonArray)
+            try
             {
-                EntityFarkOdemesi entity = new EntityFarkOdemesi();
-                entity.baba_adi = property["baba_adi"].ToString();
-                entity.destege_tabi_alan = Convert.ToDecimal(property["destege_tabi_alan(da)"].ToString());
-                entity.destege_tabi_miktar = Convert.ToDecimal(property["destege_tabi_miktar(kg)"].ToString());
-                entity.destege_tabi_uretim_miktari = Convert.ToDecimal(property["destege_tabi_uretim_miktari(kg)"].ToString());
-                entity.destek_tutari = Convert.ToDecimal(property["destek_tutari(TL)"].ToString());
-                entity.dilekce_no = property["dilekce_no"].ToString();
-
-                //gelen string değeri datetime olarak dönüştüremedim. o yüzden bu kısımda doğum tarihi eksik olacak.
-
-
-                entity.id = Convert.ToInt32(property["id"].ToString());
-                entity.il = property["il"].ToString();
-                entity.ilce = property["ilce"].ToString();
-                entity.isletme_adi = property["isletme_adi"].ToString();
-                entity.kimlikNo = property["kimlikNo"].ToString();
-                entity.mahalle_koy = property["mahalle_koy"].ToString();
-                entity.satis_miktari = Convert.ToDecimal(property["satis_miktari(kg)"].ToString());
-                entity.sira_no = Convert.ToInt32(property["sira_no"].ToString());
-                entity.urun_grubu = property["urun_grubu"].ToString();
-
-
-
-                liste.Add(entity);
+                var result = _dal.GetAll();
+                List<EntityFarkOdemesi> kayitlar = new List<EntityFarkOdemesi>();
+                while (result.Read())
+                {
+                    EntityFarkOdemesi entity = new EntityFarkOdemesi();
+                    entity.sira_no = Convert.ToInt32(result[1]);
+                    entity.il = result[2].ToString();
+                    entity.ilce = result[3].ToString();
+                    entity.mahalle_koy = result[4].ToString();
+                    entity.isletme_adi = result[5].ToString();
+                    entity.baba_adi = result[6].ToString();
+                    if (DBNull.Value.Equals(result[7]))
+                        entity.dogum_tarihi = DateTime.MinValue;
+                    else
+                        entity.dogum_tarihi = Convert.ToDateTime(result[7]);
+                    entity.kimlikNo = result[8].ToString();
+                    entity.dilekce_no = result[9].ToString();
+                    entity.urun_grubu = result[10].ToString();
+                    entity.destege_tabi_alan = Convert.ToDecimal(result[11]);
+                    entity.destege_tabi_uretim_miktari = Convert.ToDecimal(result[12]);
+                    entity.satis_miktari = Convert.ToDecimal(result[13]);
+                    entity.destege_tabi_miktar = Convert.ToDecimal(result[14]);
+                    entity.destek_tutari = Convert.ToDecimal(result[15]);
+                    kayitlar.Add(entity);
+                }
+                result.Close();
+                return kayitlar;
             }
+            catch (Exception ex)
+            {
 
-            return liste;
+                throw ex;
+
+            }
+            finally
+            {
+                _dal.BaglantiAyarla();
+            }
         }
 
         public List<string> Mesaj(string tc)

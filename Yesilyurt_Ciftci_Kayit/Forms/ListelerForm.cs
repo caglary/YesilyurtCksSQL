@@ -58,9 +58,20 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         {
             groupBoxYemKontrolDurumu.Visible = false;
             activeButon = Butonclick.CksListesi;
-            dgwListe.DataSource = null;
+       
+
+
+
             var liste = _cksManager.GetAll_CKS_ForPrint();
-            dgwListe.DataSource = liste;
+
+
+            // İstediğiniz altı property'i alarak yeni bir liste oluştur
+            var desiredDataList = liste.Select(d => new { d.DosyaNo, d.TcKimlikNo, d.IsimSoyisim, d.BabaAdi, d.CepTelefonu, d.KoyMahalle }).ToList();
+
+            // DataGridView'e veriyi bağla
+            dgwListe.DataSource = desiredDataList;
+
+
             System.Windows.Forms.Button buton = (System.Windows.Forms.Button)sender;
             lblKayitSayisi.Text = $"{buton.Text} Toplam Kayıt Sayısı:  {liste.Count}  Adet";
         }
@@ -95,16 +106,29 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             }
             if (activeButon == Butonclick.CksListesi)
             {
+                
                 if (string.IsNullOrEmpty(txtSearchByName.Text))
                 {
-                    dgwListe.DataSource = _cksManager.GetAll_CKS_ForPrint();
+                    var liste = _cksManager.GetAll_CKS_ForPrint();
+                    // İstediğiniz altı property'i alarak yeni bir liste oluştur
+                    var desiredDataList = liste.Select(d => new { d.DosyaNo, d.TcKimlikNo, d.IsimSoyisim, d.BabaAdi, d.CepTelefonu, d.KoyMahalle }).ToList();
+
+                    // DataGridView'e veriyi bağla
+                    dgwListe.DataSource = desiredDataList;
+
                     return;
                 }
-                dgwListe.DataSource = _cksManager.GetAll_CKS_ForPrint().Where(I => I.IsimSoyisim.ToLower().Contains(txtSearchByName.Text.ToLower())).ToList();
+                 var listeyeni = _cksManager.GetAll_CKS_ForPrint().Where(I => I.IsimSoyisim.ToLower().Contains(txtSearchByName.Text.ToLower())).ToList();
+                 var desiredDataListYeni = listeyeni.Select(d => new { d.DosyaNo, d.TcKimlikNo, d.IsimSoyisim, d.BabaAdi, d.CepTelefonu, d.KoyMahalle }).ToList();
+                dgwListe.DataSource = desiredDataListYeni;
+
+
+
             }
         }
         private void txtSearchByTc_TextChanged(object sender, EventArgs e)
         {
+
             if (activeButon == Butonclick.Yembitkileri)
             {
                 if (string.IsNullOrEmpty(txtSearchByTc.Text))
@@ -134,12 +158,19 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             }
             if (activeButon == Butonclick.CksListesi)
             {
+                var allList = _cksManager.GetAll_CKS_ForPrint();
+               
                 if (string.IsNullOrEmpty(txtSearchByTc.Text))
                 {
-                    dgwListe.DataSource = _cksManager.GetAll_CKS_ForPrint();
+                    
+                    var desiredDataList = allList.Select(d => new { d.DosyaNo, d.TcKimlikNo, d.IsimSoyisim, d.BabaAdi, d.CepTelefonu, d.KoyMahalle }).ToList();
+                    dgwListe.DataSource= desiredDataList;
                     return;
                 }
-                dgwListe.DataSource = _cksManager.GetAll_CKS_ForPrint().Where(I => I.TcKimlikNo.Contains(txtSearchByTc.Text)).ToList();
+
+                var newList= allList.Where(I => I.TcKimlikNo.Contains(txtSearchByTc.Text)).ToList();
+                var desiredDataListNew = newList.Select(d => new { d.DosyaNo, d.TcKimlikNo, d.IsimSoyisim, d.BabaAdi, d.CepTelefonu, d.KoyMahalle }).ToList();
+                dgwListe.DataSource = desiredDataListNew;
             }
         }
         private void txtSearchByDosyaNo_TextChanged(object sender, EventArgs e)
@@ -175,10 +206,17 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             {
                 if (string.IsNullOrEmpty(txtSearchByDosyaNo.Text))
                 {
-                    dgwListe.DataSource = _cksManager.GetAll_CKS_ForPrint();
+                    var allList = _cksManager.GetAll_CKS_ForPrint();
+                
+                    var desiredDataList = allList.Select(d => new { d.DosyaNo, d.TcKimlikNo, d.IsimSoyisim, d.BabaAdi, d.CepTelefonu, d.KoyMahalle }).ToList();
+                    dgwListe.DataSource = desiredDataList;
                     return;
-                }
-                dgwListe.DataSource = _cksManager.GetAll_CKS_ForPrint().Where(I => I.DosyaNo == (Convert.ToInt32(txtSearchByDosyaNo.Text))).ToList();
+                }               
+
+                var newList = _cksManager.GetAll_CKS_ForPrint().Where(I => I.DosyaNo == (Convert.ToInt32(txtSearchByDosyaNo.Text))).ToList();
+                var desiredDataListNew = newList.Select(d => new { d.DosyaNo, d.TcKimlikNo, d.IsimSoyisim, d.BabaAdi, d.CepTelefonu, d.KoyMahalle }).ToList();
+                dgwListe.DataSource = desiredDataListNew;
+
             }
         }
         private void btnExcel_Click(object sender, EventArgs e)

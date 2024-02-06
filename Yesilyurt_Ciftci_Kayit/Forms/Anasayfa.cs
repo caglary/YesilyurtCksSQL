@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using Yesilyurt_Ciftci_Kayit.Entities;
+using icmaller;
 namespace Yesilyurt_Ciftci_Kayit.Forms
 {
     public partial class Anasayfa : Form
@@ -33,13 +34,14 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 pictureBoxCksIslemleri.Visible= false;
                 labelYear.ForeColor=Color.White;
                 btn_icmaller.Visible= false;
+                btnIcmal2023.Visible = false;
             }
             else if (uretimSezonuYili == "2022")
             {
                 pictureBoxTMO.Visible = false;
                 pictureBoxCksIslemleri.Visible = false;
                 btn_icmaller.Visible = false;
-
+                btnIcmal2023.Visible = false;
                 labelYear.ForeColor = Color.Red;
 
 
@@ -48,6 +50,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             {
                 pictureBoxTMO.Visible = false;
                 labelYear.ForeColor = Color.Yellow;
+                btnIcmal2023.Visible = false;
             }
             else if (uretimSezonuYili == "2024")
             {
@@ -57,6 +60,7 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
                 pictureBoxFirmalar.Visible = false;
                 pictureBoxUrunler.Visible = false;
                 pictureBoxSifreDegistir.Visible= false;
+         
                
             }
         }
@@ -97,6 +101,11 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
         private void btn_icmaller_Click(object sender, EventArgs e)
         {
             Utilities.FormProperties.FormOpen("icmaller", new icmallerForm(), this, true);
+        }
+
+        private void btnIcmal2023_Click(object sender, EventArgs e)
+        {
+            Utilities.FormProperties.FormOpen("icmaller 2023", new Form1(), this, true);
         }
     }
 }
