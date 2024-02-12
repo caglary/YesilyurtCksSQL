@@ -18,8 +18,105 @@ namespace test
         static void Main(string[] args)
         {
 
-            
+            sertifikaliTohumListeEkle();
 
+        }
+        private static void sertifikaliTohumListeEkle()
+        {
+            
+            Yesilyurt_Ciftci_Kayit.Utilities.ConnectionString.year = "2024";
+            string connectionString = Yesilyurt_Ciftci_Kayit.Utilities.ConnectionString.Get();
+            Console.WriteLine(connectionString);
+
+            CksManager cksManager = new CksManager();
+            CiftciManager ciftciManager = new CiftciManager();
+            SertifikaliTohumManager sertifikaliTohumManager = new SertifikaliTohumManager();
+
+            void listele()
+            {
+                var listeToplam = sertifikaliTohumManager.GetAll_SertifikaliTohum_ForPrint();
+
+                Console.WriteLine("\n--------------------------------------------------------------------------------------");
+                Console.WriteLine("*****" + Yesilyurt_Ciftci_Kayit.Utilities.ConnectionString.year + " YILI SERTİFİKALI TOHUM MÜRACAAT LİSTESİ *****");
+                Console.WriteLine("--------------------------------------------------------------------------------------\n");
+                int counter = 0;
+                foreach (var item in listeToplam)
+                {
+                    if (counter==10)
+                    {
+                        goto devam;
+                    }
+                    Console.WriteLine($"{item.DosyaNo} {item.IsimSoyisim} {item.TcKimlikNo} ");
+                    counter++;
+
+                }
+                devam:
+                Console.WriteLine("\nToplam : " + listeToplam.Count + " kişi mevcuttur.");
+                Console.WriteLine("--------------------------------------------------------------------------------------\n");
+            }
+            listele();
+        etiket:
+            Console.Write("Tc numarası giriniz: ");
+
+            string tc = Console.ReadLine();
+            if (tc.Length != 11)
+            {
+                Console.WriteLine("Tc kimlik no eksik girdiniz.");
+                goto etiket;
+            }
+            var cks = cksManager.GetByTc(tc);
+            var ciftci = ciftciManager.GetAll().Where(I => I.TcKimlikNo == tc).FirstOrDefault();
+            if (ciftci == null)
+            {
+                Console.WriteLine("tc bulunamadı");
+                goto etiket;
+            }
+
+            var kayit = sertifikaliTohumManager.GetAll_SertifikaliTohum_ForPrint().Where(I => I.TcKimlikNo == tc).FirstOrDefault();
+            if (kayit != null)
+            {
+
+                Console.WriteLine("Eklemek istediğiniz T.C. kimlik numaralı kayıt listede mevcut");
+                goto etiket;
+            }
+            try
+            {
+                int result = sertifikaliTohumManager.Add(new SertifikaliTohum
+                {
+                    BirimFiyati = "0",
+                    CksId = cks.Id,
+                    FirmaId = 10,
+                    KullaniciId = 2,
+                    Miktari = "0",
+                    FaturaTarihi = Convert.ToDateTime("01/01/2000"),
+                    CreateTime = DateTime.Now,
+                    DosyaNo = cks.DosyaNo,
+                    FaturaNo = "bilinmiyor",
+                    MuracaatTarihi = Convert.ToDateTime("01/01/2000"),
+                    Note = "fatura bilgisi kayıt edilmedi.",
+                    OdemeDurumu = "0",
+                    SertifikaNo = "bilinmiyor",
+                    ToplamMaliyet = "0",
+                    UrunId = 29
+
+                });
+                if (result != 1)
+                {
+                    Console.WriteLine("HATA : kayıt yapılamadı.");
+                    goto etiket;
+                }
+                listele();
+            }
+            catch (Exception exception)
+            {
+
+                Console.WriteLine("\n"+exception.Message+"\n");
+            }
+           
+
+
+
+            goto etiket;
         }
         private static void xmlIntro()
         {

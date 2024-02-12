@@ -68,6 +68,13 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
             }
             return liste.OrderByDescending(I => I.CreateTime).ToList();
         }
+        public bool KayitVarMi(string tcKimlikNo)
+        {
+            // Will code...
+
+
+            return true;
+        }
         public List<SertifikaliTohumDataGrid> GetAll_SertifikaliTohumDataGrid()
         {
             List<SertifikaliTohumDataGrid> liste = new List<SertifikaliTohumDataGrid>();
