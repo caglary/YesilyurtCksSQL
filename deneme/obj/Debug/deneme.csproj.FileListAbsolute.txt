@@ -1,0 +1,8 @@
+C:\Users\cagla\Desktop\YesilyurtCksSQL\deneme\bin\Debug\deneme.exe.config
+C:\Users\cagla\Desktop\YesilyurtCksSQL\deneme\bin\Debug\deneme.exe
+C:\Users\cagla\Desktop\YesilyurtCksSQL\deneme\bin\Debug\deneme.pdb
+C:\Users\cagla\Desktop\YesilyurtCksSQL\deneme\obj\Debug\deneme.csproj.AssemblyReference.cache
+C:\Users\cagla\Desktop\YesilyurtCksSQL\deneme\obj\Debug\deneme.csproj.SuggestedBindingRedirects.cache
+C:\Users\cagla\Desktop\YesilyurtCksSQL\deneme\obj\Debug\deneme.csproj.CoreCompileInputs.cache
+C:\Users\cagla\Desktop\YesilyurtCksSQL\deneme\obj\Debug\deneme.exe
+C:\Users\cagla\Desktop\YesilyurtCksSQL\deneme\obj\Debug\deneme.pdb

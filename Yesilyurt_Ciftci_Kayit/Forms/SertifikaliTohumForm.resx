@@ -53,6 +53,7 @@
     value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
+
     mimetype: application/x-microsoft.net.object.bytearray.base64
     value   : The object must be serialized into a byte array 
             : using a System.ComponentModel.TypeConverter
@@ -120,7 +121,7 @@
   <data name="btnUpdate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAACBRJREFUWEfVV3lUVNcZJ9qEdEmTkMbWND02bfREo7bsuxEXqkkPIQpRGo0gMDDA
+        EgAACxIB0t1+/AAACBRJREFUWEfVV3lUVNcZJ9qEdEmTkMbWND02bfREo7bsuxEXqkkPIQpRGo0gMDDA
         sCtRNsFE4waK7BGGbYaZx8gw7Mq+zLDvoAiCC7IEDIaoQDzRr983PI3KgPaPnp7+zvmd9+6b797f737f
         ffe+Ufv/QXDwAp3dKSu1HNL+qesk+EybI7DW5qSZ4fV3bMR/B7oOwvc37ZXm7DpcePVAUt13EbLOe3H5
         FyEq9wJ8zbRMekZWjHwSkNNr5pGRocsRrWG7qYS1NbNQyynNkW3OjxXWzEsbvSTf+MZUjcnqBqCobQTO
@@ -161,7 +162,7 @@
   <data name="btnDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAACFRJREFUWEfFl3lQVdcdx8+759z79pVFcUFxQ+lonVpCndaxSdMZzCTa6UyamEzS
+        EgAACxIB0t1+/AAACFRJREFUWEfFl3lQVdcdx8+759z79pVFcUFxQ+lonVpCndaxSdMZzCTa6UyamEzS
         sWprk45To5FFtseiwAMeO6ho1LRpTd1aa4qaOJPFhQLKooN03HDJaInWEld47/36PU9okTyMaWfSPz4c
         5t7L+X5/v/P7nXNgRPR/hdVMjWVlY8eIupkzSxpTk693v7Pt3uEli7rXx4wvqgiPsFSFh7NczlmVQWPp
         isLcCmcFgrNClbNSkK8KtgFjNcgSCvPinQffFeh0eC9YuUGPUWVFOt3UGrutdFdCQtfRhS/c3xY14lal
@@ -217,7 +218,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAADYNJREFUeF7tW2lQVUcWTs2P+TE1v2ZqqgKyPBZZHu+B7IIssgkoPEAEZBF30bhg
+        EgAACxIB0t1+/AAADYNJREFUeF7tW2lQVUcWTs2P+TE1v2ZqqgKyPBZZHu+B7IIssgkoPEAEZBF30bhg
         RgmLC2gUI5K4axgFVMAlYhYdE41b3CMq4EwSx4kmUZPS6CgaFZennunT3be98C6omfseqSlP1Vd1X/d9
         p09/t5dzTt/72it5Ja/kpcTa2u3P1g669dYO+pvWGv35XhpdHq+yuFjb68YTOy6gLb0cdOvQNl5lPiGN
         HejloAc5rDT6JF5tMbGy1yV3toPYtp9Xm0det/dwx4b0ngHw7a73YVHRRNa4RreR32IxIU98E7ZdOTUL
@@ -290,7 +291,7 @@
   <data name="btnUrun.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAfNJREFUOE9jIAdYWFjoQpnkg9DQUGZTU1MTEBtI14JocyAA0WQBoCHCZmZmO0Bs
+        EgAACxIB0t1+/AAAAfNJREFUOE9jIAdYWFjoQpnkg9DQUGZTU1MTEBtI14JocyAA0WQBoCHCZmZmO0Bs
         IO0IpY+AaKIAzBUwoK+vL+BgY3bfztoiEGjQAidbiwwHW/O7UGncAKh4AogGGhgPpdv09PS4QQZWJds8
         nVfj+Nzexvzj5i6n1xnhVvdAavACoAH3VFRU2KEGMgEtuAlkC4Owj6v5t797PP9H+Fr9/7nT87+bo/ln
         iC48IDbQ8k6Un+UVYHgf8HezOJYSavUA5DoQzoq0elWeZPs/J8rmf1mi7f+kYKtHUG24QZi31ctfuzz/
@@ -304,7 +305,7 @@
   <data name="btnFirma.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAQZJREFUOE/tUL1qAkEY/Ew4SBvyBOktfAHzENemvybP4e16R8AmhUU669TBxiYE
+        EgAACxIB0t1+/AAAAQZJREFUOE/tUL1qAkEY/Ew4SBvyBOktfAHzENemvybP4e16R8AmhUU669TBxiYE
         BHf3tBQUCeQFUqhocfnmu7tqJTkQEgwZGG5252fh6B8F4vEVKfPwJZGpjTS7JmVX1HW3BwkPmdqQQePK
         kw94Pz/YnwSkZpfCxLUoNrPS8QEPmSqPrgdtQn75g7Rd8D96Z70uHR/wkJEsOtz1gEttH0Wn05tvB5EB
         0Plbg0FiRxf3zoLQ4h8zeN612/BpmYPQ4h85uIme33IQWvxfHDQvHI5IuZS/O1KTOx7ZtwfzHITGXeFJ

@@ -141,11 +141,7 @@ namespace Yesilyurt_Ciftci_Kayit.Manager
                 return Result;
             }
             Result = _dal.Update(c);
-            //aşağıdaki kod parçacığı çift uyarı gelmemesi için form kısmında yazıldı.
-            //if (Result == 1)
-            //{
-            //    Utilities.Mesaj.MessageBoxInformation("Kayıt güncellendi.");
-            //}
+           
             return Result;
         }
         public bool TcKontrol(string tcNumarasi)
