@@ -12,3 +12,16 @@ C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\bin\Debug\Newtonsoft.Json.xml
 C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.csproj.CopyComplete
 C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\bin\Debug\icmaller.exe.config
 C:\Users\cagla\Desktop\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.csproj.SuggestedBindingRedirects.cache
+D:\github\YesilyurtCksSQL\icmaller\bin\Debug\icmaller.exe.config
+D:\github\YesilyurtCksSQL\icmaller\bin\Debug\icmaller.exe
+D:\github\YesilyurtCksSQL\icmaller\bin\Debug\icmaller.pdb
+D:\github\YesilyurtCksSQL\icmaller\bin\Debug\Newtonsoft.Json.dll
+D:\github\YesilyurtCksSQL\icmaller\bin\Debug\Newtonsoft.Json.xml
+D:\github\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.csproj.AssemblyReference.cache
+D:\github\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.Form1.resources
+D:\github\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.Properties.Resources.resources
+D:\github\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.csproj.GenerateResource.cache
+D:\github\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.csproj.CoreCompileInputs.cache
+D:\github\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.csproj.CopyComplete
+D:\github\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.exe
+D:\github\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.pdb

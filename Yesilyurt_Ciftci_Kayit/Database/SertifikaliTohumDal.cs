@@ -75,8 +75,8 @@ namespace Yesilyurt_Ciftci_Kayit.Database
         }
         public SqlDataReader GetAll_SertifikaliTohum_ForPrint()
         {
-            command = new SqlCommand("GetAll_SertifikaliTohum_ForPrint", connect);
-            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command = new SqlCommand("select\r\nCiftciler.TcKimlikNo,\r\nCiftciler.NameSurname,\r\nSertifikaliTohum.DosyaNo,\r\nSertifikaliTohum.MuracaatTarihi,\r\nFirma.FirmaAdi,\r\nUrun.UrunAdi,\r\nSertifikaliTohum.Miktari,\r\nSertifikaliTohum.OdemeDurumu\r\nfrom SertifikaliTohum\r\ninner join cks on cks.Id=SertifikaliTohum.CksId\r\ninner join firma on Firma.Id=SertifikaliTohum.FirmaId\r\ninner join Urun on Urun.Id=SertifikaliTohum.UrunId\r\ninner join Ciftciler on Ciftciler.Id=cks.CiftciId\r\norder by SertifikaliTohum.CreateTime desc", connect);
+            
             BaglantiAyarla();
             return command.ExecuteReader();
         }

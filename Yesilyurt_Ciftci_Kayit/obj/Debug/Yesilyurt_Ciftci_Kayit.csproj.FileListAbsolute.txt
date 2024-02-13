@@ -342,3 +342,6 @@ C:\Users\cagla\Desktop\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\obj\Debug\Yesilyur
 C:\Users\cagla\Desktop\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\icmaller.exe
 C:\Users\cagla\Desktop\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\icmaller.pdb
 C:\Users\cagla\Desktop\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\icmaller.exe.config
+D:\github\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\icmaller.exe
+D:\github\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\icmaller.pdb
+D:\github\YesilyurtCksSQL\Yesilyurt_Ciftci_Kayit\bin\Debug\icmaller.exe.config

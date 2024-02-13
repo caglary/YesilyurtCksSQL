@@ -712,7 +712,7 @@ inner join cks on cks.Id=SertifikaliTohum.CksId
 inner join firma on Firma.Id=SertifikaliTohum.FirmaId
 inner join Urun on Urun.Id=SertifikaliTohum.UrunId
 inner join Ciftciler on Ciftciler.Id=cks.CiftciId
-order by SertifikaliTohum.DosyaNo desc
+order by SertifikaliTohum.CreateTime desc
 go
 --  CKS Listesi FOR PRÝNT
 create procedure GetAll_CKS_ForPrint
