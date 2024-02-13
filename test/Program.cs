@@ -59,6 +59,7 @@ namespace test
             Console.Write("Tc numarası giriniz: ");
 
             string tc = Console.ReadLine();
+            tc= tc.Trim();
             if (tc.Length != 11)
             {
                 Console.WriteLine("Tc kimlik no eksik girdiniz.");
