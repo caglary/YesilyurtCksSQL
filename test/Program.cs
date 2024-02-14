@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
+using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 using Yesilyurt_Ciftci_Kayit.Entities;
@@ -18,7 +19,7 @@ namespace test
         static void Main(string[] args)
         {
 
-            sertifikaliTohumListeEkle();
+            farkOdemesiKayitEkle2023();
 
         }
         private static void sertifikaliTohumListeEkle()
@@ -57,9 +58,12 @@ namespace test
             listele();
         etiket:
             Console.Write("Tc numarası giriniz: ");
-
+                   
             string tc = Console.ReadLine();
             tc= tc.Trim();
+
+        
+
             if (tc.Length != 11)
             {
                 Console.WriteLine("Tc kimlik no eksik girdiniz.");
@@ -76,8 +80,9 @@ namespace test
             var kayit = sertifikaliTohumManager.GetAll_SertifikaliTohum_ForPrint().Where(I => I.TcKimlikNo == tc).FirstOrDefault();
             if (kayit != null)
             {
+                Console.WriteLine($"{kayit.DosyaNo} {kayit.TcKimlikNo} {kayit.IsimSoyisim}  - (Eklemek istediğiniz T.C. kimlik numaralı kayıt listede mevcut)");
 
-                Console.WriteLine("Eklemek istediğiniz T.C. kimlik numaralı kayıt listede mevcut");
+                Console.WriteLine("");
                 goto etiket;
             }
             try
@@ -376,30 +381,40 @@ namespace test
 
                 //hata fırlat...
             }
-        }
 
-        //farkOdemesiKayitEkle2023 metodu içerisinde kullanılıyor.
-        private static void listele(FarkOdemesiManager farkOdemesiManager, CksManager cksManager, CiftciManager ciftciManager)
-        {
-            var liste = farkOdemesiManager.GetAll();
-
-            if (liste.Count >= 10)
+            void listele(FarkOdemesiManager farkOdemesiManager, CksManager cksManager, CiftciManager ciftciManager)
             {
-                Console.WriteLine("Toplam Kişi Sayısı : " + liste.Count);
-                Console.WriteLine("--------------------------");
-                for (int i = liste.Count - 1; i > liste.Count - 10; i--)
+                var liste = farkOdemesiManager.GetAll();
+
+                if (liste.Count >= 10)
                 {
-                    var cks = cksManager.GetAll().Where(I => I.Id == liste[i].CksId).FirstOrDefault();
-                    var ciftci = ciftciManager.GetAll().Where(I => I.Id == cks.CiftciId).FirstOrDefault();
+                    Console.WriteLine("\n--------------------------------------------------------------------------------------");
+                    Console.WriteLine("***** " + Yesilyurt_Ciftci_Kayit.Utilities.ConnectionString.year + " YILI HUBUBAT BAKLAGİL VE DANE MISIR FARK ÖDEMESİ MÜRACAAT LİSTESİ *****");
+                    Console.WriteLine("--------------------------------------------------------------------------------------\n");
 
-                    Console.WriteLine("isim : " + ciftci.IsimSoyisim + "   2023 çks dosya no : " + liste[i].CksId + "   Tc No:" + ciftci.TcKimlikNo);
 
+                    Console.WriteLine("Toplam Kişi Sayısı : " + liste.Count);
+                    Console.WriteLine("--------------------------");
+                    for (int i = liste.Count - 1; i > liste.Count - 10; i--)
+                    {
+                        var cks = cksManager.GetAll().Where(I => I.Id == liste[i].CksId).FirstOrDefault();
+                        var ciftci = ciftciManager.GetAll().Where(I => I.Id == cks.CiftciId).FirstOrDefault();
+
+                        Console.WriteLine("isim : " + ciftci.IsimSoyisim + "   2023 çks dosya no : " + liste[i].CksId + "   Tc No:" + ciftci.TcKimlikNo);
+
+                    }
+                    Console.WriteLine("--------------------------");
                 }
-                Console.WriteLine("--------------------------");
+
+
             }
 
 
+
         }
+
+
+        
 
 
     }
