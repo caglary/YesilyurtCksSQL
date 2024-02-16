@@ -18,8 +18,18 @@ namespace test
     {
         static void Main(string[] args)
         {
+            
+            Console.WriteLine("1-) 2024 Yılı Sertifikalı Tohum Müracaat Listesi Kayıt Ekranı");
+            Console.WriteLine("2-) 2023 Yılı Fark Ödemesi Müracaat Listesi Kayıt Ekranı");
+            etiket:
+            string secim=Console.ReadLine();
+            if (secim == "1") sertifikaliTohumListeEkle();
+            else if (secim == "2") farkOdemesiKayitEkle2023();
+            else { Console.WriteLine("hatalı seçim yaptınız.Tekrar deneyin");
+                goto etiket;
+            }
 
-            farkOdemesiKayitEkle2023();
+
 
         }
         private static void sertifikaliTohumListeEkle()
@@ -349,7 +359,7 @@ namespace test
                 {
                     farkOdemesi.FirmaId = 10;
                     farkOdemesi.UrunId = 29;
-                    farkOdemesi.DosyaNo = 0;
+                    farkOdemesi.DosyaNo = cks.DosyaNo;
                     farkOdemesi.MuracaatTarihi = Convert.ToDateTime("01/01/2000");
                     farkOdemesi.FaturaNo = "0000";
                     farkOdemesi.FaturaTarihi = Convert.ToDateTime("01/01/2000");
@@ -400,7 +410,7 @@ namespace test
                         var cks = cksManager.GetAll().Where(I => I.Id == liste[i].CksId).FirstOrDefault();
                         var ciftci = ciftciManager.GetAll().Where(I => I.Id == cks.CiftciId).FirstOrDefault();
 
-                        Console.WriteLine("isim : " + ciftci.IsimSoyisim + "   2023 çks dosya no : " + liste[i].CksId + "   Tc No:" + ciftci.TcKimlikNo);
+                        Console.WriteLine("isim : " + ciftci.IsimSoyisim + "   2023 çks dosya no : " + liste[i].DosyaNo + "   Tc No:" + ciftci.TcKimlikNo);
 
                     }
                     Console.WriteLine("--------------------------");

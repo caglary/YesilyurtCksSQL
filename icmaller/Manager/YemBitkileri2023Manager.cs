@@ -82,7 +82,7 @@ namespace icmaller.Manager
 
                 return bosListe;
             };
-            decimal toplamDestekTutari = 0;
+           
             List<string> urunGrubu = new List<string>();
             foreach (var item in liste)
             {

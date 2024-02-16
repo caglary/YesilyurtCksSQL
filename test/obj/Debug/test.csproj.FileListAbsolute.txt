@@ -58,3 +58,4 @@ C:\Users\cagla\Desktop\YesilyurtCksSQL\test\bin\Debug\icmaller.exe.config
 D:\github\YesilyurtCksSQL\test\bin\Debug\icmaller.exe
 D:\github\YesilyurtCksSQL\test\bin\Debug\icmaller.pdb
 D:\github\YesilyurtCksSQL\test\bin\Debug\icmaller.exe.config
+D:\github\YesilyurtCksSQL\test\bin\Debug\Yesilyurt_Ciftci_Kayit.pdb
