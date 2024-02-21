@@ -21,12 +21,16 @@ namespace test
             
             Console.WriteLine("1-) 2024 Yılı Sertifikalı Tohum Müracaat Listesi Kayıt Ekranı");
             Console.WriteLine("2-) 2023 Yılı Fark Ödemesi Müracaat Listesi Kayıt Ekranı");
-            etiket:
-            string secim=Console.ReadLine();
+        etiket:
+            string secim = Console.ReadLine();
             if (secim == "1") sertifikaliTohumListeEkle();
             else if (secim == "2") farkOdemesiKayitEkle2023();
-            else { Console.WriteLine("hatalı seçim yaptınız.Tekrar deneyin");
+            
+            else
+            {
+                Console.WriteLine("hatalı seçim yaptınız.Tekrar deneyin");
                 goto etiket;
+
             }
 
 

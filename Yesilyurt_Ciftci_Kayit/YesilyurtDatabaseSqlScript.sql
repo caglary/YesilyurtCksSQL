@@ -887,3 +887,37 @@ create procedure GetAll_Edevlet
 as
 select * from Edevlet
 go
+
+
+---------------------------------------------
+---       katý organik-organomineral gübre desteði icmali 2023              ---------
+---------------------------------------------
+--create table
+USE [YesilyurtDb2024]
+GO
+
+
+CREATE TABLE [dbo].[icmal_kati_organik_organomineral_gubre_odemesi_2023](
+	[id] int IDENTITY(1,1) primary key,
+	[sira_no] int NULL,
+	[il] nvarchar(10) NULL,
+	[ilce] nvarchar(10) NULL,
+	[mahalle_koy] nvarchar(50) NULL,
+	[dilekce_no] nvarchar(20) NULL,
+	[isletme_adi] nvarchar(100) NULL,
+	[baba_adi] nvarchar(50) NULL,
+	[dogum_tarihi] date NULL,
+	[kimlikNo] nvarchar(11) NOT NULL,
+	
+	[Katý Organik Ürün (Kg)] decimal(10, 3)  NULL ,
+	[Katý Organik Toprak Düzenleyici (Kg)] decimal(10, 3)  NULL,
+	[Katý Organomineral Ürün (Kg)] decimal(10, 3) NULL,
+	[Kaplama Gübre (Kg)] decimal(10, 3)  NULL,
+	[Organik Gübre (Kg)] decimal(10, 3) NULL,
+	[Desteklenen Alan (da)] decimal(10, 3) NOT NULL,
+	[Destekleme Miktarý (TL)] decimal(10, 2) NOT NULL,
+			
+		
+) 
+
+	drop table [dbo].[icmal_kati_organik_organomineral_gubre_odemesi_2023]

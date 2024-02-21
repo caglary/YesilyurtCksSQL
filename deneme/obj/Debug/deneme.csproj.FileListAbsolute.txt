@@ -6,3 +6,10 @@ C:\Users\cagla\Desktop\YesilyurtCksSQL\deneme\obj\Debug\deneme.csproj.SuggestedB
 C:\Users\cagla\Desktop\YesilyurtCksSQL\deneme\obj\Debug\deneme.csproj.CoreCompileInputs.cache
 C:\Users\cagla\Desktop\YesilyurtCksSQL\deneme\obj\Debug\deneme.exe
 C:\Users\cagla\Desktop\YesilyurtCksSQL\deneme\obj\Debug\deneme.pdb
+D:\github\YesilyurtCksSQL\deneme\bin\Debug\deneme.exe.config
+D:\github\YesilyurtCksSQL\deneme\bin\Debug\deneme.exe
+D:\github\YesilyurtCksSQL\deneme\bin\Debug\deneme.pdb
+D:\github\YesilyurtCksSQL\deneme\obj\Debug\deneme.csproj.AssemblyReference.cache
+D:\github\YesilyurtCksSQL\deneme\obj\Debug\deneme.csproj.CoreCompileInputs.cache
+D:\github\YesilyurtCksSQL\deneme\obj\Debug\deneme.exe
+D:\github\YesilyurtCksSQL\deneme\obj\Debug\deneme.pdb

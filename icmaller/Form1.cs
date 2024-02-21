@@ -10,6 +10,7 @@ namespace icmaller
         FarkOdemesi2023Manager farkOdemesi2023Manager;
         SertifikaliTohum2023Manager sertifikaliTohum2023Manager;
         YemBitkileri2023Manager yemBitkileri2023Manager;
+        KatiOrganikManager katiOrganikManager;
         public Form1()
         {
             InitializeComponent();
@@ -17,6 +18,7 @@ namespace icmaller
             farkOdemesi2023Manager = new FarkOdemesi2023Manager();
             sertifikaliTohum2023Manager = new SertifikaliTohum2023Manager();
             yemBitkileri2023Manager = new YemBitkileri2023Manager();
+            katiOrganikManager = new KatiOrganikManager();  
             initialize();
 
         }
@@ -39,7 +41,12 @@ namespace icmaller
             lblYemBitkileriToplamKisi.Text = yemBitkileriRapor[0];
             lblYemBitkileriToplamDestekTutari.Text = yemBitkileriRapor[1]+" TL";
 
-            var toplamDestek =Convert.ToDecimal( mgdRapor[1]) + Convert.ToDecimal(farkOdemesiRapor[1]) + Convert.ToDecimal(sertifikaliTohumRapor[1]) + Convert.ToDecimal(yemBitkileriRapor[1]);
+            var katiOrganikRapor = katiOrganikManager.ToplamRapor();
+            lblKatiOrganikToplamKisi.Text= katiOrganikRapor[0];
+            lblKatiOrganikToplamDestek.Text= katiOrganikRapor[1]+" TL";
+
+
+            var toplamDestek =Convert.ToDecimal( mgdRapor[1]) + Convert.ToDecimal(farkOdemesiRapor[1]) + Convert.ToDecimal(sertifikaliTohumRapor[1]) + Convert.ToDecimal(yemBitkileriRapor[1]) + Convert.ToDecimal(katiOrganikRapor[1]);
             lblToplamDestek.Text = $"(*) Toplam verilen destek miktarı {toplamDestek.ToString("##0,##")} TL'dir.";
         }
 
@@ -55,8 +62,10 @@ namespace icmaller
                 var yemBitkileriListe = yemBitkileri2023Manager.Mesaj(tc);
                 var mgdListe = mgd2023Manager.Mesaj(tc);
                 var sertifikaliTohumListe = sertifikaliTohum2023Manager.Mesaj(tc);
+                var katiOrganikListe = katiOrganikManager.Mesaj(tc);
 
-               
+
+
 
                 foreach (var item in mgdListe)
                 {
@@ -91,11 +100,22 @@ namespace icmaller
                 }
                 listBox1.Items.Add("-----------------");
 
+                foreach (var item in katiOrganikListe)
+                {
+
+                    listBox1.Items.Add(item);
+
+                }
+                listBox1.Items.Add("-----------------");
+
+
+
+                var katiOrganikDestekTutari=katiOrganikManager.KatiOrganikDestekTutari(tc);
                 var farkOdemesiDestekTutari = farkOdemesi2023Manager.FarkOdemesiDestekTutari(tc);
                 var sertifikaliTohumDestekTutari = sertifikaliTohum2023Manager.SertifikaliTohumDestekTutari(tc);
                 var yemBitkileriDestekTutari = yemBitkileri2023Manager.YemBitkileriDestekTutari(tc);
                 var mgdDestekTutari = mgd2023Manager.MgdDestekTutari(tc);
-                var toplam = (farkOdemesiDestekTutari + sertifikaliTohumDestekTutari + yemBitkileriDestekTutari + mgdDestekTutari).ToString();
+                var toplam = (farkOdemesiDestekTutari + sertifikaliTohumDestekTutari + yemBitkileriDestekTutari + mgdDestekTutari+katiOrganikDestekTutari).ToString();
                 listBox1.Items.Add("\n\tToplam "+toplam + " TL destek alınmıştır.");
 
 
