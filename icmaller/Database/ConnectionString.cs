@@ -11,7 +11,7 @@ namespace icmaller.Database
             string connectionString = "";
             string machineName = Environment.MachineName;
 
-            string Lenovo2024 = @"Server=localhost\SQLEXPRESS;Database=YesilyurtDb2024;Trusted_Connection=True;";
+            string Lenovo2024 = @"Server=DESKTOP-JLF6L6G\SQLEXPRESS;Database=YesilyurtDb2024;Trusted_Connection=True;";
 
 
             string Work2024 = @"data source=M601102-0003\SQLEXPRESS; Initial Catalog=YesilyurtDb2024;Trusted_Connection=True;";
@@ -20,7 +20,7 @@ namespace icmaller.Database
             string Year = year;
 
 
-            if (machineName == "DESKTOP-ITQCLKI")
+            if (machineName == "DESKTOP-JLF6L6G")
             {
                 connectionString = Lenovo2024;
              

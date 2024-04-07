@@ -34,18 +34,14 @@ namespace Yesilyurt_Ciftci_Kayit.Forms
             string macAddress = Utilities.MacAddress.GetMacAddress();
             string machineName = Environment.MachineName; // Lenovo için ekleme yapıldı...
 
-            if (machineName == "DESKTOP-ITQCLKI" || machineName == "M601102-0003")
+            if (machineName == "DESKTOP-JLF6L6G" )
             {
                 _kullanici.KullaniciAdi = "caglar";
                 OpenMenuForm(_kullanici);
 
 
             }
-            else if (machineName == "M601102-0043")
-            {
-                _kullanici.KullaniciAdi = "aleyna";
-                OpenMenuForm(_kullanici);
-            }
+          
         }
         
         private void OpenMenuForm(Kullanici _kullanici)

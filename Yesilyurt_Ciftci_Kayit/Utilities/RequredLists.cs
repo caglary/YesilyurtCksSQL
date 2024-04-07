@@ -7,7 +7,7 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
     {
         public static List<string> VillageNameList()
         {
-            var initiliazeList = new List<string> { "BAHÇEBAŞI ", "KARACAÖREN", "GOP", "SEKÜCEK", "ÇIKRIK", "ÇERKEZDANİŞMENT", "DAMLALI", "BÜĞET", "ŞEHİTLER", "ÇIRDAK", "KUŞÇU", "KAVUNLUK", "DOĞLACIK", "YAĞMUR", "EKİNLİ", "YENİKÖY", "GÜNDOĞAN", "SİVRİ", "KARAGÖZGÖLLÜALAN", "KARAOLUK", "YÜZÜNCÜYIL", "EVRENPAŞA" };
+            var initiliazeList = new List<string> { "BAHÇEBAŞI ", "KARACAÖREN", "GOP", "SEKÜCEK", "ÇIKRIK", "ÇERKEZDANİŞMENT", "DAMLALI", "BÜĞET", "ŞEHİTLER", "ÇIRDAK", "KUŞÇU", "KAVUNLUK", "DOĞLACIK", "YAĞMUR", "EKİNLİ", "YENİKÖY", "GÜNDOĞAN", "SİVRİ", "KARAGÖZGÖLLÜALAN", "KARAOLUK", "YÜZÜNCÜYIL", "   TÜRKMEN" };
             string currentDirectory = Directory.GetCurrentDirectory();
             string path = currentDirectory + @"\Villages.txt";
             if (File.Exists(path))
@@ -88,7 +88,7 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
         }
         public static List<string> YearList()
         {
-            return new List<string> { "2020", "2021" };
+            return new List<string> { "2023", "2024" };
         }
     }
 }

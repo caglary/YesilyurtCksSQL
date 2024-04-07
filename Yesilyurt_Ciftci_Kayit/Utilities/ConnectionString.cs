@@ -9,22 +9,22 @@ namespace Yesilyurt_Ciftci_Kayit.Utilities
         {
             string connectionString = "";
             string machineName = Environment.MachineName;
-            string Lenovo2022 = @"Server=localhost\SQLEXPRESS;Database=YesilyurtDb2022;Trusted_Connection=True;";
-            string Lenovo2021 = @"Server=localhost\SQLEXPRESS;Database=YesilyurtDb2021;Trusted_Connection=True;";
-            string Lenovo2023 = @"Server=localhost\SQLEXPRESS;Database=YesilyurtDb2023;Trusted_Connection=True;";
-            string Lenovo2024 = @"Server=localhost\SQLEXPRESS;Database=YesilyurtDb2024;Trusted_Connection=True;";
+            string Lenovo2022 = @"Server=DESKTOP-JLF6L6G\SQLEXPRESS;Database=YesilyurtDb2022;Trusted_Connection=True;";
+            string Lenovo2021 = @"Server=DESKTOP-JLF6L6G\SQLEXPRESS;Database=YesilyurtDb2021;Trusted_Connection=True;";
+            string Lenovo2023 = @"Server=DESKTOP-JLF6L6G\SQLEXPRESS;Database=YesilyurtDb2023;Trusted_Connection=True;";
+            string Lenovo2024 = @"Server=DESKTOP-JLF6L6G\SQLEXPRESS;Database=YesilyurtDb2024;Trusted_Connection=True;";
 
 
-            string Work2022 = @"Server=M601102-0003\SQLEXPRESS;Database=YesilyurtDb2022;Trusted_Connection=True;";
-            string Work2021 = @"Server=M601102-0003\SQLEXPRESS;Database=YesilyurtDb2021;Trusted_Connection=True;";
-            string Work2023 = @"Server=M601102-0003\SQLEXPRESS;Database=YesilyurtDb2023;Trusted_Connection=True;";
-            string Work2024 = @"Server=M601102-0003\SQLEXPRESS;Database=YesilyurtDb2024;Trusted_Connection=True;";
+            string Work2022 = @"Server=M601102-0008\SQLEXPRESS;Database=YesilyurtDb2022;Trusted_Connection=True;";
+            string Work2021 = @"Server=M601102-0008\SQLEXPRESS;Database=YesilyurtDb2021;Trusted_Connection=True;";
+            string Work2023 = @"Server=M601102-0008\SQLEXPRESS;Database=YesilyurtDb2023;Trusted_Connection=True;";
+            string Work2024 = @"Server=M601102-0008\SQLEXPRESS;Database=YesilyurtDb2024;Trusted_Connection=True;";
 
 
             string Year = year;
 
 
-            if (machineName == "DESKTOP-ITQCLKI")
+            if (machineName == "DESKTOP-JLF6L6G")
             {
                 switch (Year)
                 {
