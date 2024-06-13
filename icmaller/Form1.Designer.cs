@@ -55,17 +55,23 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblKatiOrganikToplamDestek = new System.Windows.Forms.Label();
             this.lblKatiOrganikToplamKisi = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblKatiOrganikToplamDestek = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblFarkOdemesiyagliTohumluToplamKisi = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lblFarkOdemesiYagliTohumluToplamDestekTutari = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtTc
@@ -362,27 +368,6 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "2023 Yılı Katı Organik-Organomineral Gübre Desteği";
             // 
-            // groupBox6
-            // 
-            this.groupBox6.BackColor = System.Drawing.Color.RosyBrown;
-            this.groupBox6.Controls.Add(this.lblToplamDestek);
-            this.groupBox6.Location = new System.Drawing.Point(668, 574);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(806, 60);
-            this.groupBox6.TabIndex = 13;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Yeşilyurt";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(20, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 18);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Toplam Destek Miktarı:";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -392,17 +377,6 @@
             this.label2.Size = new System.Drawing.Size(97, 18);
             this.label2.TabIndex = 7;
             this.label2.Text = "Toplam Kişi:";
-            // 
-            // lblKatiOrganikToplamDestek
-            // 
-            this.lblKatiOrganikToplamDestek.AutoSize = true;
-            this.lblKatiOrganikToplamDestek.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKatiOrganikToplamDestek.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblKatiOrganikToplamDestek.Location = new System.Drawing.Point(214, 76);
-            this.lblKatiOrganikToplamDestek.Name = "lblKatiOrganikToplamDestek";
-            this.lblKatiOrganikToplamDestek.Size = new System.Drawing.Size(97, 18);
-            this.lblKatiOrganikToplamDestek.TabIndex = 7;
-            this.lblKatiOrganikToplamDestek.Text = "Toplam Kişi:";
             // 
             // lblKatiOrganikToplamKisi
             // 
@@ -415,6 +389,93 @@
             this.lblKatiOrganikToplamKisi.TabIndex = 7;
             this.lblKatiOrganikToplamKisi.Text = "Toplam Kişi:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(20, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(179, 18);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Toplam Destek Miktarı:";
+            // 
+            // lblKatiOrganikToplamDestek
+            // 
+            this.lblKatiOrganikToplamDestek.AutoSize = true;
+            this.lblKatiOrganikToplamDestek.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKatiOrganikToplamDestek.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblKatiOrganikToplamDestek.Location = new System.Drawing.Point(214, 76);
+            this.lblKatiOrganikToplamDestek.Name = "lblKatiOrganikToplamDestek";
+            this.lblKatiOrganikToplamDestek.Size = new System.Drawing.Size(97, 18);
+            this.lblKatiOrganikToplamDestek.TabIndex = 7;
+            this.lblKatiOrganikToplamDestek.Text = "Toplam Kişi:";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.BackColor = System.Drawing.Color.RosyBrown;
+            this.groupBox6.Controls.Add(this.lblToplamDestek);
+            this.groupBox6.Location = new System.Drawing.Point(668, 574);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(806, 60);
+            this.groupBox6.TabIndex = 13;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Yeşilyurt";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.label3);
+            this.groupBox7.Controls.Add(this.lblFarkOdemesiyagliTohumluToplamKisi);
+            this.groupBox7.Controls.Add(this.label15);
+            this.groupBox7.Controls.Add(this.lblFarkOdemesiYagliTohumluToplamDestekTutari);
+            this.groupBox7.Location = new System.Drawing.Point(1080, 220);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(400, 100);
+            this.groupBox7.TabIndex = 12;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "2023 Yılı Fark Ödemesi Yağlı Tohumlu Desteği";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(20, 43);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 18);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Toplam Kişi:";
+            // 
+            // lblFarkOdemesiyagliTohumluToplamKisi
+            // 
+            this.lblFarkOdemesiyagliTohumluToplamKisi.AutoSize = true;
+            this.lblFarkOdemesiyagliTohumluToplamKisi.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblFarkOdemesiyagliTohumluToplamKisi.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblFarkOdemesiyagliTohumluToplamKisi.Location = new System.Drawing.Point(214, 43);
+            this.lblFarkOdemesiyagliTohumluToplamKisi.Name = "lblFarkOdemesiyagliTohumluToplamKisi";
+            this.lblFarkOdemesiyagliTohumluToplamKisi.Size = new System.Drawing.Size(97, 18);
+            this.lblFarkOdemesiyagliTohumluToplamKisi.TabIndex = 7;
+            this.lblFarkOdemesiyagliTohumluToplamKisi.Text = "Toplam Kişi:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label15.Location = new System.Drawing.Point(20, 76);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(179, 18);
+            this.label15.TabIndex = 7;
+            this.label15.Text = "Toplam Destek Miktarı:";
+            // 
+            // lblFarkOdemesiYagliTohumluToplamDestekTutari
+            // 
+            this.lblFarkOdemesiYagliTohumluToplamDestekTutari.AutoSize = true;
+            this.lblFarkOdemesiYagliTohumluToplamDestekTutari.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblFarkOdemesiYagliTohumluToplamDestekTutari.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblFarkOdemesiYagliTohumluToplamDestekTutari.Location = new System.Drawing.Point(214, 76);
+            this.lblFarkOdemesiYagliTohumluToplamDestekTutari.Name = "lblFarkOdemesiYagliTohumluToplamDestekTutari";
+            this.lblFarkOdemesiYagliTohumluToplamDestekTutari.Size = new System.Drawing.Size(97, 18);
+            this.lblFarkOdemesiYagliTohumluToplamDestekTutari.TabIndex = 7;
+            this.lblFarkOdemesiYagliTohumluToplamDestekTutari.Text = "Toplam Kişi:";
+            // 
             // Form1
             // 
             this.AcceptButton = this.btnSearch;
@@ -423,6 +484,7 @@
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1492, 673);
             this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -449,6 +511,8 @@
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,6 +552,11 @@
         private System.Windows.Forms.Label lblKatiOrganikToplamKisi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblKatiOrganikToplamDestek;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblFarkOdemesiyagliTohumluToplamKisi;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblFarkOdemesiYagliTohumluToplamDestekTutari;
     }
 }
 

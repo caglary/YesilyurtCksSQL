@@ -157,7 +157,7 @@ namespace icmaller.Manager
             List<string> result = new List<string>();
             var datas = GetAll();
 
-            string toplamKisi = datas.Count.ToString();
+            string toplamKisi = Convert.ToString(_dal.ToplamKayitSayisi());
             string toplamDestekMiktari = datas.Sum(x => x.destek_tutari).ToString("#,##0.##");
             result.Add(toplamKisi);
             result.Add(toplamDestekMiktari);

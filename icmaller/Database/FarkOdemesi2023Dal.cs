@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace icmaller.Database
@@ -25,10 +26,15 @@ namespace icmaller.Database
         {
             try
             {
-                command = new SqlCommand("select count(*)  from icmal_fark_odemesi_2023 ", connect);
+                command = new SqlCommand("SELECT kimlikNo FROM [YesilyurtDb2024].[dbo].icmal_fark_odemesi_2023 group by kimlikNo", connect);
                 BaglantiAyarla();
-                int kayitSayisi = Convert.ToInt32(command.ExecuteScalar());
-                return kayitSayisi;
+                var result= command.ExecuteReader();
+                List<String> list = new List<String>();
+                while (result.Read())
+                {
+                    list.Add(result[0].ToString());
+                }
+                return list.Count;
             }
             catch (Exception ex)
             {

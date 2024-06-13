@@ -1,0 +1,168 @@
+﻿using icmaller.Database;
+using icmaller.Entities;
+using System.Collections.Generic;
+using System;
+using System.Linq;
+
+namespace icmaller.Manager
+{
+    public class FarkOdemesiYagliTohumlu2023Manager
+    {
+        FarkOdemesiYagliTohumlu2023Dal _dal;
+        public FarkOdemesiYagliTohumlu2023Manager()
+        {
+            _dal=new FarkOdemesiYagliTohumlu2023Dal();
+
+        }
+        private List<EntityFarkOdemesiYagliTohumlu> Get(string tc)
+        {
+            try
+            {
+                var result = _dal.Get(tc);
+                List<EntityFarkOdemesiYagliTohumlu> kayitlar = new List<EntityFarkOdemesiYagliTohumlu>();
+                while (result.Read())
+                {
+                    EntityFarkOdemesiYagliTohumlu entity = new EntityFarkOdemesiYagliTohumlu();
+                    entity.sira_no = Convert.ToInt32(result[1]);
+                    entity.il = result[2].ToString();
+                    entity.ilce = result[3].ToString();
+                    entity.mahalle_koy = result[4].ToString();
+                    entity.isletme_adi = result[5].ToString();
+                    entity.baba_adi = result[6].ToString();
+                    if (DBNull.Value.Equals(result[7]))
+                        entity.dogum_tarihi = DateTime.MinValue;
+                    else
+                        entity.dogum_tarihi = Convert.ToDateTime(result[7]);
+                    entity.kimlikNo = result[8].ToString();
+                    entity.dilekce_no = result[9].ToString();
+                    entity.urun_grubu = result[10].ToString();
+                    entity.destege_tabi_alan = Convert.ToDecimal(result[11]);
+                    entity.destege_tabi_uretim_miktari = Convert.ToDecimal(result[12]);
+                    entity.satis_miktari = Convert.ToDecimal(result[13]);
+                    entity.destege_tabi_miktar = Convert.ToDecimal(result[14]);
+                    entity.destek_tutari = Convert.ToDecimal(result[15]);
+                    kayitlar.Add(entity);
+                }
+                result.Close();
+                return kayitlar;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+
+            }
+            finally
+            {
+                _dal.BaglantiAyarla();
+            }
+
+        }
+
+        public List<EntityFarkOdemesiYagliTohumlu> GetAll()
+        {
+            try
+            {
+                var result = _dal.GetAll();
+                List<EntityFarkOdemesiYagliTohumlu> kayitlar = new List<EntityFarkOdemesiYagliTohumlu>();
+                while (result.Read())
+                {
+                    EntityFarkOdemesiYagliTohumlu entity = new EntityFarkOdemesiYagliTohumlu();
+                    entity.sira_no = Convert.ToInt32(result[1]);
+                    entity.il = result[2].ToString();
+                    entity.ilce = result[3].ToString();
+                    entity.mahalle_koy = result[4].ToString();
+                    entity.isletme_adi = result[5].ToString();
+                    entity.baba_adi = result[6].ToString();
+                    if (DBNull.Value.Equals(result[7]))
+                        entity.dogum_tarihi = DateTime.MinValue;
+                    else
+                        entity.dogum_tarihi = Convert.ToDateTime(result[7]);
+                    entity.kimlikNo = result[8].ToString();
+                    entity.dilekce_no = result[9].ToString();
+                    entity.urun_grubu = result[10].ToString();
+                    entity.destege_tabi_alan = Convert.ToDecimal(result[11]);
+                    entity.destege_tabi_uretim_miktari = Convert.ToDecimal(result[12]);
+                    entity.satis_miktari = Convert.ToDecimal(result[13]);
+                    entity.destege_tabi_miktar = Convert.ToDecimal(result[14]);
+                    entity.destek_tutari = Convert.ToDecimal(result[15]);
+                    kayitlar.Add(entity);
+                }
+                result.Close();
+                return kayitlar;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+
+            }
+            finally
+            {
+                _dal.BaglantiAyarla();
+            }
+        }
+
+        public List<string> Mesaj(string tc)
+        {
+            var liste = Get(tc);
+            if (liste == null || liste.Count == 0)
+            {
+                List<string> bosListe = new List<string>();
+                bosListe.Add("2023 yılı Fark Ödemesi Yağlı Tohumlu Desteği bulunmamaktadır.");
+
+
+                return bosListe;
+            };
+            decimal toplamDestekTutari = 0;
+            List<string> urunGrubu = new List<string>();
+            foreach (var item in liste)
+            {
+                urunGrubu.Add("\tÜrün : " + item.urun_grubu);
+                urunGrubu.Add("\tSatış Miktarı : " + Convert.ToInt32(item.satis_miktari) + "  (kg)");
+                urunGrubu.Add("\tDestek Tutarı : " + item.destek_tutari + " TL");
+                toplamDestekTutari += item.destek_tutari;
+            }
+            string baslik = "2023 Yılı Fark Ödemesi Yağlı Tohumlu Desteği\n";
+            List<string> result = new List<string>();
+            result.Add(baslik);
+
+
+            foreach (var item in urunGrubu)
+            {
+                result.Add(item);
+            }
+
+
+            result.Add("\n\tToplam Destek Miktarı : " + toplamDestekTutari.ToString());
+            return result;
+        }
+
+        public decimal FarkOdemesiYagliTohumluDestekTutari(string tc)
+        {
+            var result = Get(tc);
+            decimal destekTutari = 0;
+            if (result == null) return destekTutari = 0;
+
+            foreach (var item in result)
+            {
+                destekTutari += item.destek_tutari;
+            }
+            return destekTutari;
+        }
+
+        public List<string> ToplamRapor()
+        {
+            List<string> result = new List<string>();
+            var datas = GetAll();
+
+            string toplamKisi = Convert.ToString(_dal.ToplamKayitSayisi());
+            string toplamDestekMiktari = datas.Sum(x => x.destek_tutari).ToString("#,##0.##");
+            result.Add(toplamKisi);
+            result.Add(toplamDestekMiktari);
+            return result;
+
+        }
+
+    }
+}

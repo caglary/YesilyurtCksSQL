@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>icmaller</RootNamespace>
     <AssemblyName>icmaller</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -54,12 +54,14 @@
     <Compile Include="Database\ConnectionString.cs" />
     <Compile Include="Database\Edevlet2024Dal.cs" />
     <Compile Include="Database\FarkOdemesi2023Dal.cs" />
+    <Compile Include="Database\FarkOdemesiYagliTohumlu2023Dal.cs" />
     <Compile Include="Database\Fiziksel2024Dal.cs" />
     <Compile Include="Database\KatiOrganik2023Dal.cs" />
     <Compile Include="Database\Mgd2023Dal.cs" />
     <Compile Include="Database\SertifikaliTohum2023Dal.cs" />
     <Compile Include="Database\YemBitkileri2023Dal.cs" />
     <Compile Include="Entities\EntityFarkOdemesi.cs" />
+    <Compile Include="Entities\EntityFarkOdemesiYagliTohumlu.cs" />
     <Compile Include="Entities\EntityKatiOrganik.cs" />
     <Compile Include="Entities\EntityMgd.cs" />
     <Compile Include="Entities\EntitySertifikaliTohum.cs" />
@@ -71,6 +73,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Manager\FarkOdemesi2023Manager.cs" />
+    <Compile Include="Manager\FarkOdemesiYagliTohumlu2023Manager.cs" />
     <Compile Include="Manager\KatiOrganikManager.cs" />
     <Compile Include="Manager\Mgd2023Manager.cs" />
     <Compile Include="Manager\SertifikaliTohum2023Manager.cs" />
