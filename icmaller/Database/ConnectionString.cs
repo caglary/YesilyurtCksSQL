@@ -14,7 +14,7 @@ namespace icmaller.Database
             string Lenovo2024 = @"Server=M601102-0009;Database=YesilyurtDb2024;User Id=sa;Password=Password.123;";
 
 
-            string Work2024 = @"Server=M601102-0009;Database=YesilyurtDb2024;User Id=sa;Password=Password.123;";
+            string Work2024 = @"Server=M601102-0012;Database=YesilyurtDb2024;User Id=sa;Password=Password.123;";
 
 
             string Year = year;
