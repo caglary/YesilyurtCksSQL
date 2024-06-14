@@ -64,3 +64,16 @@ C:\Users\caglar.yurdakul\Desktop\github\YesilyurtCksSQL\icmaller\obj\Debug\icmal
 C:\Users\caglar.yurdakul\Desktop\github\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.csproj.Up2Date
 C:\Users\caglar.yurdakul\Desktop\github\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.exe
 C:\Users\caglar.yurdakul\Desktop\github\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.pdb
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\icmaller\bin\Debug\icmaller.exe.config
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\icmaller\bin\Debug\icmaller.exe
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\icmaller\bin\Debug\icmaller.pdb
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\icmaller\bin\Debug\Newtonsoft.Json.dll
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\icmaller\bin\Debug\Newtonsoft.Json.xml
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.csproj.AssemblyReference.cache
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.Form1.resources
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.Properties.Resources.resources
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.csproj.GenerateResource.cache
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.csproj.CoreCompileInputs.cache
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.csproj.Up2Date
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.exe
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\icmaller\obj\Debug\icmaller.pdb
