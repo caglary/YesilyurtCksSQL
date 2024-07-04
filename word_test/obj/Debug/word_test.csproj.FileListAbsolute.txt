@@ -1,0 +1,17 @@
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\word_test\bin\Debug\word_test.exe.config
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\word_test\bin\Debug\word_test.exe
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\word_test\bin\Debug\word_test.pdb
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\word_test\obj\Debug\word_test.csproj.AssemblyReference.cache
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\word_test\obj\Debug\word_test.csproj.CoreCompileInputs.cache
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\word_test\obj\Debug\word_test.exe
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\word_test\obj\Debug\word_test.pdb
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\word_test\bin\Debug\Yesilyurt_Ciftci_Kayit.exe
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\word_test\bin\Debug\Newtonsoft.Json.dll
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\word_test\bin\Debug\icmaller.exe
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\word_test\bin\Debug\Yesilyurt_Ciftci_Kayit.pdb
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\word_test\bin\Debug\Yesilyurt_Ciftci_Kayit.exe.config
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\word_test\bin\Debug\Newtonsoft.Json.xml
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\word_test\bin\Debug\icmaller.pdb
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\word_test\bin\Debug\icmaller.exe.config
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\word_test\obj\Debug\word_test.csproj.Up2Date
+C:\Users\caglar.yurdakul\Documents\GitHub\YesilyurtCksSQL\word_test\obj\Debug\word_test.csproj.ResolveComReference.cache

@@ -3,60 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E15833E-82B1-4203-880B-7A8BBDADB211}|Yesilyurt_Ciftci_Kayit\\Yesilyurt_Ciftci_Kayit.csproj|C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\yesilyurt_ciftci_kayit\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E15833E-82B1-4203-880B-7A8BBDADB211}|Yesilyurt_Ciftci_Kayit\\Yesilyurt_Ciftci_Kayit.csproj|solutionrelative:yesilyurt_ciftci_kayit\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E15833E-82B1-4203-880B-7A8BBDADB211}|Yesilyurt_Ciftci_Kayit\\Yesilyurt_Ciftci_Kayit.csproj|C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\yesilyurt_ciftci_kayit\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3E15833E-82B1-4203-880B-7A8BBDADB211}|Yesilyurt_Ciftci_Kayit\\Yesilyurt_Ciftci_Kayit.csproj|solutionrelative:yesilyurt_ciftci_kayit\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E15833E-82B1-4203-880B-7A8BBDADB211}|Yesilyurt_Ciftci_Kayit\\Yesilyurt_Ciftci_Kayit.csproj|c:\\users\\caglar.yurdakul\\documents\\github\\yesilyurtckssql\\yesilyurt_ciftci_kayit\\forms\\cksform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3E15833E-82B1-4203-880B-7A8BBDADB211}|Yesilyurt_Ciftci_Kayit\\Yesilyurt_Ciftci_Kayit.csproj|solutionrelative:yesilyurt_ciftci_kayit\\forms\\cksform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E15833E-82B1-4203-880B-7A8BBDADB211}|Yesilyurt_Ciftci_Kayit\\Yesilyurt_Ciftci_Kayit.csproj|c:\\users\\caglar.yurdakul\\documents\\github\\yesilyurtckssql\\yesilyurt_ciftci_kayit\\forms\\anasayfa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3E15833E-82B1-4203-880B-7A8BBDADB211}|Yesilyurt_Ciftci_Kayit\\Yesilyurt_Ciftci_Kayit.csproj|solutionrelative:yesilyurt_ciftci_kayit\\forms\\anasayfa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}|icmaller\\icmaller.csproj|c:\\users\\caglar.yurdakul\\documents\\github\\yesilyurtckssql\\icmaller\\database\\connectionstring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}|icmaller\\icmaller.csproj|solutionrelative:icmaller\\database\\connectionstring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E15833E-82B1-4203-880B-7A8BBDADB211}|Yesilyurt_Ciftci_Kayit\\Yesilyurt_Ciftci_Kayit.csproj|c:\\users\\caglar.yurdakul\\documents\\github\\yesilyurtckssql\\yesilyurt_ciftci_kayit\\utilities\\connectionstring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E15833E-82B1-4203-880B-7A8BBDADB211}|Yesilyurt_Ciftci_Kayit\\Yesilyurt_Ciftci_Kayit.csproj|solutionrelative:yesilyurt_ciftci_kayit\\utilities\\connectionstring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA1E6DD8-6F4C-420D-B706-5F267F022D80}|test\\test.csproj|C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA1E6DD8-6F4C-420D-B706-5F267F022D80}|test\\test.csproj|solutionrelative:test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E15833E-82B1-4203-880B-7A8BBDADB211}|Yesilyurt_Ciftci_Kayit\\Yesilyurt_Ciftci_Kayit.csproj|C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\yesilyurt_ciftci_kayit\\database\\ciftcidal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E15833E-82B1-4203-880B-7A8BBDADB211}|Yesilyurt_Ciftci_Kayit\\Yesilyurt_Ciftci_Kayit.csproj|solutionrelative:yesilyurt_ciftci_kayit\\database\\ciftcidal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E15833E-82B1-4203-880B-7A8BBDADB211}|Yesilyurt_Ciftci_Kayit\\Yesilyurt_Ciftci_Kayit.csproj|C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\yesilyurt_ciftci_kayit\\database\\basedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E15833E-82B1-4203-880B-7A8BBDADB211}|Yesilyurt_Ciftci_Kayit\\Yesilyurt_Ciftci_Kayit.csproj|solutionrelative:yesilyurt_ciftci_kayit\\database\\basedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E15833E-82B1-4203-880B-7A8BBDADB211}|Yesilyurt_Ciftci_Kayit\\Yesilyurt_Ciftci_Kayit.csproj|C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\yesilyurt_ciftci_kayit\\database\\interface\\ibasedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E15833E-82B1-4203-880B-7A8BBDADB211}|Yesilyurt_Ciftci_Kayit\\Yesilyurt_Ciftci_Kayit.csproj|solutionrelative:yesilyurt_ciftci_kayit\\database\\interface\\ibasedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}|icmaller\\icmaller.csproj|C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\icmaller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}|icmaller\\icmaller.csproj|solutionrelative:icmaller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}|icmaller\\icmaller.csproj|C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\icmaller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}|icmaller\\icmaller.csproj|solutionrelative:icmaller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}|icmaller\\icmaller.csproj|C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\icmaller\\manager\\farkodemesiyaglitohumlu2023manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}|icmaller\\icmaller.csproj|solutionrelative:icmaller\\manager\\farkodemesiyaglitohumlu2023manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}|icmaller\\icmaller.csproj|C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\icmaller\\manager\\farkodemesi2023manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}|icmaller\\icmaller.csproj|solutionrelative:icmaller\\manager\\farkodemesi2023manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{237929AB-DD3E-4791-95EF-19134B2BA941}|word_test\\word_test.csproj|c:\\users\\caglar.yurdakul\\documents\\github\\yesilyurtckssql\\word_test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{237929AB-DD3E-4791-95EF-19134B2BA941}|word_test\\word_test.csproj|solutionrelative:word_test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,181 +14,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 504,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CksForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\Yesilyurt_Ciftci_Kayit\\Forms\\CksForm.cs",
-              "RelativeDocumentMoniker": "Yesilyurt_Ciftci_Kayit\\Forms\\CksForm.cs",
-              "ToolTip": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\Yesilyurt_Ciftci_Kayit\\Forms\\CksForm.cs [Design]",
-              "RelativeToolTip": "Yesilyurt_Ciftci_Kayit\\Forms\\CksForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T11:58:04.903Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Anasayfa.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\Yesilyurt_Ciftci_Kayit\\Forms\\Anasayfa.cs",
-              "RelativeDocumentMoniker": "Yesilyurt_Ciftci_Kayit\\Forms\\Anasayfa.cs",
-              "ToolTip": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\Yesilyurt_Ciftci_Kayit\\Forms\\Anasayfa.cs [Design]",
-              "RelativeToolTip": "Yesilyurt_Ciftci_Kayit\\Forms\\Anasayfa.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T11:58:01.999Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ConnectionString.cs",
-              "DocumentMoniker": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\icmaller\\Database\\ConnectionString.cs",
-              "RelativeDocumentMoniker": "icmaller\\Database\\ConnectionString.cs",
-              "ToolTip": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\icmaller\\Database\\ConnectionString.cs",
-              "RelativeToolTip": "icmaller\\Database\\ConnectionString.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAkwBIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T11:57:20.112Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LoginForm.cs",
-              "DocumentMoniker": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\Yesilyurt_Ciftci_Kayit\\Forms\\LoginForm.cs",
-              "RelativeDocumentMoniker": "Yesilyurt_Ciftci_Kayit\\Forms\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\Yesilyurt_Ciftci_Kayit\\Forms\\LoginForm.cs",
-              "RelativeToolTip": "Yesilyurt_Ciftci_Kayit\\Forms\\LoginForm.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAcwCQAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T09:32:28.614Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\Yesilyurt_Ciftci_Kayit\\Forms\\LoginForm.cs",
-              "RelativeDocumentMoniker": "Yesilyurt_Ciftci_Kayit\\Forms\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\Yesilyurt_Ciftci_Kayit\\Forms\\LoginForm.cs [Design]",
-              "RelativeToolTip": "Yesilyurt_Ciftci_Kayit\\Forms\\LoginForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T09:32:26.431Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\test\\Program.cs",
-              "RelativeDocumentMoniker": "test\\Program.cs",
-              "ToolTip": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\test\\Program.cs",
-              "RelativeToolTip": "test\\Program.cs",
-              "ViewState": "AQIAAKEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentMoniker": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\word_test\\Program.cs",
+              "RelativeDocumentMoniker": "word_test\\Program.cs",
+              "ToolTip": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\word_test\\Program.cs",
+              "RelativeToolTip": "word_test\\Program.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAkwC8AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T16:51:29.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IBaseDal.cs",
-              "DocumentMoniker": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\Yesilyurt_Ciftci_Kayit\\Database\\Interface\\IBaseDal.cs",
-              "RelativeDocumentMoniker": "Yesilyurt_Ciftci_Kayit\\Database\\Interface\\IBaseDal.cs",
-              "ToolTip": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\Yesilyurt_Ciftci_Kayit\\Database\\Interface\\IBaseDal.cs",
-              "RelativeToolTip": "Yesilyurt_Ciftci_Kayit\\Database\\Interface\\IBaseDal.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T16:50:33.78Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BaseDal.cs",
-              "DocumentMoniker": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\Yesilyurt_Ciftci_Kayit\\Database\\BaseDal.cs",
-              "RelativeDocumentMoniker": "Yesilyurt_Ciftci_Kayit\\Database\\BaseDal.cs",
-              "ToolTip": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\Yesilyurt_Ciftci_Kayit\\Database\\BaseDal.cs",
-              "RelativeToolTip": "Yesilyurt_Ciftci_Kayit\\Database\\BaseDal.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T16:50:20.76Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CiftciDal.cs",
-              "DocumentMoniker": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\Yesilyurt_Ciftci_Kayit\\Database\\CiftciDal.cs",
-              "RelativeDocumentMoniker": "Yesilyurt_Ciftci_Kayit\\Database\\CiftciDal.cs",
-              "ToolTip": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\Yesilyurt_Ciftci_Kayit\\Database\\CiftciDal.cs",
-              "RelativeToolTip": "Yesilyurt_Ciftci_Kayit\\Database\\CiftciDal.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T16:50:16.546Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ConnectionString.cs",
-              "DocumentMoniker": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\Yesilyurt_Ciftci_Kayit\\Utilities\\ConnectionString.cs",
-              "RelativeDocumentMoniker": "Yesilyurt_Ciftci_Kayit\\Utilities\\ConnectionString.cs",
-              "ToolTip": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\Yesilyurt_Ciftci_Kayit\\Utilities\\ConnectionString.cs",
-              "RelativeToolTip": "Yesilyurt_Ciftci_Kayit\\Utilities\\ConnectionString.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAkwBoAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T16:49:06.046Z",
+              "WhenOpened": "2024-06-14T21:37:17.499Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\icmaller\\Form1.cs",
-              "RelativeDocumentMoniker": "icmaller\\Form1.cs",
-              "ToolTip": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\icmaller\\Form1.cs",
-              "RelativeToolTip": "icmaller\\Form1.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAuwI0AAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T10:56:24.864Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\icmaller\\Form1.cs",
-              "RelativeDocumentMoniker": "icmaller\\Form1.cs",
-              "ToolTip": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\icmaller\\Form1.cs [Design]",
-              "RelativeToolTip": "icmaller\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T10:54:35.598Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FarkOdemesiYagliTohumlu2023Manager.cs",
-              "DocumentMoniker": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\icmaller\\Manager\\FarkOdemesiYagliTohumlu2023Manager.cs",
-              "RelativeDocumentMoniker": "icmaller\\Manager\\FarkOdemesiYagliTohumlu2023Manager.cs",
-              "ToolTip": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\icmaller\\Manager\\FarkOdemesiYagliTohumlu2023Manager.cs",
-              "RelativeToolTip": "icmaller\\Manager\\FarkOdemesiYagliTohumlu2023Manager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIwAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T10:49:15.695Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "FarkOdemesi2023Manager.cs",
-              "DocumentMoniker": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\icmaller\\Manager\\FarkOdemesi2023Manager.cs",
-              "RelativeDocumentMoniker": "icmaller\\Manager\\FarkOdemesi2023Manager.cs",
-              "ToolTip": "C:\\Users\\caglar.yurdakul\\Documents\\GitHub\\YesilyurtCksSQL\\icmaller\\Manager\\FarkOdemesi2023Manager.cs",
-              "RelativeToolTip": "icmaller\\Manager\\FarkOdemesi2023Manager.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAUwJoAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T10:48:15.843Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }

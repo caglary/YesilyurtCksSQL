@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "icmaller", "icmaller\icmaller.csproj", "{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "deneme", "deneme\deneme.csproj", "{097CF895-2F36-4FE4-99A2-D2D4076E0C37}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "word_test", "word_test\word_test.csproj", "{237929AB-DD3E-4791-95EF-19134B2BA941}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2FED9E3-3239-40C6-94B8-F8E539A5CED7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{097CF895-2F36-4FE4-99A2-D2D4076E0C37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{097CF895-2F36-4FE4-99A2-D2D4076E0C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{097CF895-2F36-4FE4-99A2-D2D4076E0C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{097CF895-2F36-4FE4-99A2-D2D4076E0C37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{237929AB-DD3E-4791-95EF-19134B2BA941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{237929AB-DD3E-4791-95EF-19134B2BA941}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{237929AB-DD3E-4791-95EF-19134B2BA941}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{237929AB-DD3E-4791-95EF-19134B2BA941}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
