@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="sablon2.docx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Yesilyurt_Ciftci_Kayit\Yesilyurt_Ciftci_Kayit.csproj">
