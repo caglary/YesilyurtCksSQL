@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 
 namespace word_test
 {
@@ -14,12 +15,16 @@ namespace word_test
         {
 
 
-
+            //2024 yılı için çalışacağımızı belirtiyoruz
             Yesilyurt_Ciftci_Kayit.Utilities.ConnectionString.year = "2024";
-            Database database = new Database();
 
+            //database classında hangi verileri alacağımı belirtiyorum ve class ı kullanıyorum
+            Database database = new Database();
+            
             Console.WriteLine(database.getConnectionString());
             SqlDataReader items = database.items();
+
+            //okuduğum verileri oluşturduğum bir class içinde liste haline getiriyorum
             List<EntitySablon> list = new List<EntitySablon>();
             while (items.Read())
             {
@@ -32,8 +37,9 @@ namespace word_test
                 entitySablon.ada = items.GetString(4);
                 entitySablon.parsel = items.GetString(5);
                 entitySablon.alan = items.GetString(6);
-                entitySablon.ekilisYili = items.GetString(7);
-                entitySablon.mahalleKoy = items.GetString(8).ToUpper();
+                entitySablon.tespitAlan = items.GetString(7);
+                entitySablon.ekilisYili = items.GetString(8);
+                entitySablon.mahalleKoy = items.GetString(9).ToUpper();
                 list.Add(entitySablon);
 
 
@@ -43,15 +49,20 @@ namespace word_test
             database.BaglantiAyarla();
             Console.WriteLine(list.Count);
             var x = 0;
-
+            
+            //listeyi kimlik numaralarına göre sıralıyorum 
             var listByKimlikNo = list.GroupBy(I => I.kimlikNo);
+ 
+            //listeyi mahalleye göre sıralıyorum 
             var listByMahalle = list.GroupBy(I => I.mahalleKoy);
-            //tc numaraları ile liste geldi
+            
+            //mahalle mahalle parseller içinde geziyorum
             foreach (var mahalleListeParsel in listByMahalle)
             {
-                //isim listesi
+                //mahalledeki isimleri buluyorum 
                 var mahalledekiIsimler = mahalleListeParsel.GroupBy(I => I.isim);
 
+                //her bir isme kayıtlı parselleri bulmak için 
                 foreach (var isim in mahalledekiIsimler)
                 {
                     List<EntitySablon> kayitlar = new List<EntitySablon>();
@@ -60,6 +71,7 @@ namespace word_test
                         //ismini geldi.
                         EntitySablon kayit = new EntitySablon();
                         kayit.alan = isimAitParseller.alan;
+                        
                         kayit.parsel = isimAitParseller.parsel;
                         kayit.kimlikNo = isimAitParseller.kimlikNo;
                         kayit.dosyaNo = isimAitParseller.dosyaNo;
@@ -69,6 +81,9 @@ namespace word_test
                         kayit.kimlikNo = isimAitParseller.kimlikNo;
                         kayit.mahalleKoy = isimAitParseller.mahalleKoy;
                         kayit.ada=isimAitParseller.ada;
+                        kayit.tespitAlan = isimAitParseller.tespitAlan;
+
+
                         kayitlar.Add(kayit);
 
 
@@ -78,13 +93,16 @@ namespace word_test
                     }
                     Console.WriteLine(kayitlar.Count);
 
+                    //isime ait parselleri bulduktan sonra printpdf metoduna gönderiyorum (parsel sayısına göre işlem yapıyorum
+                    //parsel sayısına göre 5 satırdan oluşan tutanağın içini dolduruyorum. parsel adedi 5 adetten fazla ise 
+                    //ikinci bir tutanağı dolduruyorum
                     if (kayitlar.Count <= 5)  {
-                        
-                        //printPdf(kayitlar, 1,0, kayitlar.Count);      
+
+                        printPdf(kayitlar, 1, 0, kayitlar.Count);
                     }
                     else if (kayitlar.Count > 5 && kayitlar.Count<=10) {
 
-                        //printPdf(kayitlar, 1, 0, 5);
+                        printPdf(kayitlar, 1, 0, 5);
                         printPdf(kayitlar, 2, 5, kayitlar.Count);
 
                     }
@@ -138,22 +156,27 @@ namespace word_test
             Microsoft.Office.Interop.Word.Application app;
             Microsoft.Office.Interop.Word.Document doc;
             object objMiss = Missing.Value;
-            object tmpFile = "C:\\Users\\caglar.yurdakul\\Documents\\x\\" + kayitlar[0].isim.ToLower() +pageNo.ToString()+ ".pdf";
+            object tmpFile = "C:\\Users\\caglar.yurdakul\\Documents\\x\\" + kayitlar[0].isim.ToLower() +" "+ kayitlar[0].mahalleKoy.ToLower() + pageNo.ToString()+ ".pdf";
             object fileLocation = @"C:\\Users\\caglar.yurdakul\\Desktop\\tutanak_sablon\\sablon" + pageNo+".docx";
 
             app = new Microsoft.Office.Interop.Word.Application();
             doc = app.Documents.Open( fileLocation, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss, ref objMiss);
+            
             try
             {
-
+                
 
                 void findAndReplace(object findText, object replaceText)
                 {
                     app.Selection.Find.Execute(ref findText, true, true, false, false, false, true, false, 1, ref replaceText, 2, false, false, false, false);
                 };
                 findAndReplace("[mahalle]", kayitlar[0].mahalleKoy.ToUpper());
+                
                 findAndReplace("[isim]", kayitlar[0].isim.ToUpper());
                 findAndReplace("[tcno]", kayitlar[0].kimlikNo.ToUpper());
+                findAndReplace("[cksNo]","ÇKS Dosya No : "+ kayitlar[0].dosyaNo);
+
+
 
 
                 int sablonNumaralari = 0;
@@ -161,8 +184,8 @@ namespace word_test
                 for (int i = startNo; i < stopNo; ++i)
                 {
                     if (i < 5) sablonNumaralari = i;
-                    else if (i >= 5 || i < 10) sablonNumaralari = i % 5;
-                    
+                    else {  sablonNumaralari = i % 5; }
+                   
                     if (kayitlar[i].urun == null)
                     {
                         findAndReplace("[yembitkisi" + sablonNumaralari + "]", " ");
@@ -193,20 +216,30 @@ namespace word_test
                     if (kayitlar[i].alan == null)
                     {
                         findAndReplace("[alan" + sablonNumaralari + "]", "0");
+                        findAndReplace("[tespitalan" + sablonNumaralari + "]", "");
+
                     }
                     else
                     {
                         findAndReplace("[alan" + sablonNumaralari + "]", kayitlar[i].alan);
+                        findAndReplace("[tespitalan" + sablonNumaralari + "]", kayitlar[i].tespitAlan);
+
                     }
 
                     if (kayitlar[i].ekilisYili == null)
                     {
                         findAndReplace("[ekilistarih" + sablonNumaralari + "]", "0");
+                        findAndReplace("[hasattarih" + sablonNumaralari + "]", "");
+
                     }
                     else
                     {
                         findAndReplace("[ekilistarih" + sablonNumaralari + "]", kayitlar[i].ekilisYili);
+                        findAndReplace("[hasattarih" + sablonNumaralari + "]", "2024");
+
                     }
+
+
 
 
 
@@ -243,25 +276,26 @@ namespace word_test
                 findAndReplace("[ekilistarih3]", "");
                 findAndReplace("[ekilistarih4]", "");
 
+                findAndReplace("[hasattarih0]", "");
+                findAndReplace("[hasattarih1]", "");
+                findAndReplace("[hasattarih2]", "");
+                findAndReplace("[hasattarih3]", "");
+                findAndReplace("[hasattarih4]", "");
+
                 findAndReplace("[tespitalan0]", "");
                 findAndReplace("[tespitalan1]", "");
                 findAndReplace("[tespitalan2]", "");
                 findAndReplace("[tespitalan3]", "");
                 findAndReplace("[tespitalan4]", "");
-
-
-
-
+               
+                findAndReplace("[cksNo]", "");
 
                 doc.ExportAsFixedFormat(tmpFile.ToString(), Microsoft.Office.Interop.Word.WdExportFormat.wdExportFormatPDF);
-
-
 
             }
             catch (Exception exception)
             {
 
-           
                 Console.WriteLine(exception.Message);
             }
             finally
@@ -281,10 +315,9 @@ namespace word_test
         public SqlDataReader items()
         {
 
-            command = new System.Data.SqlClient.SqlCommand("SELECT CKS.DosyaNo,Ciftciler.TcKimlikNo,Ciftciler.NameSurname,urun.UrunAdi,YemBitkileri.Ada,YemBitkileri.Parsel,YemBitkileri.MuracaatAlani,YemBitkileri.EkilisYili, YemBitkileri.AraziMahalle FROM [YesilyurtDb2024].[dbo].[YemBitkileri]  inner join Urun on YemBitkileri.UrunId=Urun.Id  inner join Cks on Cks.Id=YemBitkileri.CksId  inner join Ciftciler on cks.CiftciId=Ciftciler.Id", connect);
+            command = new System.Data.SqlClient.SqlCommand("SELECT CKS.DosyaNo,Ciftciler.TcKimlikNo,Ciftciler.NameSurname,urun.UrunAdi,YemBitkileri.Ada,YemBitkileri.Parsel,YemBitkileri.MuracaatAlani,YemBitkileri.TespitEdilenAlan,YemBitkileri.EkilisYili, YemBitkileri.AraziMahalle FROM [YesilyurtDb2024].[dbo].[YemBitkileri]  inner join Urun on YemBitkileri.UrunId=Urun.Id  inner join Cks on Cks.Id=YemBitkileri.CksId  inner join Ciftciler on cks.CiftciId=Ciftciler.Id", connect);
             BaglantiAyarla();
             return command.ExecuteReader();
-
 
         }
         public string getConnectionString()
@@ -302,6 +335,8 @@ namespace word_test
         public string ada { get; set; }
         public string parsel { get; set; }
         public string alan { get; set; }
+        public string tespitAlan { get; set; }
+
         public string ekilisYili { get; set; }
         public string mahalleKoy { get; set; }
     }
